@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prajwal Yathiraj | Lead Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafbff;--surface:#ffffff;--surface-2:#f1f5ff;
+  --blue:#2563eb;--indigo:#4f46e5;--violet:#7c3aed;--pink:#ec4899;
+  --emerald:#059669;--amber:#d97706;--cyan:#0891b2;--red:#dc2626;
+  --text:#0f172a;--text-2:#334155;--text-3:#64748b;--text-4:#94a3b8;
+  --border:#e2e8f0;--border-2:#cbd5e1;
+  --gradient:linear-gradient(135deg,#2563eb,#7c3aed);
+  --gradient-2:linear-gradient(135deg,#7c3aed,#ec4899);
+  --gradient-3:linear-gradient(135deg,#059669,#0891b2);
+  --shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg:0 4px 6px rgba(0,0,0,0.04),0 10px 30px rgba(0,0,0,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0.8rem 2rem;background:rgba(255,255,255,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;transition:transform 0.3s}
+nav .logo{font-weight:900;font-size:1.2rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+nav .links{display:flex;gap:1.8rem;list-style:none}
+nav .links a{color:var(--text-3);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.3s;position:relative}
+nav .links a:hover{color:var(--blue)}
+nav .links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gradient);transition:width 0.3s;border-radius:2px}
+nav .links a:hover::after{width:100%}
+.hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px}
+.hamburger span{width:22px;height:2px;background:var(--text);transition:0.3s;border-radius:2px}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:6rem 2rem 4rem;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-30%;width:800px;height:800px;background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-40%;left:-20%;width:700px;height:700px;background:radial-gradient(circle,rgba(124,58,237,0.05) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero-content{text-align:center;max-width:850px;position:relative;z-index:1}
+.hero-avatar{width:100px;height:100px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2.2rem;font-weight:900;color:#fff;box-shadow:0 8px 30px rgba(37,99,235,0.25)}
+.hero-badge{display:inline-flex;align-items:center;gap:0.4rem;padding:0.4rem 1rem;border-radius:50px;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.12);font-size:0.8rem;color:var(--blue);font-weight:600;margin-bottom:1.5rem}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.08;margin-bottom:1.2rem;letter-spacing:-2px;color:var(--text)}
+.hero h1 .gradient{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.1rem;color:var(--text-3);max-width:620px;margin:0 auto 2rem;line-height:1.7}
+.hero-cta{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:0.75rem 1.8rem;border-radius:10px;font-size:0.9rem;font-weight:600;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem}
+.btn-primary{background:var(--gradient);color:#fff;box-shadow:0 4px 15px rgba(37,99,235,0.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,0.35)}
+.btn-outline{background:var(--surface);color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+/* SECTIONS */
+section{padding:5rem 2rem;position:relative}
+section.alt{background:var(--surface-2)}
+.container{max-width:1100px;margin:0 auto}
+.section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--blue);font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:0.6rem;letter-spacing:-1px}
+.section-desc{color:var(--text-3);font-size:1rem;margin-bottom:3rem;max-width:550px}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.8rem 1.2rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden}
+.stat:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:transparent}
+.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;border-radius:0 0 16px 16px;opacity:0;transition:opacity 0.3s}
+.stat:nth-child(1)::after{background:var(--gradient)}
+.stat:nth-child(2)::after{background:var(--gradient-2)}
+.stat:nth-child(3)::after{background:var(--gradient-3)}
+.stat:nth-child(4)::after{background:linear-gradient(135deg,var(--amber),var(--red))}
+.stat:hover::after{opacity:1}
+.stat-num{font-size:2.2rem;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.2}
+.stat-label{font-size:0.78rem;color:var(--text-3);font-weight:500;margin-top:0.3rem;text-transform:uppercase;letter-spacing:0.5px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:all 0.3s}
+.skill-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:transparent}
+.skill-card h3{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem;font-weight:700}
+.skill-card .icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0}
+.skill-pills{display:flex;flex-wrap:wrap;gap:0.4rem}
+.pill{padding:0.3rem 0.7rem;border-radius:6px;font-size:0.78rem;font-weight:500;transition:all 0.25s;cursor:default}
+
+.sc-lang h3{color:var(--blue)}.sc-lang .icon{background:rgba(37,99,235,0.08)}
+.sc-lang .pill{background:rgba(37,99,235,0.05);color:var(--blue);border:1px solid rgba(37,99,235,0.1)}
+.sc-lang .pill:hover{background:rgba(37,99,235,0.1);border-color:var(--blue)}
+
+.sc-fw h3{color:var(--violet)}.sc-fw .icon{background:rgba(124,58,237,0.08)}
+.sc-fw .pill{background:rgba(124,58,237,0.05);color:var(--violet);border:1px solid rgba(124,58,237,0.1)}
+.sc-fw .pill:hover{background:rgba(124,58,237,0.1);border-color:var(--violet)}
+
+.sc-cloud h3{color:var(--emerald)}.sc-cloud .icon{background:rgba(5,150,105,0.08)}
+.sc-cloud .pill{background:rgba(5,150,105,0.05);color:var(--emerald);border:1px solid rgba(5,150,105,0.1)}
+.sc-cloud .pill:hover{background:rgba(5,150,105,0.1);border-color:var(--emerald)}
+
+.sc-data h3{color:var(--amber)}.sc-data .icon{background:rgba(217,119,6,0.08)}
+.sc-data .pill{background:rgba(217,119,6,0.05);color:var(--amber);border:1px solid rgba(217,119,6,0.1)}
+.sc-data .pill:hover{background:rgba(217,119,6,0.1);border-color:var(--amber)}
+
+.sc-ai h3{color:var(--pink)}.sc-ai .icon{background:rgba(236,72,153,0.08)}
+.sc-ai .pill{background:rgba(236,72,153,0.05);color:var(--pink);border:1px solid rgba(236,72,153,0.1)}
+.sc-ai .pill:hover{background:rgba(236,72,153,0.1);border-color:var(--pink)}
+
+.sc-arch h3{color:var(--cyan)}.sc-arch .icon{background:rgba(8,145,178,0.08)}
+.sc-arch .pill{background:rgba(8,145,178,0.05);color:var(--cyan);border:1px solid rgba(8,145,178,0.1)}
+.sc-arch .pill:hover{background:rgba(8,145,178,0.1);border-color:var(--cyan)}
+
+.sc-tools h3{color:var(--text-2)}.sc-tools .icon{background:rgba(51,65,85,0.08)}
+.sc-tools .pill{background:rgba(51,65,85,0.04);color:var(--text-2);border:1px solid rgba(51,65,85,0.1)}
+.sc-tools .pill:hover{background:rgba(51,65,85,0.08);border-color:var(--text-2)}
+
+/* APPS GRID */
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.app-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:all 0.3s;position:relative;overflow:hidden}
+.app-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:transparent}
+.app-card .app-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:0.8rem}
+.app-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.4rem}
+.app-card p{font-size:0.82rem;color:var(--text-3);line-height:1.5}
+.app-card .app-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.8rem}
+.app-card .app-tag{font-size:0.65rem;padding:0.2rem 0.5rem;border-radius:4px;background:var(--surface-2);color:var(--text-3);font-weight:500}
+
+.app-card:nth-child(odd) .app-icon{background:rgba(37,99,235,0.08);color:var(--blue)}
+.app-card:nth-child(even) .app-icon{background:rgba(124,58,237,0.08);color:var(--violet)}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:2.5rem}
+.timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue),var(--violet),var(--pink),var(--border));border-radius:2px}
+.tl-item{position:relative;margin-bottom:2.5rem}
+.tl-dot{position:absolute;left:-2.5rem;top:8px;width:18px;height:18px;border-radius:50%;border:3px solid var(--blue);background:#fff;z-index:2;transition:all 0.3s}
+.tl-item:nth-child(2) .tl-dot{border-color:var(--violet)}
+.tl-item:nth-child(3) .tl-dot{border-color:var(--pink)}
+.tl-item:nth-child(4) .tl-dot{border-color:var(--emerald)}
+.tl-item:hover .tl-dot{transform:scale(1.3);background:var(--blue);border-color:var(--blue);box-shadow:0 0 0 4px rgba(37,99,235,0.15)}
+.tl-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.2rem}
+.tl-role{font-size:1.1rem;font-weight:700;color:var(--text)}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--blue);padding:0.25rem 0.7rem;border-radius:6px;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.12);font-weight:500;white-space:nowrap}
+.tl-company{color:var(--text-3);font-size:0.9rem;margin-bottom:0.6rem}
+.tl-company span{color:var(--text-4);font-style:italic;font-size:0.82rem}
+.tl-list{list-style:none}
+.tl-list li{position:relative;padding-left:1rem;margin-bottom:0.5rem;color:var(--text-2);font-size:0.88rem;line-height:1.6}
+.tl-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+/* AI CARDS */
+.ai-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.ai-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.8rem;text-align:center;transition:all 0.3s}
+.ai-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:transparent}
+.ai-card .ai-emoji{font-size:2.5rem;margin-bottom:0.8rem}
+.ai-card h3{font-size:1rem;font-weight:700;margin-bottom:0.4rem}
+.ai-card p{font-size:0.82rem;color:var(--text-3);line-height:1.5}
+.ai-card .ai-badge{display:inline-block;margin-top:0.8rem;padding:0.25rem 0.8rem;border-radius:20px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.ai-card:nth-child(1) .ai-badge{background:rgba(37,99,235,0.08);color:var(--blue)}
+.ai-card:nth-child(2) .ai-badge{background:rgba(124,58,237,0.08);color:var(--violet)}
+.ai-card:nth-child(3) .ai-badge{background:rgba(5,150,105,0.08);color:var(--emerald)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.contact-cards{display:flex;flex-direction:column;gap:0.8rem}
+.contact-card{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;transition:all 0.3s}
+.contact-card:hover{box-shadow:var(--shadow);border-color:var(--blue)}
+.contact-card .c-icon{width:40px;height:40px;border-radius:10px;background:rgba(37,99,235,0.06);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-card .c-label{font-size:0.75rem;color:var(--text-4);font-weight:500;text-transform:uppercase;letter-spacing:0.5px}
+.contact-card a{color:var(--text);text-decoration:none;font-weight:500;font-size:0.92rem;transition:color 0.3s}
+.contact-card a:hover{color:var(--blue)}
+.form-wrap{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.form-wrap iframe{width:100%;height:520px;border:none}
+
+footer{text-align:center;padding:2rem;color:var(--text-4);font-size:0.8rem;border-top:1px solid var(--border)}
+footer span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+.d1{transition-delay:0.08s}.d2{transition-delay:0.16s}.d3{transition-delay:0.24s}.d4{transition-delay:0.32s}
+
+@media(max-width:768px){
+  nav .links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2rem;backdrop-filter:blur(20px)}
+  nav .links.open{display:flex}
+  .hamburger{display:flex}
+  .contact-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  section{padding:3.5rem 1.2rem}
+  .timeline{padding-left:2rem}.tl-dot{left:-2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">PRAJWAL.DEV</div>
+  <ul class="links" id="navLinks">
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+    <li><a href="#apps" onclick="closeNav()">Apps</a></li>
+    <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+    <li><a href="#ai" onclick="closeNav()">AI</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-avatar">PY</div>
+    <div class="hero-badge"><span class="dot"></span> Open to Opportunities</div>
+    <h1>Full-Stack <span class="gradient">.NET Lead</span><br>Engineer</h1>
+    <p>7+ years building enterprise retail platforms end-to-end — UI, API, database, CI/CD. From pixel to production, I own the entire stack.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Let's Talk →</a>
+      <a href="#apps" class="btn btn-outline">See My Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="about" class="alt">
+  <div class="container">
+    <div class="section-eyebrow reveal">What I Bring</div>
+    <h2 class="section-title reveal">Engineering at Scale</h2>
+    <p class="section-desc reveal">End-to-end ownership across the full stack — from frontend to database to deployment.</p>
+    <div class="stats-row">
+      <div class="stat reveal"><div class="stat-num" data-target="7">0</div><div class="stat-label">Years of Experience</div></div>
+      <div class="stat reveal d1"><div class="stat-num" data-target="35">0</div><div class="stat-label">Apps & Modules Built</div></div>
+      <div class="stat reveal d2"><div class="stat-num" data-target="50">0</div><div class="stat-label">Features Shipped</div></div>
+      <div class="stat reveal d3"><div class="stat-num" data-target="20">0</div><div class="stat-label">API Integrations</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-eyebrow reveal">Tech Stack</div>
+    <h2 class="section-title reveal">Skills & Expertise</h2>
+    <p class="section-desc reveal">Technologies I use daily to build, ship, and scale enterprise applications.</p>
+    <div class="skills-grid">
+      <div class="skill-card sc-lang reveal"><h3><span class="icon">{ }</span>Languages</h3><div class="skill-pills"><span class="pill">C#</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">SQL</span><span class="pill">LINQ</span><span class="pill">YAML</span><span class="pill">XML</span><span class="pill">JSON</span></div></div>
+      <div class="skill-card sc-fw reveal d1"><h3><span class="icon">⚡</span>Frameworks</h3><div class="skill-pills"><span class="pill">.NET 6–10</span><span class="pill">ASP.NET Core MVC</span><span class="pill">Blazor</span><span class="pill">Razor</span><span class="pill">Web API</span><span class="pill">REST</span><span class="pill">SOAP/WCF</span><span class="pill">ADO.NET</span><span class="pill">Swagger</span></div></div>
+      <div class="skill-card sc-cloud reveal"><h3><span class="icon">☁</span>Cloud & DevOps</h3><div class="skill-pills"><span class="pill">AWS</span><span class="pill">Azure AD</span><span class="pill">OpenID Connect</span><span class="pill">MS Graph API</span><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">GitHub Actions</span><span class="pill">ArgoCD</span></div></div>
+      <div class="skill-card sc-data reveal d1"><h3><span class="icon">◉</span>Data</h3><div class="skill-pills"><span class="pill">MS SQL Server</span><span class="pill">SSMS</span><span class="pill">Oracle SQL Developer</span><span class="pill">Stored Procedures</span><span class="pill">Snowflake</span><span class="pill">IBM DB2</span><span class="pill">Serilog</span></div></div>
+      <div class="skill-card sc-ai reveal"><h3><span class="icon">✦</span>AI & LLM</h3><div class="skill-pills"><span class="pill">Claude Code & API</span><span class="pill">GitHub Copilot</span><span class="pill">Google Gemini</span><span class="pill">AI App Dev</span><span class="pill">Prompt Engineering</span></div></div>
+      <div class="skill-card sc-arch reveal d1"><h3><span class="icon">△</span>Architecture</h3><div class="skill-pills"><span class="pill">Microservices</span><span class="pill">SOLID</span><span class="pill">DI</span><span class="pill">Repository Pattern</span><span class="pill">Design Patterns</span><span class="pill">Agile/Scrum</span></div></div>
+      <div class="skill-card sc-tools reveal"><h3><span class="icon">⚙</span>Tools</h3><div class="skill-pills"><span class="pill">Visual Studio</span><span class="pill">VS Code</span><span class="pill">Git</span><span class="pill">Postman</span><span class="pill">NuGet</span><span class="pill">Jira</span><span class="pill">Confluence</span><span class="pill">Okta</span><span class="pill">OAuth 2.0</span><span class="pill">IIS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPS -->
+<section id="apps" class="alt">
+  <div class="container">
+    <div class="section-eyebrow reveal">Portfolio</div>
+    <h2 class="section-title reveal">Applications I've Built</h2>
+    <p class="section-desc reveal">Enterprise-grade applications serving thousands of retail stores and millions of transactions.</p>
+    <div class="apps-grid">
+
+      <div class="app-card reveal"><div class="app-icon">📊</div><h3>PCAP/PCAR Platform</h3><p>Full-stack promotional card activation & returns system with Azure AD auth, Graph API roles, barcode scanning, and gift card SOAP integration. Deployed across 40+ stores.</p><div class="app-tags"><span class="app-tag">.NET 10</span><span class="app-tag">MVC</span><span class="app-tag">Azure AD</span><span class="app-tag">SQL Server</span><span class="app-tag">Kubernetes</span></div></div>
+
+      <div class="app-card reveal d1"><div class="app-icon">📈</div><h3>Sales Trickle Dashboard</h3><p>Real-time dashboard monitoring POS transactions, store health, sales data, and transaction flow across all retail locations.</p><div class="app-tags"><span class="app-tag">ASP.NET Core</span><span class="app-tag">JavaScript</span><span class="app-tag">SQL Server</span><span class="app-tag">REST API</span></div></div>
+
+      <div class="app-card reveal d2"><div class="app-icon">🧾</div><h3>Electronic Journal Viewer</h3><p>Advanced transaction search with receipt viewer, TLOG download, bulk ZIP export, pagination, filtering, and performance optimizations.</p><div class="app-tags"><span class="app-tag">ASP.NET MVC</span><span class="app-tag">jQuery</span><span class="app-tag">SQL Server</span><span class="app-tag">AWS S3</span></div></div>
+
+      <div class="app-card reveal"><div class="app-icon">🚨</div><h3>Incident Management Portal</h3><p>End-to-end incident lifecycle — create, track, investigate, and resolve transaction incidents with detailed history and status workflows.</p><div class="app-tags"><span class="app-tag">.NET Core</span><span class="app-tag">REST API</span><span class="app-tag">SQL Server</span></div></div>
+
+      <div class="app-card reveal d1"><div class="app-icon">⚠️</div><h3>Error Monitoring Portal</h3><p>Centralized error tracking, search, analytics, and reporting for failed POS transactions across all stores.</p><div class="app-tags"><span class="app-tag">ASP.NET Core</span><span class="app-tag">Serilog</span><span class="app-tag">SQL Server</span></div></div>
+
+      <div class="app-card reveal d2"><div class="app-icon">🏪</div><h3>Store Health Dashboard</h3><p>Monitoring store connectivity, transaction status, and operational health across the entire retail network.</p><div class="app-tags"><span class="app-tag">.NET Core</span><span class="app-tag">Snowflake</span><span class="app-tag">REST API</span></div></div>
+
+      <div class="app-card reveal"><div class="app-icon">💲</div><h3>Sales Price Adjustment</h3><p>Pricing adjustment workflows with business rule validations, approval flows, and database integrations.</p><div class="app-tags"><span class="app-tag">ASP.NET MVC</span><span class="app-tag">SQL Server</span><span class="app-tag">jQuery</span></div></div>
+
+      <div class="app-card reveal d1"><div class="app-icon">👤</div><h3>MyAssociate Application</h3><p>Internal retail associate management app with feature additions, API optimizations, and performance improvements.</p><div class="app-tags"><span class="app-tag">.NET Core</span><span class="app-tag">REST API</span><span class="app-tag">SQL Server</span></div></div>
+
+      <div class="app-card reveal d2"><div class="app-icon">🔐</div><h3>Authentication Platform</h3><p>Led Okta-to-Azure AD migration using OAuth 2.0/OpenID Connect, Microsoft Graph API, and role-based access control.</p><div class="app-tags"><span class="app-tag">Azure AD</span><span class="app-tag">OAuth 2.0</span><span class="app-tag">Graph API</span></div></div>
+
+      <div class="app-card reveal"><div class="app-icon">📱</div><h3>Store iPad Applications</h3><p>iOS apps (Xcode/Swift) for in-store iPads enabling customers to apply for credit cards and associates to manage operations.</p><div class="app-tags"><span class="app-tag">Swift</span><span class="app-tag">Xcode</span><span class="app-tag">REST API</span></div></div>
+
+      <div class="app-card reveal d1"><div class="app-icon">❄️</div><h3>Snowflake Integration</h3><p>Secure data integration using JWT authentication, private keys, and Snowflake APIs for enterprise reporting pipelines.</p><div class="app-tags"><span class="app-tag">Snowflake</span><span class="app-tag">JWT</span><span class="app-tag">.NET</span></div></div>
+
+      <div class="app-card reveal d2"><div class="app-icon">💳</div><h3>Payment Integration</h3><p>Cybersource payment gateway integration with secure transaction processing and enterprise payment APIs.</p><div class="app-tags"><span class="app-tag">Cybersource</span><span class="app-tag">REST API</span><span class="app-tag">.NET</span></div></div>
+
+      <div class="app-card reveal"><div class="app-icon">📡</div><h3>NOC Dashboard</h3><p>Network Operations Center dashboard for real-time monitoring of application health and transaction flow.</p><div class="app-tags"><span class="app-tag">ASP.NET Core</span><span class="app-tag">JavaScript</span><span class="app-tag">SQL Server</span></div></div>
+
+      <div class="app-card reveal d1"><div class="app-icon">⚙️</div><h3>POS Sends CCA Extract</h3><p>Console app automating JSON extract generation from SQL Server and uploading to AWS S3, replacing a legacy mainframe job.</p><div class="app-tags"><span class="app-tag">.NET 10</span><span class="app-tag">Console</span><span class="app-tag">AWS S3</span></div></div>
+
+      <div class="app-card reveal d2"><div class="app-icon">🔄</div><h3>MuleTranslator API</h3><p>.NET REST API replacing an AWS Spring Boot/Java service for customer info retrieval and shipping data updates for POS systems.</p><div class="app-tags"><span class="app-tag">.NET 10</span><span class="app-tag">REST API</span><span class="app-tag">SQL Server</span></div></div>
+
+      <div class="app-card reveal"><div class="app-icon">🎁</div><h3>PCAP Returns EGC Connector</h3><p>Console app handling promotional eGift card returns with single-transaction UPDATE + DELETE operations on pending records.</p><div class="app-tags"><span class="app-tag">.NET 10</span><span class="app-tag">Console</span><span class="app-tag">SQL Server</span></div></div>
+
+      <div class="app-card reveal d1"><div class="app-icon">🏢</div><h3>SaaS Business Platform</h3><p>Full SaaS business management application covering lead tracking, quotations, orders, and operational reporting.</p><div class="app-tags"><span class="app-tag">.NET</span><span class="app-tag">MVC</span><span class="app-tag">SQL Server</span></div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-eyebrow reveal">Career</div>
+    <h2 class="section-title reveal">Experience</h2>
+    <p class="section-desc reveal">7+ years of progressive growth in enterprise retail technology.</p>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">Lead Software Engineer</div><div class="tl-date">Sep 2025 – Present</div></div>
+        <div class="tl-company">Neiman Marcus Global Technology Services <span>(formerly Hudson's Bay / Saks Global)</span></div>
+        <ul class="tl-list">
+          <li>Key contributor to an $8M mainframe decommissioning initiative — personally migrated 25+ batch jobs and 6 applications to .NET 10.</li>
+          <li>Architected and delivered the PCAP/PCAR platform with Azure AD auth, Graph API roles, and barcode scanning across 40+ stores.</li>
+          <li>Built AI-powered tools using Claude API; leveraged Claude, Copilot, and Gemini to reduce delivery timelines by ~50%.</li>
+          <li>Automated data pipelines replacing mainframe processes — hours reduced to under 5 minutes.</li>
+          <li>Centralized secrets management via AWS Secrets Manager, reducing config failures by 90%.</li>
+          <li>Mentored 3+ developers and implemented CI/CD cutting deployment time to under 15 minutes.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">Senior Software Engineer</div><div class="tl-date">Jul 2020 – Sep 2025</div></div>
+        <div class="tl-company">Hudson's Bay Services / Saks Global</div>
+        <ul class="tl-list">
+          <li>Developed 10+ enterprise applications including Sales Trickle Dashboard, EJ Viewer, Incident Management, and NOC Dashboard.</li>
+          <li>Integrated REST APIs, GraphQL, Snowflake, Cybersource Payment Gateway, and Microsoft Graph API.</li>
+          <li>Led Okta-to-Azure AD migration with OAuth 2.0/OpenID Connect and role-based access control.</li>
+          <li>Optimized SQL queries, API calls, and frontend rendering — improving response times by up to 60%.</li>
+          <li>Implemented Serilog for centralized logging; established TDD with 80%+ code coverage.</li>
+          <li>Mentored junior developers through code reviews, debugging support, and .NET best practices.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">Software Engineer</div><div class="tl-date">Jun 2019 – Feb 2020</div></div>
+        <div class="tl-company">Infolink Technologies Private Limited</div>
+        <ul class="tl-list">
+          <li>Built a SaaS business management platform covering lead tracking, quotations, orders, and reporting.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI -->
+<section id="ai" class="alt">
+  <div class="container">
+    <div class="section-eyebrow reveal">AI Workflow</div>
+    <h2 class="section-title reveal">How I Use AI</h2>
+    <p class="section-desc reveal">AI is embedded in how I architect, build, debug, and ship software every day.</p>
+    <div class="ai-grid">
+      <div class="ai-card reveal"><div class="ai-emoji">🧠</div><h3>Claude</h3><p>Primary tool. Architecture decisions, full-stack code generation, complex debugging, documentation, and building AI-powered apps via the API.</p><div class="ai-badge">Primary Dev Partner</div></div>
+      <div class="ai-card reveal d1"><div class="ai-emoji">🤖</div><h3>GitHub Copilot</h3><p>Inline code completion in Visual Studio & VS Code. Boilerplate scaffolding, model properties, LINQ queries, and test generation.</p><div class="ai-badge">IDE Companion</div></div>
+      <div class="ai-card reveal d2"><div class="ai-emoji">💎</div><h3>Google Gemini</h3><p>Quick research, second opinions on design approaches, understanding unfamiliar APIs, and validating architectural choices.</p><div class="ai-badge">Research & Validation</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal">Education</div>
+    <h2 class="section-title reveal">Academic Background</h2>
+    <div class="app-card reveal" style="max-width:500px;margin-top:1.5rem">
+      <div class="app-icon" style="background:rgba(37,99,235,0.08);color:var(--blue)">🎓</div>
+      <h3>B.E. Computer Science and Engineering</h3>
+      <p>The Oxford College of Engineering, Bengaluru</p>
+      <div class="app-tags"><span class="app-tag">2015 – 2019</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="container">
+    <div class="section-eyebrow reveal">Get In Touch</div>
+    <h2 class="section-title reveal">Let's Connect</h2>
+    <p class="section-desc reveal">Have an opportunity or want to collaborate? I'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <div class="contact-card"><div class="c-icon">📧</div><div><div class="c-label">Email</div><a href="mailto:yathirajprajwal@gmail.com">yathirajprajwal@gmail.com</a></div></div>
+        <div class="contact-card"><div class="c-icon">📱</div><div><div class="c-label">Phone</div><a href="tel:+919481719233">+91-9481719233</a></div></div>
+        <div class="contact-card"><div class="c-icon">💼</div><div><div class="c-label">LinkedIn</div><a href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank">linkedin.com/in/prajwal-yathiraj</a></div></div>
+        <div class="contact-card"><div class="c-icon">📍</div><div><div class="c-label">Location</div><a>Bengaluru, India</a></div></div>
+      </div>
+      <div class="form-wrap reveal d1">
+        <!-- REPLACE YOUR_FORM_ID WITH YOUR GOOGLE FORM ID -->
+        <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" loading="lazy">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><p>Designed & Built by <span>Prajwal Yathiraj</span> · 2026</p></footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Counter
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.target;
+    if (!target) return;
+    let cur = 0; const inc = target / 35;
+    const t = setInterval(() => {
+      cur += inc;
+      if (cur >= target) { el.textContent = target + '+'; clearInterval(t); }
+      else el.textContent = Math.floor(cur) + '+';
+    }, 35);
+    cObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => cObs.observe(el));
+
+// Nav
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+function closeNav() { document.getElementById('navLinks').classList.remove('open'); }
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav'), y = window.pageYOffset;
+  nav.style.transform = y > lastY && y > 80 ? 'translateY(-100%)' : 'translateY(0)';
+  lastY = y;
+});
+</script>
+</body>
+</html>
