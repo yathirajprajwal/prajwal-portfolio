@@ -21,6 +21,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Prajwal Yathiraj","alternateName":"Prajwal Y","jobTitle":"Lead Software Engineer","worksFor":{"@type":"Organization","name":"Neiman Marcus Global Technology Services"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"email":"mailto:yathirajprajwal@gmail.com","url":"https://yathirajprajwal.github.io/prajwal-portfolio/","sameAs":["https://www.linkedin.com/in/prajwal-yathiraj/","https://github.com/yathirajprajwal"],"knowsAbout":[".NET","C#","ASP.NET Core","Full-stack development","Azure Entra ID","AWS","Kubernetes","PostgreSQL","Retrieval-augmented generation","AI agents"]}
 </script>
+<script>(function(){var m=matchMedia("(max-width: 760px)");if(m.matches)document.documentElement.classList.add("phone");var r=function(){if(m.matches!==document.documentElement.classList.contains("phone"))location.reload()};m.addEventListener?m.addEventListener("change",r):m.addListener(r)})();</script>
 <style>
 /* Layout: a dark stage. Particle-built name, then scroll-driven chapters: statement, Shui, migration, project reel, career, contact. */
 :root{
@@ -395,6 +396,232 @@ dialog.pal::backdrop{background:rgba(7,6,15,.6);backdrop-filter:blur(4px)}
   *,*::before,*::after{animation:none!important;transition-duration:.001ms!important}
   .grain{display:none}
 }
+
+/* ================= PHONE: Prajwal OS =================
+   On phones the site becomes a small OS: lock screen, home screen, and each section is an app. */
+html:not(.phone) #os{display:none}
+html.phone body{overflow:hidden;height:100%}
+html.phone body > :not(#os):not(.toast){display:none!important}
+#os{position:fixed;inset:0;height:100dvh;overflow:hidden;background:var(--void);color:var(--text);font-family:var(--sans);-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.os-wall{position:absolute;inset:-30%;background:radial-gradient(40% 30% at 20% 25%,rgba(124,92,255,.55),transparent 70%),radial-gradient(35% 28% at 85% 20%,rgba(92,242,218,.35),transparent 70%),radial-gradient(40% 30% at 60% 85%,rgba(255,107,139,.4),transparent 70%),var(--void);filter:blur(30px);animation:wall 16s ease-in-out infinite alternate}
+@keyframes wall{50%{transform:translate(6%,-4%) rotate(8deg) scale(1.1)}100%{transform:translate(-5%,5%) rotate(-6deg) scale(1.05)}}
+.os-top{position:absolute;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 10px) max(20px,env(safe-area-inset-right,0px)) 0 max(20px,env(safe-area-inset-left,0px));font-family:var(--mono);font-size:12.5px;color:rgba(236,233,255,.8);pointer-events:none}
+.os-top b{font-weight:600;color:var(--text);pointer-events:auto}
+
+/* lock screen */
+.lock{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 54px) max(18px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 18px) max(18px,env(safe-area-inset-left,0px));background:rgba(7,6,15,.25);backdrop-filter:blur(2px);touch-action:none;will-change:transform}
+.lock.gone{transition:transform .55s cubic-bezier(.7,0,.2,1),opacity .55s;transform:translateY(-100%);opacity:0;pointer-events:none}
+.lock-date{font-size:16px;font-weight:500;color:rgba(236,233,255,.85)}
+.lock-clock{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 120;font-size:84px;line-height:1;letter-spacing:-.03em;margin:4px 0 6px;font-variant-numeric:tabular-nums}
+#lockName{width:100%;height:96px}
+.lock-tag{font-size:15px;color:rgba(236,233,255,.8);text-align:center;margin-top:6px}
+.notes{width:100%;display:grid;gap:8px;margin-top:auto;margin-bottom:22px}
+.note{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:20px;background:rgba(22,19,44,.62);backdrop-filter:blur(18px);border:1px solid rgba(236,233,255,.08);opacity:0;transform:translateY(20px) scale(.96);animation:noteIn .6s cubic-bezier(.2,.9,.3,1.2) forwards;animation-delay:calc(.5s + var(--i) * .18s)}
+@keyframes noteIn{to{opacity:1;transform:none}}
+.note i{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-style:normal}
+.note div{min-width:0;flex:1}
+.note strong{display:flex;justify-content:space-between;gap:8px;font-size:14px}
+.note strong span{font-weight:400;color:var(--muted);font-size:12px}
+.note p{font-size:14px;color:rgba(236,233,255,.82);line-height:1.35}
+.unlock{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:14px;color:rgba(236,233,255,.85)}
+.chev{width:14px;height:14px;border-left:2px solid currentColor;border-top:2px solid currentColor;transform:rotate(45deg);animation:chev 1.4s ease-in-out infinite}
+@keyframes chev{50%{transform:translateY(-6px) rotate(45deg);opacity:.5}}
+.bar-ind{width:134px;height:5px;border-radius:5px;background:rgba(236,233,255,.85);margin-top:8px}
+
+/* home */
+.home{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 44px) max(18px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 14px) max(18px,env(safe-area-inset-left,0px));transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s,opacity .45s}
+.home.dim{transform:scale(.9);filter:blur(6px);opacity:.5}
+.widget{position:relative;border-radius:26px;padding:18px;background:rgba(22,19,44,.55);backdrop-filter:blur(20px);border:1px solid rgba(236,233,255,.1);overflow:hidden;opacity:0;transform:translateY(16px)}
+.widget h1{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 110;font-size:28px;line-height:1.02;letter-spacing:-.02em}
+.widget p{color:var(--muted);font-size:14px;margin:4px 0 14px}
+.w-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.w-stats div{background:rgba(7,6,15,.45);border-radius:14px;padding:10px}
+.w-stats strong{display:block;font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 125;font-size:24px;line-height:1}
+.w-stats span{font-size:11.5px;color:var(--muted);line-height:1.2;display:block;margin-top:4px}
+.w-live{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--aqua);margin-top:12px;font-family:var(--mono)}
+.w-live b{width:7px;height:7px;border-radius:50%;background:var(--aqua);box-shadow:0 0 10px var(--aqua);animation:pulse 2s infinite}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 10px;margin-top:26px}
+.dock{margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px;border-radius:30px;background:rgba(22,19,44,.5);backdrop-filter:blur(20px);border:1px solid rgba(236,233,255,.08);opacity:0;transform:translateY(30px)}
+.dock .ic span{display:none}
+.now{display:flex;align-items:center;gap:14px;margin-top:26px;padding:14px 16px;border-radius:24px;text-align:left;background:linear-gradient(120deg,rgba(124,92,255,.35),rgba(92,242,218,.18));border:1px solid rgba(236,233,255,.12);backdrop-filter:blur(20px);opacity:0;transform:translateY(16px)}
+.home.in .now{animation:homeIn .6s cubic-bezier(.2,.9,.3,1.2) .4s forwards}
+.now:active{transform:scale(.97)}
+.now-orb{flex:none;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 6%,var(--aqua) 26%,#9d8cff 64%,#2c2370 100%);box-shadow:0 0 22px rgba(92,242,218,.5);animation:speak 1.2s ease-in-out infinite alternate}
+.now-txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.now-txt small{font-family:var(--mono);font-size:11.5px;color:var(--aqua)}
+.now-txt strong{font-size:15px;line-height:1.25}
+.now-txt em{font-style:normal;font-size:12.5px;color:var(--muted)}
+.eq{display:flex;gap:3px;align-items:flex-end;height:22px}
+.eq i{width:3px;border-radius:2px;background:var(--aqua);animation:eq .9s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}.eq i:nth-child(4){animation-delay:.1s}
+@keyframes eq{from{height:4px}to{height:22px}}
+.ic{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;opacity:0;transform:scale(.4) translateY(20px)}
+.ic i{position:relative;width:62px;height:62px;border-radius:18px;display:grid;place-items:center;box-shadow:0 8px 20px -6px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .2s;font-style:normal}
+.ic:active i{transform:scale(.88)}
+.ic i svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic span{font-size:12px;color:rgba(236,233,255,.92);text-shadow:0 1px 4px rgba(0,0,0,.6);white-space:nowrap}
+.ic .badge{position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;border-radius:10px;background:var(--coral);color:#fff;font-size:12px;font-weight:600;display:grid;place-items:center;padding:0 5px;font-family:var(--sans);box-shadow:0 0 0 2px var(--void)}
+.ic.ping i::after{content:"";position:absolute;inset:-6px;border-radius:22px;border:2px solid var(--aqua);animation:ping 1.6s ease-out infinite}
+@keyframes ping{from{opacity:1;transform:scale(.9)}to{opacity:0;transform:scale(1.25)}}
+.home.in .widget{animation:homeIn .6s cubic-bezier(.2,.9,.3,1.2) .05s forwards}
+.home.in .ic{animation:iconIn .55s cubic-bezier(.2,.9,.3,1.35) forwards;animation-delay:calc(.15s + var(--i) * .045s)}
+.home.in .dock{animation:homeIn .6s cubic-bezier(.2,.9,.3,1.2) .45s forwards}
+.home.in .dock .ic{animation-delay:calc(.55s + var(--i) * .05s)}
+@keyframes homeIn{to{opacity:1;transform:none}}
+@keyframes iconIn{to{opacity:1;transform:none}}
+.ic-shui{background:radial-gradient(circle at 32% 30%,#fff 0 6%,var(--aqua) 26%,#9d8cff 64%,#2c2370 100%)}
+.ic-work{background:linear-gradient(135deg,#7c5cff,#4a2fd0)}
+.ic-mig{background:linear-gradient(135deg,#0d3b1e,#39ff7a)}
+.ic-career{background:linear-gradient(135deg,#ff6b8b,#ffb547)}
+.ic-term{background:linear-gradient(135deg,#1b1838,#07060f);border:1px solid #2e2a55}
+.ic-log{background:linear-gradient(135deg,#ffb547,#ff7a3d)}
+.ic-gh{background:linear-gradient(135deg,#2b2a3a,#111)}
+.ic-li{background:linear-gradient(135deg,#2f7bd8,#1958a8)}
+.ic-li b{font-family:var(--sans);font-weight:800;font-size:26px;color:#fff;letter-spacing:-.04em}
+.ic-msg{background:linear-gradient(135deg,#5cf2da,#14b89c)}
+.ic-cv{background:linear-gradient(135deg,#ece9ff,#b9b2ef)}
+.ic-cv svg{stroke:#14112b!important}
+
+/* app window */
+.win{position:absolute;inset:0;z-index:40;display:none;flex-direction:column;background:var(--void);transform-origin:0 0;overflow:hidden;will-change:transform}
+.win.open{display:flex}
+.win-bar{flex:none;display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 34px) max(14px,env(safe-area-inset-right,0px)) 8px max(14px,env(safe-area-inset-left,0px));touch-action:none}
+.win-back{display:flex;align-items:center;gap:6px;font-size:16px;color:var(--aqua);padding:6px 4px}
+.win-back::before{content:"";width:10px;height:10px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
+.win-title{font-weight:600;font-size:16px}
+.win-body{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:0 max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 40px) max(16px,env(safe-area-inset-left,0px));opacity:0;transition:opacity .3s .15s}
+.win.shown .win-body{opacity:1}
+.win-handle{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 6px);width:134px;height:5px;margin-left:-67px;border-radius:5px;background:rgba(236,233,255,.6);z-index:3}
+.win-handle::before{content:"";position:absolute;inset:-18px -20px}
+.a-h{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 105;font-size:34px;line-height:1.02;letter-spacing:-.025em;margin:6px 0 10px;text-wrap:balance}
+.a-sub{color:var(--muted);font-size:15.5px;margin-bottom:22px}
+.a-lbl{font-family:var(--mono);font-size:12px;color:var(--aqua)}
+.a-sec{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 110;font-size:22px;margin:34px 0 14px}
+.pill-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:999px;background:var(--text);color:var(--void);font-weight:600;font-size:15px;text-decoration:none;width:100%}
+
+/* Shui app */
+.win[data-app="shui"]{background:radial-gradient(120% 60% at 50% 0%,rgba(124,92,255,.35),transparent 60%),#060c1f}
+.s-orb{position:relative;height:250px;margin:-6px -16px 0}
+.s-orb canvas{width:100%;height:100%}
+.s-state{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--aqua)}
+.s-cap{min-height:88px;background:rgba(12,24,56,.8);border:1px solid #22346a;border-radius:18px;padding:12px 14px;font-size:15.5px;line-height:1.45}
+.s-cap .who{color:var(--aqua);font-weight:600;margin-right:6px}
+.s-src{display:grid;gap:4px;margin-top:8px}
+.s-src a{font-family:var(--mono);font-size:12px;color:#8fa6cc;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s-chips{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.s-chip{text-align:left;border:1px solid #22346a;background:#13224a;padding:12px 14px;border-radius:16px;font-size:14.5px;transition:transform .15s}
+.s-chip:active{transform:scale(.97)}
+.s-chip[disabled]{opacity:.45}
+.s-row{display:flex;gap:8px;margin-top:10px}
+.s-row input{flex:1;min-width:0;background:#060e24;border:1px solid #22346a;border-radius:14px;padding:12px 14px;color:var(--text);font:inherit;font-size:16px;-webkit-user-select:text;user-select:text}
+.s-row button{background:var(--aqua);color:#032a26;font-weight:600;border-radius:14px;padding:0 16px}
+.s-voice{margin-top:10px;font-size:13.5px;color:#8fa6cc;border:1px solid #22346a;border-radius:999px;padding:8px 14px}
+.s-voice[aria-pressed="true"]{color:var(--aqua);border-color:var(--aqua)}
+.h-scroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}
+.h-scroll::-webkit-scrollbar{display:none}
+.h-card{flex:none;width:76%;scroll-snap-align:start;border-radius:20px;padding:18px;background:#0c1838;border:1px solid #22346a}
+.h-card small{font-family:var(--mono);font-size:12px;color:var(--aqua)}
+.h-card strong{display:block;font-size:18px;margin:6px 0}
+.h-card p{color:#a9b8d6;font-size:14.5px}
+.kv{display:grid;gap:1px;background:#22346a;border-radius:18px;overflow:hidden;border:1px solid #22346a}
+.kv div{background:#0a1430;padding:13px 14px}
+.kv dt{font-family:var(--mono);font-size:13px;color:var(--aqua)}
+.kv dd{font-size:14px;color:#a9b8d6}
+
+/* Work app: swipe deck */
+.deck{position:relative;height:min(62dvh,520px);margin:6px 0 16px}
+.dcard{position:absolute;inset:0;border-radius:28px;overflow:hidden;border:1px solid rgba(236,233,255,.12);background:var(--night);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;touch-action:none;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.dcard .card-art,.dcard .card-glyph{position:absolute}
+.dcard .card-art{inset:0;background:var(--art)}
+.dcard .card-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(16,14,34,.95) 66%)}
+.dcard .card-glyph{top:16px;left:20px;font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 150;font-size:70px;line-height:.9;color:rgba(255,255,255,.16)}
+.dcard>*:not(.card-art):not(.card-glyph):not(.stamp){position:relative}
+.dcard small{font-family:var(--mono);font-size:12px;color:var(--aqua)}
+.dcard h3{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 105;font-size:27px;line-height:1.05;margin:6px 0 8px}
+.dcard p{color:#cfcbea;font-size:15px;margin-bottom:12px}
+.stamp{position:absolute;top:24px;right:20px;font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 130;font-size:22px;padding:4px 12px;border:3px solid var(--aqua);color:var(--aqua);border-radius:10px;transform:rotate(12deg);opacity:0}
+.deck-ctl{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.deck-ctl button{width:56px;height:56px;border-radius:50%;border:1px solid var(--line);background:var(--night);display:grid;place-items:center}
+.deck-ctl button::before{content:"";width:12px;height:12px;border-left:2px solid var(--text);border-bottom:2px solid var(--text);transform:translateX(3px) rotate(45deg)}
+.deck-ctl button.nx::before{transform:translateX(-3px) rotate(-135deg)}
+.deck-ctl span{font-family:var(--mono);font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mini-list{list-style:none;border-top:1px solid var(--line)}
+.mini-list li{padding:14px 0;border-bottom:1px solid var(--line)}
+.mini-list strong{display:block;font-size:16px}
+.mini-list span{font-size:13.5px;color:var(--muted)}
+.mini-list em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--amber);margin-left:6px}
+
+/* Migrate app */
+.mig{position:relative;aspect-ratio:3/4;max-width:100%;border-radius:22px;overflow:hidden;touch-action:none;margin:4px 0 18px}
+.mig .legacy{position:absolute;inset:0;border-radius:22px;font-size:9.6px;padding:14px 10px;border-width:8px}
+.mig .modern{position:absolute;inset:0;clip-path:inset(0 0 0 50%);border-radius:22px}
+.mig .app{font-size:11px;padding:12px}
+.mig-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;margin-left:-1.5px;background:var(--aqua);box-shadow:0 0 20px 3px var(--aqua);z-index:3}
+.mig-handle i{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--aqua);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.mig-handle i::before{content:"‹ ›";font-weight:800;color:#032a26;font-size:18px;letter-spacing:2px}
+.mig-labels{position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;z-index:2;pointer-events:none}
+.mig-labels span{font-family:var(--mono);font-size:11px;padding:4px 8px;border-radius:6px;background:rgba(7,6,15,.75)}
+.big-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big-stats div{border-radius:18px;background:var(--night);border:1px solid var(--line);padding:16px}
+.big-stats strong{display:block;font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 130;font-size:40px;line-height:1}
+.big-stats span{font-size:13.5px;color:var(--muted)}
+
+/* Career app: stories */
+.win[data-app="career"] .win-body{padding:0;display:flex;flex-direction:column}
+.story-wrap{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;padding:6px max(18px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 30px) max(18px,env(safe-area-inset-left,0px));background:var(--sbg,var(--void));transition:background .6s}
+.segs{display:flex;gap:4px;margin-bottom:22px}
+.segs span{flex:1;height:3px;border-radius:3px;background:rgba(236,233,255,.25);overflow:hidden}
+.segs i{display:block;height:100%;width:0;background:var(--text)}
+.story-in{flex:1;display:flex;flex-direction:column;justify-content:center;animation:storyIn .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes storyIn{from{opacity:0;transform:translateX(30px)}}
+.story-in time{font-family:var(--mono);font-size:13px;color:var(--aqua)}
+.story-in h3{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 100;font-size:36px;line-height:1.02;letter-spacing:-.025em;margin:8px 0 6px;text-wrap:balance}
+.story-in .org{color:rgba(236,233,255,.7);margin-bottom:18px;font-size:15px}
+.story-in ul{list-style:none;display:grid;gap:10px}
+.story-in li{position:relative;padding-left:20px;font-size:15.5px;line-height:1.45}
+.story-in li::before{content:"";position:absolute;left:0;top:10px;width:9px;height:2px;background:var(--aqua)}
+.story-tap{position:absolute;inset:60px 0 0;display:grid;grid-template-columns:1fr 2fr;z-index:2}
+.story-hint{text-align:center;font-size:12.5px;color:rgba(236,233,255,.6);margin-top:14px}
+
+/* Terminal app */
+.win[data-app="term"]{background:#05040b}
+.term{font-family:var(--mono);font-size:13.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;color:#cfcbea;min-height:46dvh}
+.term .p{color:var(--aqua)}
+.term .k{color:var(--violet)}
+.term .g{color:#39ff7a}
+.term .c{display:inline-block;width:8px;height:15px;background:var(--aqua);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.cmds{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cmds button{font-family:var(--mono);font-size:13px;border:1px solid #2e2a55;background:#110f22;border-radius:10px;padding:9px 11px;color:var(--text)}
+.cmds button.hot{border-color:var(--coral);color:var(--coral)}
+
+/* Messages app */
+.win[data-app="msg"] .win-body{display:flex;flex-direction:column}
+.thread{display:flex;flex-direction:column;gap:6px;padding-top:6px;flex:1}
+.who-head{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:14px}
+.who-head i{width:64px;height:64px;border-radius:50%;background:var(--aurora);display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;font-size:24px;color:var(--void)}
+.who-head span{font-size:13px;color:var(--muted)}
+.bub{max-width:80%;padding:10px 14px;border-radius:20px;font-size:15.5px;line-height:1.4;animation:pop .35s cubic-bezier(.2,.9,.3,1.3)}
+.bub.them{align-self:flex-start;background:#1d1a38;border-bottom-left-radius:6px}
+.bub.me{align-self:flex-end;background:var(--violet);color:#fff;border-bottom-right-radius:6px}
+.bub a,.bub button{color:var(--aqua);font-weight:600;text-decoration:none}
+.bub.card{display:flex;align-items:center;gap:12px}
+.bub.card b{width:38px;height:44px;border-radius:6px;background:#ece9ff;color:#14112b;display:grid;place-items:center;font-size:11px;font-family:var(--mono)}
+.typing{align-self:flex-start;display:flex;gap:4px;padding:14px 16px;border-radius:20px;background:#1d1a38}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{transform:translateY(-4px);opacity:.4}}
+.replies{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding:16px 0 4px}
+.replies button{border:1px solid var(--violet);color:var(--text);border-radius:999px;padding:10px 14px;font-size:14.5px;background:rgba(124,92,255,.12)}
+
+/* Build log app */
+.logs{display:grid;gap:10px}
+.logs div{display:flex;gap:12px;padding:14px;border-radius:20px;background:var(--night);border:1px solid var(--line);animation:noteIn .5s cubic-bezier(.2,.9,.3,1.2) both;animation-delay:calc(var(--i) * .07s)}
+.logs i{flex:none;width:34px;height:34px;border-radius:10px;font-style:normal}
+.logs strong{display:flex;justify-content:space-between;gap:8px;font-size:15px}
+.logs strong span{font-weight:400;font-size:12px;color:var(--muted);font-family:var(--mono);white-space:nowrap}
+.logs p{font-size:14px;color:var(--muted);line-height:1.4}
+@media(prefers-reduced-motion:reduce){#os *{animation-duration:.001ms!important;animation-delay:0s!important}}
 </style>
 </head>
 <body>
@@ -697,6 +924,59 @@ dialog.pal::backdrop{background:rgba(7,6,15,.6);backdrop-filter:blur(4px)}
 </dialog>
 <div class="toast" id="toast" role="status"></div>
 
+<!-- ================= PHONE: Prajwal OS ================= -->
+<div id="os" aria-label="Prajwal's portfolio as a phone">
+  <div class="os-wall" aria-hidden="true"></div>
+  <div class="os-top"><b id="osHomeBtn">PY OS</b><span id="osTime">10:02</span></div>
+
+  <section class="lock" id="lock">
+    <p class="lock-date" id="lockDate">Saturday, 24 October</p>
+    <p class="lock-clock" id="lockClock">10:02</p>
+    <canvas id="lockName" aria-label="Prajwal"></canvas>
+    <p class="lock-tag">Full-stack .NET engineer who builds with AI</p>
+    <div class="notes">
+      <div class="note" style="--i:0"><i class="ic-shui"></i><div><strong>Shui.AI <span>now</span></strong><p>Joined "Platform sync" and answered with 2 sources.</p></div></div>
+      <div class="note" style="--i:1"><i class="ic-work" style="display:grid;place-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i><div><strong>CI <span>2m ago</span></strong><p>82 tests passed. Deployed to Kubernetes.</p></div></div>
+      <div class="note" style="--i:2"><i class="ic-mig"></i><div><strong>Store apps <span>today</span></strong><p>Gift card platform running in 40+ stores.</p></div></div>
+    </div>
+    <button class="unlock" id="unlockBtn" type="button"><span class="chev" aria-hidden="true"></span>Swipe up to open<span class="bar-ind" aria-hidden="true"></span></button>
+  </section>
+
+  <section class="home" id="home" aria-label="Home screen">
+    <div class="widget">
+      <h1>Prajwal Yathiraj</h1>
+      <p>Lead Software Engineer, full-stack .NET with AI</p>
+      <div class="w-stats">
+        <div><strong>7+</strong><span>years</span></div>
+        <div><strong>35+</strong><span>apps built</span></div>
+        <div><strong>40+</strong><span>stores live</span></div>
+      </div>
+      <div class="w-live"><b aria-hidden="true"></b>Open to lead and principal roles</div>
+    </div>
+    <nav class="grid" aria-label="Apps">
+      <button class="ic" type="button" data-app="mig" style="--i:0"><i class="ic-mig"><svg viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></i><span>Migrate</span></button>
+      <button class="ic" type="button" data-app="career" style="--i:1"><i class="ic-career"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></i><span>Career</span></button>
+      <button class="ic" type="button" data-app="term" style="--i:2"><i class="ic-term"><svg viewBox="0 0 24 24"><path d="M5 8l4 4-4 4M12 16h7"/></svg></i><span>Stack</span></button>
+      <button class="ic" type="button" data-app="log" style="--i:3"><i class="ic-log"><svg viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></svg><b class="badge">6</b></i><span>Build log</span></button>
+      <a class="ic" href="https://github.com/yathirajprajwal" target="_blank" rel="noopener" style="--i:4"><i class="ic-gh"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></i><span>GitHub</span></a>
+      <a class="ic" href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank" rel="noopener" style="--i:5"><i class="ic-li"><b>in</b></i><span>LinkedIn</span></a>
+    </nav>
+    <button class="now" type="button" data-app="shui" id="nowCard"><span class="now-orb" aria-hidden="true"></span><span class="now-txt"><small>Now building</small><strong>Shui.AI, my AI meeting teammate</strong><em>Tap to try the live demo</em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+    <nav class="dock" aria-label="Dock">
+      <button class="ic" type="button" data-app="msg" style="--i:0"><i class="ic-msg"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><b class="badge">1</b></i><span>Messages</span></button>
+      <button class="ic ping" type="button" data-app="shui" style="--i:1"><i class="ic-shui"></i><span>Shui</span></button>
+      <button class="ic" type="button" data-app="work" style="--i:2"><i class="ic-work"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></i><span>Work</span></button>
+      <a class="ic" href="Prajwal_Yathiraj_Resume.pdf" target="_blank" rel="noopener" style="--i:3"><i class="ic-cv"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg></i><span>Resume</span></a>
+    </nav>
+  </section>
+
+  <div class="win" id="win" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+    <header class="win-bar" id="winBar"><button class="win-back" id="winBack" type="button">Home</button><span class="win-title" id="winTitle"></span><span style="width:56px"></span></header>
+    <div class="win-body" id="winBody"></div>
+    <button class="win-handle" id="winHandle" type="button" aria-label="Back to home"></button>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
@@ -707,6 +987,7 @@ dialog.pal::backdrop{background:rgba(7,6,15,.6);backdrop-filter:blur(4px)}
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(pointer: fine)').matches;
   const mobile = () => innerWidth <= 760;
+  if (document.documentElement.classList.contains('phone')) return;
   const G = window.gsap, ST = window.ScrollTrigger;
   if (G && ST) G.registerPlugin(ST);
   const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1800); };
@@ -1100,6 +1381,394 @@ dialog.pal::backdrop{background:rgba(7,6,15,.6);backdrop-filter:blur(4px)}
     if (e.key === 'Enter') { runPal(active); e.preventDefault(); }
   });
   addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal.open ? pal.close() : openPal(); } });
+})();
+</script>
+
+<script>
+/* Phone experience: the portfolio as a small OS. Runs only when the page opened at phone width. */
+(() => {
+  if (!document.documentElement.classList.contains('phone')) return;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const buzz = ms => { try { navigator.vibrate && navigator.vibrate(ms || 8); } catch (e) {} };
+  const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+  const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1800); };
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- clock ---------- */
+  function tick() {
+    const d = new Date();
+    const hm = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }).replace(/\s?[AP]M/i, '');
+    $('#osTime').textContent = hm; $('#lockClock').textContent = hm;
+    $('#lockDate').textContent = d.toLocaleDateString([], { weekday: 'long', day: 'numeric', month: 'long' });
+  }
+  tick(); setInterval(tick, 10000);
+
+  /* ---------- lock screen particle name ---------- */
+  const nc = $('#lockName'), nx = nc.getContext('2d');
+  let dots = [], nw = 0, nh = 0, touch = { x: -999, y: -999 }, lockLive = true;
+  const pal = ['#7c5cff', '#9d8cff', '#5cf2da', '#ff6b8b', '#ffb547'];
+  function buildName() {
+    const d = Math.min(devicePixelRatio || 1, 2); nw = nc.clientWidth; nh = nc.clientHeight;
+    nc.width = nw * d; nc.height = nh * d; nx.setTransform(d, 0, 0, d, 0, 0);
+    const o = document.createElement('canvas').getContext('2d'); o.canvas.width = nw; o.canvas.height = nh;
+    let size = nh * .9; o.font = `900 ${size}px Anybody, 'Arial Black', sans-serif`;
+    const w = o.measureText('PRAJWAL').width; if (w > nw * .96) { size *= nw * .96 / w; o.font = `900 ${size}px Anybody, 'Arial Black', sans-serif`; }
+    o.fillStyle = '#fff'; o.textAlign = 'center'; o.textBaseline = 'middle'; o.fillText('PRAJWAL', nw / 2, nh / 2);
+    const data = o.getImageData(0, 0, nw, nh).data; dots = [];
+    for (let y = 0; y < nh; y += 3) for (let x = 0; x < nw; x += 3) if (data[(y * nw + x) * 4 + 3] > 128)
+      dots.push({ tx: x, ty: y, x: Math.random() * nw, y: Math.random() * nh * 3 - nh, vx: 0, vy: 0, c: pal[Math.floor(x / nw * 4.99)] });
+    if (reduce) dots.forEach(p => { p.x = p.tx; p.y = p.ty; });
+  }
+  function drawName() {
+    if (!lockLive) return;
+    nx.clearRect(0, 0, nw, nh);
+    for (const p of dots) {
+      let ax = (p.tx - p.x) * .07, ay = (p.ty - p.y) * .07;
+      const dx = p.x - touch.x, dy = p.y - touch.y, d2 = dx * dx + dy * dy;
+      if (d2 < 3600) { const f = (1 - d2 / 3600) * 7, d = Math.sqrt(d2) || 1; ax += dx / d * f; ay += dy / d * f; }
+      p.vx = (p.vx + ax) * .8; p.vy = (p.vy + ay) * .8; p.x += p.vx; p.y += p.vy;
+      nx.fillStyle = p.c; nx.fillRect(p.x, p.y, 2.2, 2.2);
+    }
+    requestAnimationFrame(drawName);
+  }
+  const fontsReady = document.fonts ? Promise.race([document.fonts.ready, wait(1200)]) : Promise.resolve();
+  fontsReady.then(() => { buildName(); drawName(); });
+  nc.addEventListener('pointermove', e => { const k = nc.getBoundingClientRect(); touch.x = e.clientX - k.left; touch.y = e.clientY - k.top; });
+  nc.addEventListener('pointerdown', e => { const k = nc.getBoundingClientRect(); touch.x = e.clientX - k.left; touch.y = e.clientY - k.top; buzz(6); });
+  nc.addEventListener('pointerup', () => { touch.x = touch.y = -999; });
+  nc.addEventListener('pointerleave', () => { touch.x = touch.y = -999; });
+
+  /* ---------- unlock ---------- */
+  const lock = $('#lock'), home = $('#home');
+  let startY = null, dragY = 0, startT = 0, onName = false;
+  function unlock() {
+    if (lock.classList.contains('gone')) return;
+    buzz(14); lock.style.transform = ''; lock.classList.add('gone');
+    home.classList.add('in'); setTimeout(() => { lockLive = false; }, 700);
+    try { sessionStorage.setItem('pyos-unlocked', '1'); } catch (e) {}
+  }
+  lock.addEventListener('pointerdown', e => { onName = e.target === nc; if (onName) return; startY = e.clientY; startT = performance.now(); dragY = 0; lock.style.transition = 'none'; });
+  lock.addEventListener('pointermove', e => { if (startY === null) return; dragY = Math.min(0, e.clientY - startY); lock.style.transform = `translateY(${dragY}px)`; lock.style.opacity = 1 + dragY / innerHeight; });
+  const endDrag = () => {
+    if (startY === null) return; const v = -dragY / (performance.now() - startT); startY = null; lock.style.transition = '';
+    if (-dragY > innerHeight * .18 || v > .6) unlock(); else { lock.style.transform = ''; lock.style.opacity = ''; }
+  };
+  lock.addEventListener('pointerup', endDrag); lock.addEventListener('pointercancel', endDrag);
+  $('#unlockBtn').addEventListener('click', unlock);
+  $('#osHomeBtn').addEventListener('click', () => { if (win.classList.contains('open')) closeApp(); });
+  try { if (sessionStorage.getItem('pyos-unlocked')) { lock.remove(); home.classList.add('in'); lockLive = false; } } catch (e) {}
+
+  /* ---------- app window with zoom from icon ---------- */
+  const win = $('#win'), body = $('#winBody'), title = $('#winTitle');
+  let fromIcon = null, current = null, cleanup = null;
+  const apps = {};
+  function zoomFrom(el, opening) {
+    const r = el.querySelector('i').getBoundingClientRect(), W = innerWidth, H = innerHeight;
+    const t = `translate(${r.left}px,${r.top}px) scale(${r.width / W},${r.height / H})`;
+    if (reduce) return Promise.resolve();
+    win.style.transition = 'none';
+    win.style.transform = opening ? t : 'none'; win.style.borderRadius = opening ? '60px' : '0';
+    void win.offsetWidth;
+    win.style.transition = 'transform .5s cubic-bezier(.2,.85,.2,1), border-radius .5s';
+    win.style.transform = opening ? 'none' : t; win.style.borderRadius = opening ? '0' : '60px';
+    return new Promise(res => setTimeout(res, 500));
+  }
+  async function openApp(name, icon) {
+    if (current) return; current = name; fromIcon = icon; buzz(10);
+    $$('.ic.ping').forEach(i => i.classList.remove('ping'));
+    const badge = icon && icon.querySelector('.badge'); if (badge) badge.remove();
+    win.dataset.app = name; title.textContent = apps[name].title; body.innerHTML = ''; body.scrollTop = 0;
+    win.classList.add('open'); home.classList.add('dim');
+    try { history.pushState({ app: name }, ''); } catch (e) {}
+    cleanup = apps[name].mount(body) || null;
+    await zoomFrom(icon, true); win.classList.add('shown');
+  }
+  async function closeApp(fromPop) {
+    if (!current) return; buzz(8);
+    if (cleanup) { cleanup(); cleanup = null; }
+    win.classList.remove('shown'); home.classList.remove('dim');
+    await zoomFrom(fromIcon, false);
+    win.classList.remove('open'); win.style.transform = ''; current = null;
+    if (!fromPop) { try { if (history.state && history.state.app) history.back(); } catch (e) {} }
+  }
+  addEventListener('popstate', () => { if (current) closeApp(true); });
+  $$('.ic[data-app]').forEach(b => b.addEventListener('click', () => openApp(b.dataset.app, b)));
+  $('#nowCard').addEventListener('click', () => openApp('shui', $('.ic[data-app="shui"]')));
+  $('#winBack').addEventListener('click', () => closeApp());
+  $('#winHandle').addEventListener('click', () => closeApp());
+  // drag the title bar down to close
+  let barY = null, barD = 0;
+  $('#winBar').addEventListener('pointerdown', e => { if (e.target.closest('button')) return; barY = e.clientY; barD = 0; win.style.transition = 'none'; });
+  addEventListener('pointermove', e => { if (barY === null) return; barD = Math.max(0, e.clientY - barY); const s = 1 - Math.min(barD / innerHeight, .3); win.style.transform = `translateY(${barD}px) scale(${s})`; win.style.borderRadius = Math.min(barD / 3, 40) + 'px'; });
+  addEventListener('pointerup', () => { if (barY === null) return; barY = null; if (barD > 110) closeApp(); else { win.style.transition = 'transform .3s'; win.style.transform = 'none'; win.style.borderRadius = '0'; } });
+  const openByName = n => openApp(n, $(`.ic[data-app="${n}"]`));
+
+  /* ---------- Shui ---------- */
+  const SRC = 'https://github.com/yathirajprajwal/shui-ai-assistant';
+  const shuiScript = {
+    sync: { q: 'Hey Shui, why did the last sync skip some files?', asker: 'Dev', say: "It skipped files whose content hasn't changed since the last sync, and removed files that were deleted in the repository. Vendored, generated, binary and oversized files are filtered out on purpose.", sources: [['1', 'docs/architecture.md', SRC + '/blob/main/docs/architecture.md'], ['2', 'GitHub/GitHubFileFilter.cs', SRC + '/blob/main/src/Shui.Infrastructure/GitHub/GitHubFileFilter.cs']] },
+    catchup: { q: 'Hey Shui, catch me up.', asker: 'Nik', say: 'You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work without a screen. Action item: Dev spikes it by Friday.', sources: [['', "From this call's live captions", null]] },
+    secret: { q: "Hey Shui, what's this quarter's revenue?", asker: 'Priya', say: "I can't answer that here. Everyone in the call hears my answers, so I only use material the whole team is allowed to see.", sources: [['', 'Room rule', null]] },
+    unknown: { q: 'Hey Shui, who wrote the original COBOL?', asker: 'Nik', say: "I don't have a source for that, so I won't guess.", sources: [['', 'No source, no answer', null]] }
+  };
+  apps.shui = { title: 'Shui.AI', mount(el) {
+    el.innerHTML = `
+      <span class="a-lbl">Personal project</span>
+      <h2 class="a-h">An AI teammate that joins your meetings.</h2>
+      <p class="a-sub">Built solo in .NET 10. Say "Hey Shui" in Google Meet and it answers out loud from your code, PRs, issues and docs, with sources.</p>
+      <div class="s-orb"><canvas></canvas><span class="s-state">tap a question</span></div>
+      <div class="s-cap" id="sCap"><span class="who">Priya</span>Okay, let's start. Ask Shui something.</div>
+      <div class="s-chips">
+        <button class="s-chip" data-q="sync">${shuiScript.sync.q}</button>
+        <button class="s-chip" data-q="catchup">${shuiScript.catchup.q}</button>
+        <button class="s-chip" data-q="secret">${shuiScript.secret.q}</button>
+        <button class="s-chip" data-q="unknown">${shuiScript.unknown.q}</button>
+      </div>
+      <form class="s-row" id="sForm"><label class="sr" for="sInput">Ask Shui</label><input id="sInput" placeholder="Hey Shui, …" autocomplete="off" maxlength="140"><button type="submit">Ask</button></form>
+      <button class="s-voice" id="sVoice" type="button" aria-pressed="false">Voice off</button>
+      <h3 class="a-sec">How it works</h3>
+      <div class="h-scroll">
+        <div class="h-card"><small>Step 1</small><strong>It joins by itself</strong><p>Invite it in Calendar or add it mid-call. Several calls at once.</p></div>
+        <div class="h-card"><small>Step 2</small><strong>It waits its turn</strong><p>Reads live captions and never talks over people.</p></div>
+        <div class="h-card"><small>Step 3</small><strong>It cites sources</strong><p>Hybrid search filtered by permissions. No source, no answer.</p></div>
+        <div class="h-card"><small>Step 4</small><strong>It writes the notes</strong><p>Summary, decisions and action items after the call.</p></div>
+      </div>
+      <h3 class="a-sec">Built with</h3>
+      <dl class="kv">
+        <div><dt>.NET 10, ASP.NET Core MVC</dt><dd>Razor views, JSON API, background workers</dd></div>
+        <div><dt>Microsoft.Extensions.AI</dt><dd>One interface for every model</dd></div>
+        <div><dt>PostgreSQL + pgvector</dt><dd>Vector plus full-text search with rank fusion</dd></div>
+        <div><dt>Playwright</dt><dd>Drives a real browser into Google Meet</dd></div>
+        <div><dt>Kokoro TTS, SearXNG</dt><dd>Self-hosted voice, private web search</dd></div>
+        <div><dt>Free model chain</dt><dd>Gemini, Groq, Cerebras, OpenRouter, Mistral, then Ollama</dd></div>
+        <div><dt>Docker, GitHub Actions</dt><dd>One-command deploy, CI with 80+ tests</dd></div>
+      </dl>
+      <p class="a-sub" style="margin-top:18px">About 7,500 lines of C#. First commit to speaking in Meet took two days.</p>
+      <a class="pill-btn" href="${SRC}" target="_blank" rel="noopener">Read the code on GitHub</a>`;
+    // orb
+    const c = el.querySelector('canvas'), x = c.getContext('2d'), stateEl = el.querySelector('.s-state');
+    let mode = 0, alive = true, w, h;
+    const size = () => { const d = Math.min(devicePixelRatio || 1, 2); w = c.clientWidth; h = c.clientHeight; c.width = w * d; c.height = h * d; x.setTransform(d, 0, 0, d, 0, 0); };
+    function draw(t) {
+      if (!alive) return; if (!w) size();
+      x.clearRect(0, 0, w, h); const cx = w / 2, cy = h / 2 - 8, b = Math.min(w, h) * .28;
+      const amp = [6, 4, 26][mode], spd = [.0012, .004, .005][mode];
+      for (let k = 0; k < 3; k++) { x.beginPath(); x.arc(cx, cy, b * (1.3 + k * .28) + Math.sin(t * .002 + k) * (mode === 1 ? 10 : 4), 0, 7); x.strokeStyle = `rgba(92,242,218,${.18 - k * .05})`; x.lineWidth = 1.5; x.stroke(); }
+      x.globalCompositeOperation = 'lighter';
+      [['rgba(124,92,255,.6)', 1.1, 0], ['rgba(92,242,218,.6)', 1, 2], ['rgba(255,107,139,.4)', .9, 4]].forEach(([col, sc, ph]) => {
+        x.beginPath();
+        for (let a = 0; a <= 6.3; a += .07) { const r = b * sc + Math.sin(a * 3 + t * spd * 1.3 + ph) * amp + Math.sin(a * 5 - t * spd + ph) * amp * .6; a ? x.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r) : x.moveTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); }
+        const g = x.createRadialGradient(cx - b * .3, cy - b * .3, b * .1, cx, cy, b * 1.3); g.addColorStop(0, 'rgba(255,255,255,.18)'); g.addColorStop(.4, col); g.addColorStop(1, 'rgba(6,12,31,0)'); x.fillStyle = g; x.fill();
+      });
+      x.globalCompositeOperation = 'source-over';
+      requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+    const cap = el.querySelector('#sCap'), chips = $$('.s-chip', el), voice = el.querySelector('#sVoice');
+    let voiceOn = false, busy = false; const hasSpeech = 'speechSynthesis' in window; if (!hasSpeech) voice.hidden = true;
+    voice.addEventListener('click', () => { voiceOn = !voiceOn; voice.setAttribute('aria-pressed', voiceOn); voice.textContent = voiceOn ? 'Voice on' : 'Voice off'; buzz(); if (!voiceOn) speechSynthesis.cancel(); });
+    const pickVoice = () => { const v = speechSynthesis.getVoices().filter(z => /^en/i.test(z.lang)); return v.find(z => /female|samantha|zira|jenny|aria|libby|sonia|victoria|karen|moira|tessa/i.test(z.name)) || v[0]; };
+    const speak = s => new Promise(res => { if (!voiceOn || !hasSpeech) return wait(Math.min(5000, 900 + s.length * 30)).then(res); speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(s); const v = pickVoice(); if (v) u.voice = v; u.rate = 1.03; u.pitch = 1.08; u.onend = u.onerror = res; speechSynthesis.speak(u); });
+    async function run(key, custom) {
+      if (busy) return; busy = true; chips.forEach(b => b.disabled = true); buzz();
+      const it = shuiScript[key] || shuiScript.unknown, q = custom ? esc(custom) : it.q, who = custom ? 'You' : it.asker;
+      cap.innerHTML = `<span class="who">${who}</span>${q}`; mode = 0; stateEl.textContent = 'listening';
+      cap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      await wait(1100); mode = 1; stateEl.textContent = 'searching sources';
+      await wait(1000); mode = 2; stateEl.textContent = 'speaking'; buzz(12);
+      const src = '<div class="s-src">' + it.sources.map(([n, l, u]) => u ? `<a href="${u}" target="_blank" rel="noopener">[${n}] ${l}</a>` : `<a>${l}</a>`).join('') + '</div>';
+      cap.innerHTML = `<span class="who">Shui</span>${it.say}${src}`;
+      await speak(it.say); mode = 0; stateEl.textContent = 'tap a question'; busy = false; chips.forEach(b => b.disabled = false);
+    }
+    chips.forEach(b => b.addEventListener('click', () => run(b.dataset.q)));
+    el.querySelector('#sForm').addEventListener('submit', e => {
+      e.preventDefault(); const inp = el.querySelector('#sInput'); const v = inp.value.trim(); if (!v) return; inp.value = ''; inp.blur();
+      const t = v.toLowerCase(); const k = /catch|missed|recap|summar/.test(t) ? 'catchup' : /sync|skip|file|repo|github/.test(t) ? 'sync' : /revenue|salary|profit|confidential/.test(t) ? 'secret' : 'unknown';
+      run(k, /^(hey|hi)\s+sh/i.test(v) ? v : 'Hey Shui, ' + v);
+    });
+    return () => { alive = false; if (hasSpeech) speechSynthesis.cancel(); };
+  } };
+
+  /* ---------- Work: swipe deck ---------- */
+  const featured = [
+    ['Store Gift Card Platform', 'PCAP / PCAR', 'Promotional gift card activation and returns. Azure AD, Graph roles, barcode scanning. Live in 40+ stores.', ['.NET 10', 'MVC', 'Azure AD', 'Kubernetes'], 'GIFT', ['#7c5cff', '#ff6b8b']],
+    ['Returns Management', 'Mainframe replacement', 'Replaces the PICICPS1 green screens so associates find a sale in seconds.', ['.NET 10', 'ASP.NET Core MVC', 'SQL Server'], 'RTN', ['#5cf2da', '#7c5cff']],
+    ['Sales Trickle Dashboard', 'Real-time monitoring', 'Live POS transactions, store health and sales flow across every store.', ['ASP.NET Core', 'JavaScript', 'SQL Server'], 'LIVE', ['#ffb547', '#ff6b8b']],
+    ['Electronic Journal Viewer', 'Receipts and TLOGs', 'Receipt viewer, TLOG download and bulk ZIP export for big result sets.', ['ASP.NET MVC', 'jQuery', 'AWS S3'], 'EJ', ['#7c5cff', '#5cf2da']],
+    ['Authentication Platform', 'Okta to Azure AD', 'Led the Okta to Azure AD move with OAuth 2.0, OIDC, Graph and roles.', ['Azure AD', 'OIDC', 'Graph API'], 'AUTH', ['#ff6b8b', '#7c5cff']],
+    ['MuleTranslator API', 'Java to .NET', 'Replaced an AWS Spring Boot service for customer and shipping data from POS.', ['.NET 10', 'REST', 'SQL Server'], 'API', ['#5cf2da', '#ffb547']],
+    ['POS Extract', 'Batch job to console app', 'SQL Server to S3 JSON extracts, replacing a mainframe job. Hours to under 5 minutes.', ['.NET 10', 'Console', 'AWS S3'], 'S3', ['#ffb547', '#7c5cff']],
+    ['Store iPad Apps', 'Native iOS', 'In-store iPads where customers apply for the store credit card.', ['Swift', 'Xcode', 'REST'], 'iOS', ['#9d8cff', '#5cf2da']]
+  ];
+  const rest = [['Store Health Dashboard', 'Connectivity across stores'], ['NOC Dashboard', 'Operations wall view'], ['Error Monitoring Portal', 'Failed POS transactions'], ['Incident Management Portal', 'Incidents start to finish'], ['Credit System Management', 'AD/LDAP to Entra ID', 1], ['Secure Middleware', 'TLS, Okta, MFA, Akamai'], ['Snowflake Integration', 'JWT reporting pipelines'], ['Payment Integration', 'Cybersource'], ['Sales Price Adjustment', 'Approvals and rules'], ['MyAssociate', 'Associate management'], ['PCAP Returns eGift Connector', 'eGift card returns'], ['SaaS Business Platform', 'Infolink Technologies']];
+  apps.work = { title: 'Work', mount(el) {
+    el.innerHTML = `<span class="a-lbl">At Saks, Hudson's Bay, Neiman Marcus</span><h2 class="a-h">Swipe through what I've shipped.</h2>
+      <div class="deck" id="deck"></div>
+      <div class="deck-ctl"><button class="pv" type="button" aria-label="Previous"></button><span id="dCount">1 / 8</span><button class="nx" type="button" aria-label="Next"></button></div>
+      <h3 class="a-sec">And 12 more</h3><ul class="mini-list">${rest.map(r => `<li><strong>${r[0]}</strong><span>${r[1]}</span>${r[2] ? '<em>in progress</em>' : ''}</li>`).join('')}</ul>`;
+    const deck = el.querySelector('#deck'), count = el.querySelector('#dCount');
+    let order = featured.map((_, i) => i), top = 0;
+    function render() {
+      deck.innerHTML = '';
+      order.slice(0, 3).reverse().forEach((idx, j, arr) => {
+        const f = featured[idx], depth = arr.length - 1 - j;
+        const d = document.createElement('article'); d.className = 'dcard';
+        d.style.setProperty('--art', `radial-gradient(120% 80% at 10% 0%,${f[5][0]}dd,transparent 60%),radial-gradient(90% 70% at 100% 30%,${f[5][1]}bb,transparent 60%),linear-gradient(160deg,#1a1640,#100e22)`);
+        d.style.transform = `translateY(${depth * 14}px) scale(${1 - depth * .05})`; d.style.zIndex = 10 - depth;
+        d.innerHTML = `<div class="card-art"></div><div class="card-glyph" aria-hidden="true">${f[4]}</div><span class="stamp">SHIPPED</span><small>${f[1]}</small><h3>${f[0]}</h3><p>${f[2]}</p><div class="techs">${f[3].map(t => `<span>${t}</span>`).join('')}</div>`;
+        deck.appendChild(d); if (depth === 0) drag(d);
+      });
+      count.textContent = `${order[0] + 1} / 8`;
+    }
+    function fling(card, dir) {
+      buzz(12); card.style.transition = 'transform .45s cubic-bezier(.3,.7,.3,1), opacity .45s';
+      card.style.transform = `translate(${dir * innerWidth * 1.3}px, -40px) rotate(${dir * 30}deg)`; card.style.opacity = '0';
+      setTimeout(() => { if (dir > 0) order.push(order.shift()); else order.unshift(order.pop()); render(); }, 260);
+    }
+    function drag(card) {
+      let sx = 0, sy = 0, dx = 0, on = false; const stamp = card.querySelector('.stamp');
+      card.addEventListener('pointerdown', e => { on = true; sx = e.clientX; sy = e.clientY; dx = 0; card.style.transition = 'none'; card.setPointerCapture(e.pointerId); });
+      card.addEventListener('pointermove', e => { if (!on) return; dx = e.clientX - sx; const dy = (e.clientY - sy) * .3; card.style.transform = `translate(${dx}px,${dy}px) rotate(${dx / 14}deg)`; stamp.style.opacity = clamp(Math.abs(dx) / 120, 0, 1); });
+      const end = () => { if (!on) return; on = false; if (Math.abs(dx) > 90) fling(card, dx > 0 ? 1 : -1); else { card.style.transition = ''; card.style.transform = ''; stamp.style.opacity = 0; } };
+      card.addEventListener('pointerup', end); card.addEventListener('pointercancel', end);
+    }
+    el.querySelector('.nx').addEventListener('click', () => fling(deck.lastElementChild, 1));
+    el.querySelector('.pv').addEventListener('click', () => { buzz(); order.unshift(order.pop()); render(); });
+    render();
+  } };
+
+  /* ---------- Migrate: drag to compare ---------- */
+  const legacy = ['<span class="hi">PICICPS1</span>   TRAN INQUIRY   10/24/26', '<span class="dim">STORE:</span> 0412 <span class="dim">REG:</span> 07', '<span class="dim">--------------------------------</span>', ' DATE     TYPE   AMOUNT  STATUS', ' 10/23/26 SALE   129.00  POSTED', ' 10/23/26 RTN    -42.50  PENDNG', ' 10/23/26 SALE   310.75  POSTED', ' 10/24/26 EXCH     0.00  POSTED', '', '', '', '', '<span class="dim">--------------------------------</span>', ' PF3=EXIT  PF7=BK  PF8=FWD', '<span class="hi">===&gt;</span> █'].join('\n');
+  apps.mig = { title: 'Migrate', mount(el) {
+    el.innerHTML = `<span class="a-lbl">At work</span><h2 class="a-h">Drag the line. Mainframe to .NET 10.</h2>
+      <div class="mig" id="mig">
+        <div class="scr legacy">${legacy}</div>
+        <div class="scr modern" id="migM"><div class="chrome"><i></i><i></i><i></i><span>returns.store-apps</span></div>
+          <div class="app"><div class="app-top"><strong>Returns lookup</strong><span>Store 0412</span></div><div class="filters"><span class="on">7 days</span><span>Reg 07</span><span>Pending</span></div>
+          <table><thead><tr><th>Date</th><th>Type</th><th style="text-align:right">Amount</th></tr></thead><tbody>
+          <tr><td>Oct 23</td><td>Sale</td><td class="n">$129.00</td></tr><tr><td>Oct 23</td><td>Return <span class="pill wait">Pending</span></td><td class="n">−$42.50</td></tr><tr><td>Oct 23</td><td>Sale</td><td class="n">$310.75</td></tr><tr><td>Oct 24</td><td>Exchange</td><td class="n">$0.00</td></tr></tbody></table>
+          <div class="app-foot"><span>.NET 10</span><span>MVC</span><span>SQL Server</span></div></div></div>
+        <div class="mig-handle" id="migH"><i></i></div>
+        <div class="mig-labels"><span>Before</span><span>After</span></div>
+      </div>
+      <div class="big-stats"><div><strong>25+</strong><span>UC4/DB2 batch jobs moved</span></div><div><strong>6</strong><span>applications rebuilt on .NET 10</span></div></div>
+      <p class="a-sub" style="margin-top:18px">Part of my job is retiring the mainframe without breaking the stores, as a key contributor to an $8M decommissioning program.</p>`;
+    const box = el.querySelector('#mig'), m = el.querySelector('#migM'), h = el.querySelector('#migH');
+    let p = .5, last = 0;
+    const set = v => { p = clamp(v, 0, 1); m.style.clipPath = `inset(0 0 0 ${p * 100}%)`; h.style.left = p * 100 + '%'; const s = Math.round(p * 10); if (s !== last) { last = s; buzz(4); } };
+    const at = e => { const k = box.getBoundingClientRect(); set((e.clientX - k.left) / k.width); };
+    let on = false;
+    box.addEventListener('pointerdown', e => { on = true; box.setPointerCapture(e.pointerId); at(e); });
+    box.addEventListener('pointermove', e => on && at(e));
+    box.addEventListener('pointerup', () => { on = false; });
+    if (!reduce) { let t0 = null; const intro = t => { if (on) return; t0 = t0 || t; const k = (t - t0) / 1800; if (k > 1) return set(.5); set(.92 - Math.sin(k * Math.PI) * .8); requestAnimationFrame(intro); }; setTimeout(() => requestAnimationFrame(intro), 500); }
+  } };
+
+  /* ---------- Career: stories ---------- */
+  const stories = [
+    ['Sep 2025 – now', 'Lead Software Engineer', "Neiman Marcus GTS, formerly Hudson's Bay / Saks Global", ['Architected the gift card platform live in 40+ stores', 'AI tools on the Claude API; about half the delivery time', '25+ batch jobs and 6 apps moved to .NET 10', 'Mentor 3+ developers; architect for the team’s .NET apps'], 'linear-gradient(160deg,#2a1a6e,#07060f 70%)'],
+    ['Apr 2024 – Sep 2025', 'Senior Software Engineer', "Hudson's Bay Services / Saks Global", ['ASP.NET Core MVC apps and REST APIs', 'Up to 60% faster responses from query tuning', 'Okta to Azure AD migration', 'Test-driven development across the team'], 'linear-gradient(160deg,#0f4a52,#07060f 70%)'],
+    ['Jul 2020 – Mar 2024', 'Software Engineer', "Hudson's Bay Services", ['Secure TLS middleware with Okta, MFA and Akamai', 'Monitoring apps: Sales Trickle, EJ Viewer, NOC', 'iOS apps for in-store credit applications'], 'linear-gradient(160deg,#5c1a35,#07060f 70%)'],
+    ['Jun 2019 – Feb 2020', 'Software Engineer', 'Infolink Technologies', ['SaaS platform for leads, quotes, orders and reporting'], 'linear-gradient(160deg,#5a3a0a,#07060f 70%)'],
+    ['Every day', 'How I use AI', 'B.E. Computer Science, The Oxford College of Engineering, 2019', ['Claude: architecture, full-stack code, debugging, and the API behind my AI tools', 'GitHub Copilot: inline completion in Visual Studio', 'Gemini: research and a second opinion'], 'linear-gradient(160deg,#3a1f6e,#0a2a3a 60%,#07060f)']
+  ];
+  apps.career = { title: 'Career', mount(el) {
+    el.innerHTML = `<div class="story-wrap" id="sw"><div class="segs">${stories.map(() => '<span><i></i></span>').join('')}</div><div id="sIn"></div><p class="story-hint">Tap right for next, left for back, hold to pause</p><div class="story-tap"><button aria-label="Previous"></button><button aria-label="Next"></button></div></div>`;
+    const sw = el.querySelector('#sw'), inn = el.querySelector('#sIn'), segs = $$('.segs i', el);
+    let i = 0, t = 0, last = performance.now(), paused = false, alive = true; const DUR = 6500;
+    const show = n => {
+      i = clamp(n, 0, stories.length - 1); t = 0; buzz(6); const s = stories[i];
+      segs.forEach((g, k) => g.style.width = k < i ? '100%' : '0');
+      sw.style.setProperty('--sbg', s[4]);
+      inn.innerHTML = `<div class="story-in"><time>${s[0]}</time><h3>${s[1]}</h3><p class="org">${s[2]}</p><ul>${s[3].map(b => `<li>${b}</li>`).join('')}</ul></div>`;
+    };
+    const loop = now => { if (!alive) return; const dt = now - last; last = now; if (!paused && !reduce) { t += dt; segs[i].style.width = Math.min(100, t / DUR * 100) + '%'; if (t >= DUR) { if (i < stories.length - 1) show(i + 1); else paused = true; } } requestAnimationFrame(loop); };
+    const [prev, next] = $$('.story-tap button', el);
+    prev.addEventListener('click', () => show(i - 1)); next.addEventListener('click', () => { if (i === stories.length - 1) { paused = true; segs[i].style.width = '100%'; } else show(i + 1); });
+    const tapArea = el.querySelector('.story-tap'); let holdT;
+    tapArea.addEventListener('pointerdown', () => { holdT = setTimeout(() => { paused = true; }, 250); });
+    tapArea.addEventListener('pointerup', () => { clearTimeout(holdT); if (paused && i < stories.length - 1) setTimeout(() => { paused = false; }, 0); });
+    show(0); requestAnimationFrame(loop);
+    return () => { alive = false; };
+  } };
+
+  /* ---------- Stack: terminal ---------- */
+  const skills = {
+    frontend: ['Razor', 'JavaScript', 'HTML/CSS', 'Blazor', 'jQuery', 'Swift (iOS)'],
+    backend: ['C#', '.NET 6–10', 'ASP.NET Core MVC', 'Web API', 'REST', 'SOAP/WCF', 'LINQ'],
+    data: ['SQL Server', 'PostgreSQL + pgvector', 'Snowflake', 'Stored procedures', 'IBM DB2 (legacy)'],
+    cloud: ['AWS (S3, Secrets Manager)', 'Azure Entra ID', 'Docker', 'Kubernetes', 'GitHub Actions', 'ArgoCD'],
+    ai: ['Claude API', 'Microsoft.Extensions.AI', 'RAG', 'Ollama', 'Playwright agents', 'Copilot']
+  };
+  apps.term = { title: 'Stack', mount(el) {
+    el.innerHTML = `<div class="term" id="tOut"></div><div class="cmds" id="tCmds">
+      ${Object.keys(skills).map(k => `<button data-k="${k}">skills --${k}</button>`).join('')}<button data-k="whoami">whoami</button><button data-k="clear">clear</button><button data-k="hire" class="hot">sudo hire prajwal</button></div>`;
+    const out = el.querySelector('#tOut'); let queue = Promise.resolve(), alive = true;
+    const typeLine = (html, speed) => new Promise(async res => {
+      const plain = html.replace(/<[^>]+>/g, '');
+      const line = document.createElement('div'); out.appendChild(line);
+      if (reduce || !speed) { line.innerHTML = html; return res(); }
+      for (let k = 1; k <= plain.length && alive; k++) { line.textContent = plain.slice(0, k); line.insertAdjacentHTML('beforeend', '<span class="c"></span>'); await wait(speed); }
+      line.innerHTML = html; el.scrollTop = el.scrollHeight; res();
+    });
+    const cmd = c => { queue = queue.then(async () => {
+      buzz(6);
+      if (c === 'clear') { out.innerHTML = ''; return; }
+      const label = c === 'whoami' ? 'whoami' : c === 'hire' ? 'sudo hire prajwal' : 'skills --' + c;
+      await typeLine(`<span class="p">prajwal@dev</span>:<span class="k">~</span>$ ${label}`, 28);
+      if (c === 'whoami') { await typeLine('Prajwal Yathiraj', 0); await typeLine('Lead Software Engineer, full-stack .NET with AI', 0); await typeLine('Bengaluru, India. 7+ years.', 0); }
+      else if (c === 'hire') { await typeLine('[sudo] checking permissions…', 0); await wait(700); await typeLine('<span class="g">Permission granted.</span> Opening Messages…', 0); await wait(900); closeApp().then(() => setTimeout(() => openByName('msg'), 350)); }
+      else for (const s of skills[c]) await typeLine(`<span class="g">✓</span> ${s}`, 0).then(() => wait(70));
+      await typeLine('', 0);
+    }); };
+    $$('#tCmds button', el).forEach(b => b.addEventListener('click', () => cmd(b.dataset.k)));
+    cmd('whoami'); cmd('backend');
+    return () => { alive = false; };
+  } };
+
+  /* ---------- Messages ---------- */
+  const replies = {
+    hiring: ["I'm hiring", ["Great. I'm open to lead and principal .NET roles.", "Email works best. I reply within a day.", { email: 1 }, { link: ['LinkedIn', 'https://www.linkedin.com/in/prajwal-yathiraj/'] }]],
+    shui: ['Tell me about Shui', ["It's an AI teammate I built solo in .NET 10.", 'It joins Google Meet, answers out loud with sources, and writes the notes.', { open: 'shui' }]],
+    resume: ['Send your resume', ['Here you go.', { pdf: 1 }]],
+    stack: ['What do you work with?', ['C#, .NET 10, ASP.NET Core, SQL Server and Postgres, AWS, Azure Entra ID, Kubernetes.', 'And AI: Claude API, Microsoft.Extensions.AI, RAG.', { open: 'term', label: 'Open my stack' }]],
+    reach: ['How do I reach you?', [{ email: 1 }, { link: ['Phone: +91 94817 19233', 'tel:+919481719233'] }, { link: ['Contact form', 'https://docs.google.com/forms/d/e/1FAIpQLSe4DTJCeKA-QEYEuN-tyzmqgXBZdqG8qH8fslgN92jwn1e8gg/viewform'] }]]
+  };
+  apps.msg = { title: 'Messages', mount(el) {
+    el.innerHTML = `<div class="who-head"><i>PY</i><strong>Prajwal</strong><span>usually replies within a day</span></div><div class="thread" id="th"></div><div class="replies" id="rp"></div>`;
+    const th = el.querySelector('#th'), rp = el.querySelector('#rp'); let alive = true; const used = new Set();
+    const scroll = () => el.scrollTo({ top: el.scrollHeight, behavior: reduce ? 'auto' : 'smooth' });
+    const bubble = (html, me, cls) => { const b = document.createElement('div'); b.className = 'bub ' + (me ? 'me' : 'them') + (cls ? ' ' + cls : ''); b.innerHTML = html; th.appendChild(b); scroll(); return b; };
+    async function say(items) {
+      for (const it of items) {
+        if (!alive) return; const ty = document.createElement('div'); ty.className = 'typing'; ty.innerHTML = '<i></i><i></i><i></i>'; th.appendChild(ty); scroll();
+        await wait(typeof it === 'string' ? 500 + it.length * 12 : 600); ty.remove(); buzz(5);
+        if (typeof it === 'string') bubble(esc(it));
+        else if (it.email) { const b = bubble('yathirajprajwal@gmail.com<br><button type="button">Copy email</button>'); b.querySelector('button').addEventListener('click', () => navigator.clipboard.writeText('yathirajprajwal@gmail.com').then(() => toast('Email copied'), () => toast('yathirajprajwal@gmail.com'))); }
+        else if (it.link) bubble(`<a href="${it.link[1]}" target="_blank" rel="noopener">${it.link[0]}</a>`);
+        else if (it.pdf) bubble('<b>PDF</b><a href="Prajwal_Yathiraj_Resume.pdf" target="_blank" rel="noopener">Prajwal_Yathiraj_Resume.pdf<br><span style="color:var(--muted);font-weight:400">One page</span></a>', false, 'card');
+        else if (it.open) { const b = bubble(`<button type="button">${it.label || 'Open Shui'}</button>`); b.querySelector('button').addEventListener('click', () => closeApp().then(() => setTimeout(() => openByName(it.open), 350))); }
+      }
+      showReplies(); scroll();
+    }
+    function showReplies() {
+      rp.innerHTML = Object.entries(replies).filter(([k]) => !used.has(k)).map(([k, v]) => `<button type="button" data-k="${k}">${v[0]}</button>`).join('');
+      $$('button', rp).forEach(b => b.addEventListener('click', () => { const k = b.dataset.k; used.add(k); rp.innerHTML = ''; buzz(); bubble(esc(replies[k][0]), true); say(replies[k][1]); }));
+    }
+    say(["Hi, I'm Prajwal.", 'I build full-stack .NET apps and put AI into them.', 'What brings you here?']);
+    return () => { alive = false; };
+  } };
+
+  /* ---------- Build log ---------- */
+  const logs = [['Shui.AI', 'Oct 23', 'Takes turns like a person', 'Waits for people to finish and answers questions typed in the Meet chat.', 'ic-shui'], ['Shui.AI', 'Oct 23', 'Never stuck on a busy model', 'Tries every free model from five providers in turn.', 'ic-shui'], ['Shui.AI', 'Oct 23', 'Joins by itself', 'Invite it in Calendar or add it mid-call.', 'ic-shui'], ['Shui.AI', 'Oct 22', '"Hey Shui" in Google Meet', 'Spoken answers, catch-up and meeting notes.', 'ic-shui'], ['Shui.AI', 'Oct 22', 'First commit', 'GitHub ingestion, permission-aware search, cited answers.', 'ic-shui'], ['Work', 'Oct', 'Returns Management', 'A .NET 10 app replacing mainframe lookup screens.', 'ic-mig']];
+  apps.log = { title: 'Build log', mount(el) {
+    el.innerHTML = `<h2 class="a-h">What I shipped lately.</h2><p class="a-sub">Updated as I go. Every Shui change is public on GitHub.</p><div class="logs">${logs.map((l, i) => `<div style="--i:${i}"><i class="${l[4]}"></i><span style="min-width:0;flex:1"><strong>${l[2]}<span>${l[1]}</span></strong><p>${l[3]}</p></span></div>`).join('')}</div>`;
+  } };
+
+  addEventListener('resize', () => { if (lockLive) buildName(); });
 })();
 </script>
 </body>
