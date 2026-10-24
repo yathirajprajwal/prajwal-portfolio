@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,300..900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Prajwal Yathiraj","alternateName":"Prajwal Y","jobTitle":"Lead Software Engineer","worksFor":{"@type":"Organization","name":"Neiman Marcus Global Technology Services"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"email":"mailto:yathirajprajwal@gmail.com","url":"https://yathirajprajwal.github.io/prajwal-portfolio/","sameAs":["https://www.linkedin.com/in/prajwal-yathiraj/","https://github.com/yathirajprajwal"],"knowsAbout":[".NET","C#","ASP.NET Core","Full-stack development","Azure Entra ID","AWS","Kubernetes","PostgreSQL","Retrieval-augmented generation","AI agents"]}
+{"@context":"https://schema.org","@type":"Person","name":"Prajwal Yathiraj","alternateName":"Prajwal Y","jobTitle":"Lead Software Engineer","worksFor":{"@type":"Organization","name":"Neiman Marcus Global Technology Services"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"email":"mailto:yathirajprajwal@gmail.com","url":"https://yathirajprajwal.github.io/prajwal-portfolio/","sameAs":["https://www.linkedin.com/in/prajwal-yathiraj/"],"knowsAbout":[".NET","C#","ASP.NET Core","Full-stack development","Azure Entra ID","AWS","Kubernetes","PostgreSQL","Retrieval-augmented generation","AI agents"]}
 </script>
 <script>(function(){var m=matchMedia("(max-width: 760px)");if(m.matches)document.documentElement.classList.add("phone");var r=function(){if(m.matches!==document.documentElement.classList.contains("phone"))location.reload()};m.addEventListener?m.addEventListener("change",r):m.addListener(r)})();</script>
 <style>
@@ -313,15 +313,6 @@ img,canvas{display:block;max-width:100%}
 .edu{margin-top:40px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line)}
 .edu span{color:var(--muted)}
 
-/* log */
-.log{background:var(--night);border-block:1px solid var(--line)}
-.entries{list-style:none;margin-top:44px}
-.entries li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid var(--line);transition:background .3s}
-.entries time{font-family:var(--mono);font-size:13px;color:var(--aqua);padding-top:3px}
-.entries strong{display:block;font-size:18px;margin-bottom:2px}
-.entries p{color:var(--muted)}
-.log-foot{margin-top:24px;color:var(--muted)}
-.log-foot a{color:var(--aqua)}
 
 /* contact */
 .contact{text-align:left;overflow:hidden}
@@ -478,6 +469,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
 .ic-gh{background:linear-gradient(135deg,#2b2a3a,#111)}
 .ic-li{background:linear-gradient(135deg,#2f7bd8,#1958a8)}
 .ic-li b{font-family:var(--sans);font-weight:800;font-size:26px;color:#fff;letter-spacing:-.04em}
+.ic-mail{background:linear-gradient(135deg,#ff6b8b,#c2357a)}
 .ic-msg{background:linear-gradient(135deg,#5cf2da,#14b89c)}
 .ic-cv{background:linear-gradient(135deg,#ece9ff,#b9b2ef)}
 .ic-cv svg{stroke:#14112b!important}
@@ -614,13 +606,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
 .replies{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding:16px 0 4px}
 .replies button{border:1px solid var(--violet);color:var(--text);border-radius:999px;padding:10px 14px;font-size:14.5px;background:rgba(124,92,255,.12)}
 
-/* Build log app */
-.logs{display:grid;gap:10px}
-.logs div{display:flex;gap:12px;padding:14px;border-radius:20px;background:var(--night);border:1px solid var(--line);animation:noteIn .5s cubic-bezier(.2,.9,.3,1.2) both;animation-delay:calc(var(--i) * .07s)}
-.logs i{flex:none;width:34px;height:34px;border-radius:10px;font-style:normal}
-.logs strong{display:flex;justify-content:space-between;gap:8px;font-size:15px}
-.logs strong span{font-weight:400;font-size:12px;color:var(--muted);font-family:var(--mono);white-space:nowrap}
-.logs p{font-size:14px;color:var(--muted);line-height:1.4}
 @media(prefers-reduced-motion:reduce){#os *{animation-duration:.001ms!important;animation-delay:0s!important}}
 </style>
 </head>
@@ -659,7 +644,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
       <p class="rot-line">I build <span class="rot" id="rot" aria-live="off"><span>Razor UIs</span></span> in .NET.</p>
       <div class="ctas">
         <a class="btn btn-main magnetic" href="#work">See my work</a>
-        <a class="btn btn-ghost magnetic" href="Prajwal_Yathiraj_Resume.pdf" download>Resume</a>
+        <a class="btn btn-ghost magnetic" href="#contact">Get in touch</a>
       </div>
     </div>
   </div>
@@ -757,10 +742,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
       <div><strong>People who join late</strong><p>"Hey Shui, catch me up" recaps the call without stopping it.</p></div>
       <div><strong>Leads and managers</strong><p>Decisions and owners arrive after every call. Nobody takes minutes.</p></div>
       <div><strong>Security teams</strong><p>Permissions are enforced in the database query, so the model never sees what the asker can't.</p></div>
-    </div>
-    <div class="shui-foot">
-      <a class="btn btn-main magnetic" href="https://github.com/yathirajprajwal/shui-ai-assistant" target="_blank" rel="noopener">Read the code on GitHub</a>
-      <span>About 7,500 lines of C#. First commit to speaking in Meet took two days.</span>
     </div>
   </div>
 </section>
@@ -878,22 +859,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
   </div>
 </section>
 
-<!-- LOG -->
-<section class="chapter log" id="log">
-  <div class="wrap">
-    <span class="label">Build log</span>
-    <h2 class="h2 reveal">What I shipped lately.</h2>
-    <ol class="entries">
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Shui takes turns like a person</strong><p>Waits for people to finish, yields when someone talks, and answers questions typed in the Meet chat.</p></div></li>
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Never stuck on a busy model</strong><p>Every free model from five providers is tried in turn; a model that just failed rests before it's tried again.</p></div></li>
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Joins by itself</strong><p>Invite Shui in Google Calendar, or add it mid-call with Meet's "Add people".</p></div></li>
-      <li><time datetime="2026-10-22">Oct 22, 2026</time><div><strong>"Hey Shui" in Google Meet</strong><p>Spoken answers, catch-up for latecomers, and notes when the call ends.</p></div></li>
-      <li><time datetime="2026-10-22">Oct 22, 2026</time><div><strong>Shui's first commit</strong><p>GitHub ingestion, permission-aware hybrid search and cited answers.</p></div></li>
-      <li><time datetime="2026-10">Oct 2026</time><div><strong>Returns Management at work</strong><p>A new .NET 10 MVC app replacing the mainframe screens stores used to look up transactions.</p></div></li>
-    </ol>
-    <p class="log-foot">Every Shui change is public in its <a href="https://github.com/yathirajprajwal/shui-ai-assistant/commits/main" target="_blank" rel="noopener">commit history</a>.</p>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section class="chapter contact" id="contact">
@@ -905,10 +870,8 @@ html.phone body > :not(#os):not(.toast){display:none!important}
       <ul class="links">
         <li><button type="button" data-copy="yathirajprajwal@gmail.com"><span>Email</span><span>yathirajprajwal@gmail.com</span></button></li>
         <li><a href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank" rel="noopener"><span>LinkedIn</span><span>in/prajwal-yathiraj</span></a></li>
-        <li><a href="https://github.com/yathirajprajwal" target="_blank" rel="noopener"><span>GitHub</span><span>yathirajprajwal</span></a></li>
         <li><a href="tel:+919481719233"><span>Phone</span><span>+91 94817 19233</span></a></li>
         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4DTJCeKA-QEYEuN-tyzmqgXBZdqG8qH8fslgN92jwn1e8gg/viewform" target="_blank" rel="noopener"><span>Form</span><span>Send me a message</span></a></li>
-        <li><a href="Prajwal_Yathiraj_Resume.pdf" download><span>Resume</span><span>One-page PDF</span></a></li>
       </ul>
     </div>
   </div>
@@ -936,7 +899,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
     <p class="lock-tag">Full-stack .NET engineer who builds with AI</p>
     <div class="notes">
       <div class="note" style="--i:0"><i class="ic-shui"></i><div><strong>Shui.AI <span>now</span></strong><p>Joined "Platform sync" and answered with 2 sources.</p></div></div>
-      <div class="note" style="--i:1"><i class="ic-work" style="display:grid;place-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i><div><strong>CI <span>2m ago</span></strong><p>82 tests passed. Deployed to Kubernetes.</p></div></div>
+      <div class="note" style="--i:1"><i class="ic-msg" style="display:grid;place-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></i><div><strong>Prajwal <span>now</span></strong><p>Hi, I'm Prajwal. Unlock to say hello.</p></div></div>
       <div class="note" style="--i:2"><i class="ic-mig"></i><div><strong>Store apps <span>today</span></strong><p>Gift card platform running in 40+ stores.</p></div></div>
     </div>
     <button class="unlock" id="unlockBtn" type="button"><span class="chev" aria-hidden="true"></span>Swipe up to open<span class="bar-ind" aria-hidden="true"></span></button>
@@ -956,17 +919,15 @@ html.phone body > :not(#os):not(.toast){display:none!important}
     <nav class="grid" aria-label="Apps">
       <button class="ic" type="button" data-app="mig" style="--i:0"><i class="ic-mig"><svg viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></i><span>Migrate</span></button>
       <button class="ic" type="button" data-app="career" style="--i:1"><i class="ic-career"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></i><span>Career</span></button>
-      <button class="ic" type="button" data-app="term" style="--i:2"><i class="ic-term"><svg viewBox="0 0 24 24"><path d="M5 8l4 4-4 4M12 16h7"/></svg></i><span>Stack</span></button>
-      <button class="ic" type="button" data-app="log" style="--i:3"><i class="ic-log"><svg viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></svg><b class="badge">6</b></i><span>Build log</span></button>
-      <a class="ic" href="https://github.com/yathirajprajwal" target="_blank" rel="noopener" style="--i:4"><i class="ic-gh"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></i><span>GitHub</span></a>
-      <a class="ic" href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank" rel="noopener" style="--i:5"><i class="ic-li"><b>in</b></i><span>LinkedIn</span></a>
+      <a class="ic" href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank" rel="noopener" style="--i:3"><i class="ic-li"><b>in</b></i><span>LinkedIn</span></a>
+      <button class="ic" type="button" id="mailIc" style="--i:4"><i class="ic-mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><span>Mail</span></button>
     </nav>
     <button class="now" type="button" data-app="shui" id="nowCard"><span class="now-orb" aria-hidden="true"></span><span class="now-txt"><small>Now building</small><strong>Shui.AI, my AI meeting teammate</strong><em>Tap to try the live demo</em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
     <nav class="dock" aria-label="Dock">
       <button class="ic" type="button" data-app="msg" style="--i:0"><i class="ic-msg"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><b class="badge">1</b></i><span>Messages</span></button>
       <button class="ic ping" type="button" data-app="shui" style="--i:1"><i class="ic-shui"></i><span>Shui</span></button>
       <button class="ic" type="button" data-app="work" style="--i:2"><i class="ic-work"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></i><span>Work</span></button>
-      <a class="ic" href="Prajwal_Yathiraj_Resume.pdf" target="_blank" rel="noopener" style="--i:3"><i class="ic-cv"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg></i><span>Resume</span></a>
+      <button class="ic" type="button" data-app="term" style="--i:3"><i class="ic-term"><svg viewBox="0 0 24 24"><path d="M5 8l4 4-4 4M12 16h7"/></svg></i><span>Stack</span></button>
     </nav>
   </section>
 
@@ -1174,12 +1135,11 @@ html.phone body > :not(#os):not(.toast){display:none!important}
   $$('.step').forEach(s => stepObs.observe(s));
 
   /* ---------- Shui demo ---------- */
-  const SRC = 'https://github.com/yathirajprajwal/shui-ai-assistant';
   const script = {
     sync: { q: 'Hey Shui, why did the last sync skip some files?', asker: 'Dev',
       say: "It skipped files whose content hasn't changed since the last sync, and removed files that were deleted in the repository. Vendored, generated, binary and oversized files are filtered out on purpose.",
       html: 'It skipped files whose content hash hasn\'t changed since the last sync, and removed files deleted upstream <span class="cite">1</span>. Vendored, generated, binary and oversized files are filtered out on purpose <span class="cite">2</span>.',
-      sources: [['1', 'docs/architecture.md, Ingesting a source', SRC + '/blob/main/docs/architecture.md'], ['2', 'src/…/GitHub/GitHubFileFilter.cs', SRC + '/blob/main/src/Shui.Infrastructure/GitHub/GitHubFileFilter.cs']] },
+      sources: [['1', 'docs/architecture.md, Ingesting a source', null], ['2', 'GitHubFileFilter.cs', null]] },
     catchup: { q: 'Hey Shui, catch me up.', asker: 'Nik',
       say: "You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work without a screen. Action item: Dev spikes it by Friday.",
       html: 'You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work headless.<br><b>Action:</b> Dev spikes it by Friday.',
@@ -1205,7 +1165,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
   function addMsg(item) {
     const e = chat.querySelector('.empty'); if (e) e.remove();
     const m = document.createElement('div'); m.className = 'msg';
-    const s = '<div class="sources">' + item.sources.map(([n, l, u]) => u ? `<a href="${u}" target="_blank" rel="noopener">${n ? '[' + n + '] ' : ''}${l}</a>` : `<a>${l}</a>`).join('') + '</div>';
+    const s = '<div class="sources">' + item.sources.map(([n, l, u]) => `<a>${n ? '[' + n + '] ' : ''}${l}</a>`).join('') + '</div>';
     m.innerHTML = `<div class="from">Shui</div><div class="bubble">${item.html}${s}</div>`;
     chat.appendChild(m); chat.scrollTop = chat.scrollHeight;
   }
@@ -1364,7 +1324,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
     ['Green screen migration', 'Work', () => scrollTo('migrate')],
     ["Apps I've shipped", 'Work', () => scrollTo('work')],
     ['Career', 'Section', () => scrollTo('career')],
-    ['Build log', 'Section', () => scrollTo('log')],
     ['Contact', 'Section', () => scrollTo('contact')],
     ['Copy my email', 'Contact', () => navigator.clipboard.writeText('yathirajprajwal@gmail.com').then(() => toast('Email copied'), () => toast('yathirajprajwal@gmail.com'))]
   ];
@@ -1496,6 +1455,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
   }
   addEventListener('popstate', () => { if (current) closeApp(true); });
   $$('.ic[data-app]').forEach(b => b.addEventListener('click', () => openApp(b.dataset.app, b)));
+  $('#mailIc').addEventListener('click', () => { buzz(); navigator.clipboard.writeText('yathirajprajwal@gmail.com').then(() => toast('Email copied: yathirajprajwal@gmail.com'), () => toast('yathirajprajwal@gmail.com')); });
   $('#nowCard').addEventListener('click', () => openApp('shui', $('.ic[data-app="shui"]')));
   $('#winBack').addEventListener('click', () => closeApp());
   $('#winHandle').addEventListener('click', () => closeApp());
@@ -1507,9 +1467,8 @@ html.phone body > :not(#os):not(.toast){display:none!important}
   const openByName = n => openApp(n, $(`.ic[data-app="${n}"]`));
 
   /* ---------- Shui ---------- */
-  const SRC = 'https://github.com/yathirajprajwal/shui-ai-assistant';
   const shuiScript = {
-    sync: { q: 'Hey Shui, why did the last sync skip some files?', asker: 'Dev', say: "It skipped files whose content hasn't changed since the last sync, and removed files that were deleted in the repository. Vendored, generated, binary and oversized files are filtered out on purpose.", sources: [['1', 'docs/architecture.md', SRC + '/blob/main/docs/architecture.md'], ['2', 'GitHub/GitHubFileFilter.cs', SRC + '/blob/main/src/Shui.Infrastructure/GitHub/GitHubFileFilter.cs']] },
+    sync: { q: 'Hey Shui, why did the last sync skip some files?', asker: 'Dev', say: "It skipped files whose content hasn't changed since the last sync, and removed files that were deleted in the repository. Vendored, generated, binary and oversized files are filtered out on purpose.", sources: [['1', 'docs/architecture.md', null], ['2', 'GitHubFileFilter.cs', null]] },
     catchup: { q: 'Hey Shui, catch me up.', asker: 'Nik', say: 'You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work without a screen. Action item: Dev spikes it by Friday.', sources: [['', "From this call's live captions", null]] },
     secret: { q: "Hey Shui, what's this quarter's revenue?", asker: 'Priya', say: "I can't answer that here. Everyone in the call hears my answers, so I only use material the whole team is allowed to see.", sources: [['', 'Room rule', null]] },
     unknown: { q: 'Hey Shui, who wrote the original COBOL?', asker: 'Nik', say: "I don't have a source for that, so I won't guess.", sources: [['', 'No source, no answer', null]] }
@@ -1546,8 +1505,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
         <div><dt>Free model chain</dt><dd>Gemini, Groq, Cerebras, OpenRouter, Mistral, then Ollama</dd></div>
         <div><dt>Docker, GitHub Actions</dt><dd>One-command deploy, CI with 80+ tests</dd></div>
       </dl>
-      <p class="a-sub" style="margin-top:18px">About 7,500 lines of C#. First commit to speaking in Meet took two days.</p>
-      <a class="pill-btn" href="${SRC}" target="_blank" rel="noopener">Read the code on GitHub</a>`;
+`;
     // orb
     const c = el.querySelector('canvas'), x = c.getContext('2d'), stateEl = el.querySelector('.s-state');
     let mode = 0, alive = true, w, h;
@@ -1579,7 +1537,7 @@ html.phone body > :not(#os):not(.toast){display:none!important}
       cap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
       await wait(1100); mode = 1; stateEl.textContent = 'searching sources';
       await wait(1000); mode = 2; stateEl.textContent = 'speaking'; buzz(12);
-      const src = '<div class="s-src">' + it.sources.map(([n, l, u]) => u ? `<a href="${u}" target="_blank" rel="noopener">[${n}] ${l}</a>` : `<a>${l}</a>`).join('') + '</div>';
+      const src = '<div class="s-src">' + it.sources.map(([n, l]) => `<a>${n ? '[' + n + '] ' : ''}${l}</a>`).join('') + '</div>';
       cap.innerHTML = `<span class="who">Shui</span>${it.say}${src}`;
       await speak(it.say); mode = 0; stateEl.textContent = 'tap a question'; busy = false; chips.forEach(b => b.disabled = false);
     }
@@ -1733,7 +1691,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
   const replies = {
     hiring: ["I'm hiring", ["Great. I'm open to lead and principal .NET roles.", "Email works best. I reply within a day.", { email: 1 }, { link: ['LinkedIn', 'https://www.linkedin.com/in/prajwal-yathiraj/'] }]],
     shui: ['Tell me about Shui', ["It's an AI teammate I built solo in .NET 10.", 'It joins Google Meet, answers out loud with sources, and writes the notes.', { open: 'shui' }]],
-    resume: ['Send your resume', ['Here you go.', { pdf: 1 }]],
     stack: ['What do you work with?', ['C#, .NET 10, ASP.NET Core, SQL Server and Postgres, AWS, Azure Entra ID, Kubernetes.', 'And AI: Claude API, Microsoft.Extensions.AI, RAG.', { open: 'term', label: 'Open my stack' }]],
     reach: ['How do I reach you?', [{ email: 1 }, { link: ['Phone: +91 94817 19233', 'tel:+919481719233'] }, { link: ['Contact form', 'https://docs.google.com/forms/d/e/1FAIpQLSe4DTJCeKA-QEYEuN-tyzmqgXBZdqG8qH8fslgN92jwn1e8gg/viewform'] }]]
   };
@@ -1749,7 +1706,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
         if (typeof it === 'string') bubble(esc(it));
         else if (it.email) { const b = bubble('yathirajprajwal@gmail.com<br><button type="button">Copy email</button>'); b.querySelector('button').addEventListener('click', () => navigator.clipboard.writeText('yathirajprajwal@gmail.com').then(() => toast('Email copied'), () => toast('yathirajprajwal@gmail.com'))); }
         else if (it.link) bubble(`<a href="${it.link[1]}" target="_blank" rel="noopener">${it.link[0]}</a>`);
-        else if (it.pdf) bubble('<b>PDF</b><a href="Prajwal_Yathiraj_Resume.pdf" target="_blank" rel="noopener">Prajwal_Yathiraj_Resume.pdf<br><span style="color:var(--muted);font-weight:400">One page</span></a>', false, 'card');
         else if (it.open) { const b = bubble(`<button type="button">${it.label || 'Open Shui'}</button>`); b.querySelector('button').addEventListener('click', () => closeApp().then(() => setTimeout(() => openByName(it.open), 350))); }
       }
       showReplies(); scroll();
@@ -1762,11 +1718,6 @@ html.phone body > :not(#os):not(.toast){display:none!important}
     return () => { alive = false; };
   } };
 
-  /* ---------- Build log ---------- */
-  const logs = [['Shui.AI', 'Oct 23', 'Takes turns like a person', 'Waits for people to finish and answers questions typed in the Meet chat.', 'ic-shui'], ['Shui.AI', 'Oct 23', 'Never stuck on a busy model', 'Tries every free model from five providers in turn.', 'ic-shui'], ['Shui.AI', 'Oct 23', 'Joins by itself', 'Invite it in Calendar or add it mid-call.', 'ic-shui'], ['Shui.AI', 'Oct 22', '"Hey Shui" in Google Meet', 'Spoken answers, catch-up and meeting notes.', 'ic-shui'], ['Shui.AI', 'Oct 22', 'First commit', 'GitHub ingestion, permission-aware search, cited answers.', 'ic-shui'], ['Work', 'Oct', 'Returns Management', 'A .NET 10 app replacing mainframe lookup screens.', 'ic-mig']];
-  apps.log = { title: 'Build log', mount(el) {
-    el.innerHTML = `<h2 class="a-h">What I shipped lately.</h2><p class="a-sub">Updated as I go. Every Shui change is public on GitHub.</p><div class="logs">${logs.map((l, i) => `<div style="--i:${i}"><i class="${l[4]}"></i><span style="min-width:0;flex:1"><strong>${l[2]}<span>${l[1]}</span></strong><p>${l[3]}</p></span></div>`).join('')}</div>`;
-  } };
 
   addEventListener('resize', () => { if (lockLive) buildName(); });
 })();
