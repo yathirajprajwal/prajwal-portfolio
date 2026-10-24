@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prajwal Yathiraj | Full-stack .NET Lead Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Prajwal Yathiraj</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Prajwal Yathiraj, full-stack .NET Lead Software Engineer in Bengaluru with 7+ years building enterprise apps end to end, with AI built in. Projects include Shui.AI, an AI teammate that joins Google Meet calls.">
-<meta name="theme-color" content="#101a33">
+<meta name="theme-color" content="#07060f">
 <link rel="canonical" href="https://yathirajprajwal.github.io/prajwal-portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Prajwal Yathiraj | Full-stack .NET Lead Software Engineer">
@@ -13,940 +14,1084 @@
 <meta property="og:url" content="https://yathirajprajwal.github.io/prajwal-portfolio/">
 <meta property="og:image" content="https://yathirajprajwal.github.io/prajwal-portfolio/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101a33'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%2339ff7a'%3EPY%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%235cf2da'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307060f'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-size='30' font-weight='900' text-anchor='middle' fill='url(%23g)'%3EPY%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,300..900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Prajwal Yathiraj","alternateName":"Prajwal Y","jobTitle":"Lead Software Engineer","worksFor":{"@type":"Organization","name":"Neiman Marcus Global Technology Services"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"email":"mailto:yathirajprajwal@gmail.com","url":"https://yathirajprajwal.github.io/prajwal-portfolio/","sameAs":["https://www.linkedin.com/in/prajwal-yathiraj/","https://github.com/yathirajprajwal"],"knowsAbout":[".NET","C#","ASP.NET Core","Mainframe modernization","Azure Entra ID","AWS","PostgreSQL","pgvector","Retrieval-augmented generation","AI agents"]}
+{"@context":"https://schema.org","@type":"Person","name":"Prajwal Yathiraj","alternateName":"Prajwal Y","jobTitle":"Lead Software Engineer","worksFor":{"@type":"Organization","name":"Neiman Marcus Global Technology Services"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"email":"mailto:yathirajprajwal@gmail.com","url":"https://yathirajprajwal.github.io/prajwal-portfolio/","sameAs":["https://www.linkedin.com/in/prajwal-yathiraj/","https://github.com/yathirajprajwal"],"knowsAbout":[".NET","C#","ASP.NET Core","Full-stack development","Azure Entra ID","AWS","Kubernetes","PostgreSQL","Retrieval-augmented generation","AI agents"]}
 </script>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* Layout: a dark stage. Particle-built name, then scroll-driven chapters: statement, Shui, migration, project reel, career, contact. */
 :root{
-  --porcelain:#eef1f6;
-  --paper:#ffffff;
-  --ink:#101a33;
-  --slate:#566179;
-  --rule:#d5dae4;
-  --dotnet:#512bd4;
-  --dotnet-soft:#ece7fd;
-  --phosphor:#39ff7a;
-  --phosphor-dim:#1a8f44;
-  --crt:#03130a;
-  /* Shui's own palette, from its app */
-  --abyss:#060e24;--deep:#0c1838;--current:#13224a;--edge:#22346a;
-  --foam:#eaf4ff;--mist:#8fa6cc;--aqua:#5cf2da;--iris:#9d8cff;--coral:#ff7a8a;
-  --display:'Bricolage Grotesque',system-ui,sans-serif;
-  --sans:'IBM Plex Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
-  --gutter:clamp(16px,4vw,48px);
-  --max:1180px;
+  color-scheme:dark;
+  --void:#07060f;      /* page */
+  --night:#100e22;     /* raised surfaces */
+  --line:#262246;      /* rules and borders */
+  --violet:#7c5cff;    /* .NET-ish primary */
+  --aqua:#5cf2da;      /* Shui */
+  --coral:#ff6b8b;     /* heat */
+  --amber:#ffb547;
+  --text:#ece9ff;
+  --muted:#9a95c2;
+  --display:'Anybody','Arial Black',system-ui,sans-serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  --max:1240px;
+  --aurora:linear-gradient(100deg,var(--violet),var(--aqua) 50%,var(--coral));
 }
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--porcelain);overflow-x:hidden}
-img,svg{display:block;max-width:100%}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--void);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--void)}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:3px solid var(--dotnet);outline-offset:3px;border-radius:4px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:6px;z-index:999}
-.skip:focus{left:8px}
+img,canvas{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--aqua);outline-offset:3px;border-radius:6px}
+::selection{background:var(--violet);color:#fff}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:760px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grad{background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* ---------- top bar ---------- */
-.bar{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
-.bar.scrolled{background:rgba(238,241,246,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.mark{font-family:var(--mono);font-weight:600;font-size:15px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.mark i{width:28px;height:28px;border-radius:7px;background:var(--ink);color:var(--phosphor);display:grid;place-items:center;font-style:normal;font-size:12px}
-.bar nav{display:flex;gap:26px;align-items:center}
-.bar nav a{text-decoration:none;font-size:15px;color:var(--slate);font-weight:500}
-.bar nav a:hover{color:var(--ink)}
-.kbd-btn{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);border:1px solid var(--rule);background:var(--paper);padding:6px 10px;border-radius:8px}
-.kbd-btn kbd{font-family:var(--mono);font-size:11px;background:var(--porcelain);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
-.menu-btn{display:none;width:40px;height:40px;border-radius:8px;border:1px solid var(--rule);background:var(--paper)}
-.menu-btn span{display:block;width:18px;height:2px;background:var(--ink);margin:4px auto;transition:.25s}
+/* grain */
+.grain{position:fixed;inset:-50%;z-index:70;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 
-/* ---------- hero ---------- */
-.hero{padding:120px 0 72px;position:relative}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
-.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--slate);margin-bottom:22px}
-.status b{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.15)}
-.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,4.7vw,64px);line-height:1.02;letter-spacing:-.03em;margin-bottom:24px}
-.hero h1 .name{display:block;font-weight:600;font-size:.42em;letter-spacing:-.01em;color:var(--slate);margin-bottom:14px}
-.hero .lede{font-size:clamp(17px,1.5vw,19px);color:var(--slate);max-width:52ch;margin-bottom:32px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s,background .2s,box-shadow .2s}
-.btn:active{transform:translateY(1px)}
-.btn-ink{background:var(--ink);color:#fff}
-.btn-ink:hover{background:#1d2b52}
-.btn-net{background:var(--dotnet);color:#fff}
-.btn-net:hover{background:#4423b8}
-.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:#fff}
+/* preloader */
+.loader{position:fixed;inset:0;z-index:100;background:var(--void);display:grid;place-items:center;padding:env(safe-area-inset-top,0px) 16px env(safe-area-inset-bottom,0px)}
+.loader-num{font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 150;font-size:clamp(72px,18vw,220px);line-height:1;font-variant-numeric:tabular-nums}
+.loader-tag{position:absolute;bottom:max(32px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.loader.done{pointer-events:none}
 
-/* migration device */
-.device{position:relative;aspect-ratio:4/3.05;perspective:1600px}
-.screen{position:absolute;inset:0;border-radius:18px;overflow:hidden;transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
-.legacy{background:var(--crt);border:14px solid #2a2f27;box-shadow:inset 0 0 80px rgba(57,255,122,.12),0 30px 60px -20px rgba(16,26,51,.55);font-family:var(--mono);color:var(--phosphor);font-size:clamp(9px,1.02vw,13px);line-height:1.5;padding:14px 16px;white-space:pre;text-shadow:0 0 6px rgba(57,255,122,.55)}
-.legacy::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px);pointer-events:none}
-.legacy .hi{color:#d8ffe5}
-.legacy .dim{color:var(--phosphor-dim)}
-.legacy .cur{animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.modern{background:var(--paper);border:1px solid var(--rule);box-shadow:0 40px 80px -30px rgba(16,26,51,.45);display:flex;flex-direction:column;opacity:0;transform:rotateY(-14deg) scale(.94)}
-.device.is-modern .legacy{opacity:0;transform:rotateY(14deg) scale(.94)}
-.device.is-modern .modern{opacity:1;transform:none}
-.chrome{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--rule);background:#f7f8fb}
-.chrome i{width:10px;height:10px;border-radius:50%;background:#d5dae4}
-.chrome .url{margin-left:10px;flex:1;font-size:12px;color:var(--slate);background:#fff;border:1px solid var(--rule);border-radius:6px;padding:3px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.app{padding:16px 18px;display:flex;flex-direction:column;gap:12px;flex:1;min-height:0;font-size:clamp(11px,1vw,13.5px)}
-.app-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.app-head strong{font-family:var(--display);font-size:1.35em;letter-spacing:-.01em}
-.who{display:flex;align-items:center;gap:6px;color:var(--slate);font-size:.9em}
-.who i{width:22px;height:22px;border-radius:50%;background:var(--dotnet-soft);color:var(--dotnet);display:grid;place-items:center;font-style:normal;font-weight:600;font-size:.8em}
-.filters{display:flex;gap:8px;flex-wrap:wrap}
-.filters span{border:1px solid var(--rule);border-radius:999px;padding:3px 10px;color:var(--slate)}
-.filters span.on{background:var(--ink);border-color:var(--ink);color:#fff}
-.app table{width:100%;border-collapse:collapse}
-.app th{text-align:left;font-weight:500;color:var(--slate);font-size:.88em;padding:6px 6px;border-bottom:1px solid var(--rule)}
-.app td{padding:7px 6px;border-bottom:1px solid #eef0f4;white-space:nowrap}
-.app td.num{font-family:var(--mono);text-align:right}
-.pill{display:inline-block;font-size:.82em;padding:2px 8px;border-radius:999px;font-weight:600}
-.pill.ok{background:#e3f6ea;color:#11743a}
-.pill.wait{background:#fff3d6;color:#8a5a00}
-.app-foot{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
-.app-foot span{font-family:var(--mono);font-size:.8em;color:var(--dotnet);background:var(--dotnet-soft);padding:2px 8px;border-radius:6px}
-.toggle{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:14px;color:var(--slate)}
-.switch{position:relative;width:52px;height:28px;border-radius:999px;background:var(--crt);border:1px solid #2a2f27;transition:background .3s}
-.switch::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--phosphor);transition:transform .3s,background .3s}
-.switch[aria-checked="true"]{background:var(--dotnet);border-color:var(--dotnet)}
-.switch[aria-checked="true"]::after{transform:translateX(24px);background:#fff}
-.toggle b{color:var(--ink);font-weight:600}
+/* progress + cursor */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;z-index:61;transform-origin:left;transform:scaleX(0);background:var(--aurora)}
+.cursor,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:90;border-radius:50%;display:none}
+@media(pointer:fine){
+  .cursor{display:block;width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--aqua)}
+  .cursor-ring{display:block;width:40px;height:40px;margin:-20px 0 0 -20px;border:1.5px solid rgba(236,233,255,.4);transition:width .25s,height .25s,margin .25s,border-color .25s,background .25s}
+  .cursor-ring.hover{width:72px;height:72px;margin:-36px 0 0 -36px;border-color:var(--aqua);background:rgba(92,242,218,.08)}
+}
 
-/* proof line */
-.proof{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--paper)}
-.proof ul{list-style:none;display:grid;grid-template-columns:repeat(5,1fr)}
-.proof li{padding:22px 18px;border-left:1px solid var(--rule)}
-.proof li:first-child{border-left:0;padding-left:0}
-.proof strong{display:block;font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.proof span{font-size:14px;color:var(--slate)}
+/* nav */
+.bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s}
+.bar.scrolled{background:rgba(7,6,15,.7);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.mark{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 125;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.bar nav{display:flex;align-items:center;gap:28px}
+.bar nav a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
+.bar nav a:hover{color:var(--text)}
+.kbd{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.kbd kbd{font-family:var(--mono);font-size:11px;color:var(--text)}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line)}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--text);margin:4px auto;transition:.3s}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(3px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-3px) rotate(-45deg)}
 
-/* section scaffolding */
-section{scroll-margin-top:72px}
-.block{padding:110px 0}
-.block h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.2vw,52px);line-height:1.04;letter-spacing:-.025em;max-width:20ch;margin-bottom:18px}
-.block .intro{color:var(--slate);max-width:62ch;font-size:18px;margin-bottom:48px}
+/* hero */
+.hero{position:relative;padding-top:calc(68px + env(safe-area-inset-top,0px));min-height:min(100svh,980px);display:flex;flex-direction:column;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:90%;background:radial-gradient(600px 380px at 20% 30%,rgba(124,92,255,.28),transparent 70%),radial-gradient(520px 340px at 80% 20%,rgba(92,242,218,.16),transparent 70%),radial-gradient(500px 300px at 60% 80%,rgba(255,107,139,.14),transparent 70%);filter:blur(10px);animation:drift 18s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{to{transform:translate(4%,6%) scale(1.08)}}
+#particles{position:relative;width:100%;height:clamp(200px,38vw,440px);flex:none}
+.hero-copy{position:relative;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:end;padding-block:8px 48px}
+.kicker{font-family:var(--mono);font-size:13px;color:var(--muted);margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.kicker b{flex:none;width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 12px var(--aqua);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 100;font-size:clamp(38px,6vw,84px);line-height:.98;letter-spacing:-.03em;text-wrap:balance}
+.hero h1 .ch{display:inline-block;will-change:transform}
+.hero h1 .w{display:inline-block;white-space:nowrap}
+.rot-line{font-size:clamp(17px,1.6vw,21px);color:var(--muted);margin-bottom:24px}
+.rot{display:inline-grid;vertical-align:bottom;overflow:hidden;height:1.6em;color:var(--text);font-weight:600}
+.rot span{grid-area:1/1;transition:transform .6s cubic-bezier(.7,0,.2,1),opacity .6s}
+.rot span.out{transform:translateY(-110%);opacity:0}
+.rot span.in{transform:translateY(110%);opacity:0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;overflow:hidden;isolation:isolate;transition:color .3s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;transform:translateY(101%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.btn:hover::before{transform:none}
+.btn-main{background:var(--text);color:var(--void)}
+.btn-main::before{background:var(--aqua)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--text)}
+.btn-ghost::before{background:var(--violet)}
+.btn-ghost:hover{border-color:var(--violet)}
+.scroll-cue{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:24px;font-family:var(--mono);font-size:12px;color:var(--muted);writing-mode:vertical-rl;display:flex;align-items:center;gap:10px}
+.scroll-cue::after{content:"";width:1px;height:48px;background:linear-gradient(var(--muted),transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* ---------- Shui ---------- */
-.shui{background:radial-gradient(1200px 600px at 85% -10%,rgba(157,140,255,.22),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(92,242,218,.12),transparent 60%),var(--abyss);color:var(--foam);position:relative;overflow:hidden}
-.shui .intro{color:var(--mist)}
-.shui-top{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin-bottom:44px}
-.shui-top h2{margin-bottom:14px}
-.shui-top .intro{margin-bottom:0}
-.brand{display:flex;align-items:center;gap:14px;margin-bottom:22px;font-family:var(--display);font-weight:600;font-size:20px}
-.brand .say{font-family:var(--sans);font-weight:400;font-size:14px;color:var(--mist)}
-.mini-orb{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 6%,var(--aqua) 22%,var(--iris) 62%,#3b2f8f 100%);box-shadow:0 0 24px rgba(92,242,218,.45)}
-.badge-dev{font-size:13px;color:var(--aqua);border:1px solid rgba(92,242,218,.35);border-radius:999px;padding:6px 12px;white-space:nowrap}
+/* marquee */
+.marquee{border-block:1px solid var(--line);padding-block:18px;overflow:hidden;display:grid;gap:10px;background:var(--night)}
+.track{display:flex;width:max-content;gap:0;will-change:transform}
+.track span{font-family:var(--display);font-weight:700;font-size:clamp(22px,3vw,40px);font-variation-settings:'wdth' 120;padding-right:40px;white-space:nowrap;display:flex;align-items:center;gap:40px}
+.track span::after{content:"";width:12px;height:12px;border-radius:3px;background:var(--aurora);transform:rotate(45deg)}
+.track.alt span{color:transparent;-webkit-text-stroke:1px var(--muted)}
+
+/* chapters */
+.chapter{padding-block:clamp(90px,12vw,160px)}
+.label{font-family:var(--mono);font-size:13px;color:var(--aqua);margin-bottom:22px;display:block}
+.h2{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 100;font-size:clamp(36px,5.4vw,76px);line-height:1;letter-spacing:-.03em;text-wrap:balance;max-width:16ch}
+.lead{color:var(--muted);font-size:clamp(17px,1.4vw,19px);max-width:60ch;margin-top:22px}
+.reveal{will-change:transform}
+
+/* statement */
+.statement p{font-family:var(--display);font-weight:600;font-variation-settings:'wdth' 90;font-size:clamp(28px,4.2vw,58px);line-height:1.12;letter-spacing:-.02em;max-width:22ch;text-wrap:balance}
+.statement .word{opacity:.18;transition:opacity .2s}
+.statement .word.lit{opacity:1}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(60px,8vw,110px);border-top:1px solid var(--line)}
+.stat{padding:28px 20px 0 0}
+.stat+.stat{padding-left:20px;border-left:1px solid var(--line)}
+.stat strong{display:block;font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 130;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:15px}
+
+/* Shui */
+.shui{position:relative;background:radial-gradient(900px 500px at 90% 0%,rgba(124,92,255,.2),transparent 65%),radial-gradient(700px 500px at 0% 40%,rgba(92,242,218,.1),transparent 60%),#060c1f;border-block:1px solid var(--line);overflow:clip}
+.shui .label{color:var(--aqua)}
+.shui-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:12.5px;color:var(--aqua);border:1px solid rgba(92,242,218,.35);border-radius:999px;padding:7px 14px;white-space:nowrap}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);margin-top:clamp(50px,7vw,90px)}
+.orb-wrap{align-self:start;position:sticky;top:calc(18vh + env(safe-area-inset-top,0px));height:min(64vh,520px);display:grid;place-items:center}
+#orb{width:100%;height:100%}
+.orb-caption{position:absolute;bottom:4%;left:0;right:0;text-align:center;font-family:var(--mono);font-size:13px;color:var(--aqua)}
+.steps{list-style:none;display:grid;gap:0}
+.step{min-height:56vh;display:flex;flex-direction:column;justify-content:center;opacity:.28;transition:opacity .5s}
+.step.on{opacity:1}
+.step small{font-family:var(--mono);color:var(--aqua);font-size:13px;margin-bottom:10px}
+.step h3{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 110;font-size:clamp(28px,3.4vw,46px);line-height:1.05;letter-spacing:-.02em;margin-bottom:14px}
+.step p{color:var(--muted);font-size:18px;max-width:42ch}
 
 /* meeting demo */
-.meet{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
-.stage{background:var(--deep);border:1px solid var(--edge);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:12px;min-height:520px}
-.stage-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mist);padding:2px 4px}
-.rec{display:flex;align-items:center;gap:8px}
-.rec b{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:pulse 1.6s infinite}
-@keyframes pulse{50%{opacity:.35}}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1}
-.tile{position:relative;border-radius:14px;background:var(--current);display:grid;place-items:center;min-height:130px;border:2px solid transparent;transition:border-color .25s,box-shadow .25s}
-.tile.talking{border-color:var(--aqua);box-shadow:0 0 0 4px rgba(92,242,218,.12)}
-.face{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:22px;color:var(--abyss)}
-.tile .nm{position:absolute;left:10px;bottom:8px;font-size:13px;color:var(--foam);background:rgba(6,14,36,.6);padding:2px 8px;border-radius:6px}
-.tile .mic{position:absolute;right:10px;bottom:8px;font-size:12px;color:var(--mist)}
-.orb{width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 5%,var(--aqua) 22%,var(--iris) 60%,#2c2370 100%);box-shadow:0 0 40px rgba(92,242,218,.35),inset 0 -10px 30px rgba(6,14,36,.4);transition:transform .3s}
-.tile.shui-tile.thinking .orb{animation:think 1.1s ease-in-out infinite}
-.tile.shui-tile.speaking .orb{animation:speak .45s ease-in-out infinite alternate}
-@keyframes think{50%{transform:scale(.9);filter:hue-rotate(40deg)}}
-@keyframes speak{from{transform:scale(1)}to{transform:scale(1.09)}}
-.captions{min-height:64px;background:rgba(6,14,36,.75);border-radius:12px;padding:10px 14px;font-size:15px;line-height:1.5}
-.captions .who-c{color:var(--aqua);font-weight:600;margin-right:6px}
-.ask-row{display:flex;gap:8px;flex-wrap:wrap}
-.chip{border:1px solid var(--edge);background:var(--current);color:var(--foam);padding:8px 12px;border-radius:999px;font-size:14px;text-align:left;transition:border-color .2s,background .2s}
-.chip:hover{border-color:var(--aqua)}
-.chip[disabled]{opacity:.45;cursor:not-allowed}
-.ask-form{display:flex;gap:8px}
-.ask-form input{flex:1;min-width:0;background:var(--abyss);border:1px solid var(--edge);border-radius:10px;padding:11px 14px;color:var(--foam);font:inherit;font-size:15px}
-.ask-form input::placeholder{color:var(--mist)}
-.ask-form button{background:var(--aqua);color:#032a26;font-weight:600;border-radius:10px;padding:0 16px;font-size:15px}
-.side{background:var(--deep);border:1px solid var(--edge);border-radius:20px;display:flex;flex-direction:column;min-height:520px;overflow:hidden}
-.side-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--edge);font-size:14px;color:var(--mist)}
-.sound{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--foam);border:1px solid var(--edge);border-radius:999px;padding:4px 10px}
-.sound[aria-pressed="true"]{border-color:var(--aqua);color:var(--aqua)}
-.chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
-.msg{font-size:14.5px;line-height:1.55}
-.msg .from{font-size:12.5px;color:var(--mist);margin-bottom:3px}
-.msg.shui-msg .bubble{background:var(--current);border:1px solid var(--edge);border-radius:4px 14px 14px 14px;padding:10px 12px}
-.cite{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:5px;background:rgba(92,242,218,.16);color:var(--aqua);font-family:var(--mono);font-size:11px;margin:0 2px;vertical-align:1px}
-.sources{margin-top:8px;display:flex;flex-direction:column;gap:4px}
-.sources a{font-size:12.5px;color:var(--mist);text-decoration:none;font-family:var(--mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sources a:hover{color:var(--aqua)}
-.empty-chat{color:var(--mist);font-size:14px;margin:auto 0;text-align:center;padding:20px}
-.demo-note{font-size:13px;color:var(--mist);margin-top:14px}
+.demo-head{margin-top:clamp(70px,9vw,120px);display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.demo-head h3{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 110;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.02em;line-height:1.05}
+.demo-head p{color:var(--muted);max-width:46ch}
+.meet{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
+.stage{background:#0c1838;border:1px solid #22346a;border-radius:24px;padding:14px;display:flex;flex-direction:column;gap:12px}
+.stage-head{display:flex;justify-content:space-between;font-size:13px;color:#8fa6cc;padding:2px 4px}
+.rec{display:flex;align-items:center;gap:8px}.rec b{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:pulse 1.6s infinite}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{position:relative;border-radius:16px;background:#13224a;display:grid;place-items:center;min-height:clamp(110px,14vw,170px);border:2px solid transparent;transition:border-color .25s,box-shadow .25s}
+.tile.talking{border-color:var(--aqua);box-shadow:0 0 0 5px rgba(92,242,218,.12)}
+.face{width:clamp(48px,5vw,66px);height:clamp(48px,5vw,66px);border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:22px;color:#060e24}
+.tile .nm{position:absolute;left:10px;bottom:8px;font-size:13px;background:rgba(6,14,36,.7);padding:2px 8px;border-radius:6px}
+.mini-orb{width:clamp(70px,7vw,96px);height:clamp(70px,7vw,96px);border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 5%,var(--aqua) 22%,#9d8cff 60%,#2c2370 100%);box-shadow:0 0 40px rgba(92,242,218,.35)}
+.tile.thinking .mini-orb{animation:think 1.1s ease-in-out infinite}
+.tile.speaking .mini-orb{animation:speak .42s ease-in-out infinite alternate}
+@keyframes think{50%{transform:scale(.88);filter:hue-rotate(50deg)}}
+@keyframes speak{to{transform:scale(1.1)}}
+.captions{min-height:66px;background:rgba(6,14,36,.8);border-radius:12px;padding:10px 14px;font-size:15px}
+.captions .who{color:var(--aqua);font-weight:600;margin-right:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #22346a;background:#13224a;padding:9px 13px;border-radius:999px;font-size:14px;text-align:left;transition:border-color .2s,transform .2s}
+.chip:hover{border-color:var(--aqua);transform:translateY(-2px)}
+.chip[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.ask{display:flex;gap:8px}
+.ask input{flex:1;min-width:0;background:#060e24;border:1px solid #22346a;border-radius:12px;padding:12px 14px;color:var(--text);font:inherit;font-size:15px}
+.ask input::placeholder{color:#8fa6cc}
+.ask button{background:var(--aqua);color:#032a26;font-weight:600;border-radius:12px;padding:0 18px}
+.side{background:#0c1838;border:1px solid #22346a;border-radius:24px;display:flex;flex-direction:column;min-height:440px;overflow:hidden}
+.side-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #22346a;font-size:14px;color:#8fa6cc}
+.voice{font-size:13px;border:1px solid #22346a;border-radius:999px;padding:5px 12px}
+.voice[aria-pressed="true"]{border-color:var(--aqua);color:var(--aqua)}
+.chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:14px;max-height:520px}
+.msg .from{font-size:12.5px;color:#8fa6cc;margin-bottom:3px}
+.msg .bubble{background:#13224a;border:1px solid #22346a;border-radius:4px 16px 16px 16px;padding:10px 12px;font-size:14.5px;animation:pop .4s cubic-bezier(.2,.9,.3,1.3)}
+@keyframes pop{from{transform:translateY(8px) scale(.97);opacity:0}}
+.cite{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:5px;background:rgba(92,242,218,.16);color:var(--aqua);font-family:var(--mono);font-size:11px;margin:0 2px}
+.sources{margin-top:8px;display:grid;gap:3px}
+.sources a{font-family:var(--mono);font-size:12px;color:#8fa6cc;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sources a[href]:hover{color:var(--aqua)}
+.empty{margin:auto;color:#8fa6cc;font-size:14px;text-align:center;padding:20px}
+.note{font-size:13.5px;color:#8fa6cc;margin-top:14px}
 
-/* how it works */
-.flow{margin-top:90px}
-.flow h3,.helps h3,.stack h3{font-family:var(--display);font-size:clamp(24px,2.6vw,32px);font-weight:600;letter-spacing:-.015em;margin-bottom:26px}
-.steps{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:s;position:relative}
-.steps::before{content:"";position:absolute;top:19px;left:20px;right:calc(100% / 6 - 20px);height:2px;background:linear-gradient(90deg,var(--aqua),var(--iris))}
-.steps li{position:relative;padding-right:18px;counter-increment:s}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--abyss);border:2px solid var(--aqua);color:var(--aqua);font-family:var(--mono);font-weight:600;margin-bottom:16px;position:relative}
-.steps strong{display:block;font-size:17px;margin-bottom:6px}
-.steps p{font-size:14.5px;color:var(--mist);line-height:1.5}
-
-.helps{margin-top:90px;display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
-.helps h3{grid-column:1/-1}
-.help{padding:22px 0;border-top:1px solid var(--edge)}
-.help strong{display:block;font-size:18px;margin-bottom:6px;color:#fff}
-.help p{color:var(--mist);font-size:15.5px}
-
-.stack{margin-top:90px}
-.stack dl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:16px;overflow:hidden}
-.stack dl div{background:var(--deep);padding:18px 18px 20px}
+.stack-h{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 110;font-size:clamp(26px,3vw,38px);letter-spacing:-.02em;margin:clamp(70px,9vw,110px) 0 26px}
+.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#22346a;border:1px solid #22346a;border-radius:20px;overflow:hidden}
+.stack div{background:#0a1430;padding:20px 20px 22px;transition:background .3s}
+.stack div:hover{background:#13224a}
 .stack dt{font-family:var(--mono);font-size:14px;color:var(--aqua);margin-bottom:6px}
-.stack dd{font-size:14.5px;color:var(--mist);line-height:1.5}
-.shui-cta{margin-top:56px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn-aqua{background:var(--aqua);color:#032a26}
-.btn-aqua:hover{background:#86f6e4}
-.btn-ghost{border:1.5px solid var(--edge);color:var(--foam)}
-.btn-ghost:hover{border-color:var(--aqua);color:var(--aqua)}
-.shui-facts{font-size:14px;color:var(--mist);margin-left:8px}
+.stack dd{font-size:15px;color:#a9b8d6}
+.helps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:clamp(60px,8vw,90px)}
+.helps strong{display:block;font-size:17px;margin-bottom:6px}
+.helps p{color:#a9b8d6;font-size:15px}
+.shui-foot{margin-top:56px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.shui-foot span{color:#8fa6cc;font-size:15px}
 
-/* ---------- work index ---------- */
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
-.tab{border:1px solid var(--rule);background:var(--paper);padding:8px 14px;border-radius:999px;font-size:14.5px;color:var(--slate);transition:background .2s,color .2s,border-color .2s}
-.tab:hover{border-color:var(--ink);color:var(--ink)}
-.tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-.tab small{font-family:var(--mono);font-size:12px;opacity:.7;margin-left:4px}
-.index{list-style:none;border-top:2px solid var(--ink)}
-.row{border-bottom:1px solid var(--rule)}
-.row[hidden]{display:none}
-.row>button{width:100%;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 150px 28px;gap:18px;align-items:center;text-align:left;padding:20px 4px}
-.row>button:hover .r-name{color:var(--dotnet)}
-.r-name{font-family:var(--display);font-size:clamp(19px,1.8vw,23px);font-weight:600;letter-spacing:-.01em;transition:color .2s}
-.r-what{color:var(--slate);font-size:15px}
-.r-tag[hidden]{display:none}
-.r-tag{font-size:13px;color:var(--slate);justify-self:start;border:1px solid var(--rule);border-radius:6px;padding:2px 8px;white-space:nowrap}
-.r-tag.live{color:#11743a;border-color:#b7e3c6;background:#effaf3}
-.r-tag.wip{color:#8a5a00;border-color:#f0d9a3;background:#fff8e8}
-.plus{width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);position:relative;transition:transform .3s,background .2s}
-.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+/* migration */
+.migrate{height:260vh;position:relative}
+.migrate-pin{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;display:flex;align-items:center;overflow:hidden}
+.migrate-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,70px);align-items:center;width:100%}
+.meter{margin-top:28px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.meter-bar{height:4px;background:var(--line);border-radius:4px;margin-top:10px;overflow:hidden}
+.meter-bar i{display:block;height:100%;width:0;background:var(--aurora)}
+.screens{position:relative;aspect-ratio:4/3;max-width:100%}
+.scr{position:absolute;inset:0;border-radius:18px;overflow:hidden}
+.legacy{background:#03130a;border:12px solid #2a2f27;font-family:var(--mono);color:#39ff7a;font-size:clamp(8.5px,1.02vw,13px);line-height:1.55;padding:14px 16px;white-space:pre;text-shadow:0 0 6px rgba(57,255,122,.55)}
+.legacy::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 1px,transparent 1px 3px);pointer-events:none}
+.legacy .hi{color:#d8ffe5}.legacy .dim{color:#1a8f44}
+.modern{background:#fbfaff;color:#14112b;clip-path:inset(0 0 0 100%);display:flex;flex-direction:column;box-shadow:0 30px 80px -20px rgba(124,92,255,.5)}
+.wipe{position:absolute;top:0;bottom:0;width:3px;left:100%;background:var(--aqua);box-shadow:0 0 24px 4px var(--aqua);z-index:3}
+.chrome{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid #e3e1f0;background:#f2f1f8}
+.chrome i{width:10px;height:10px;border-radius:50%;background:#d6d3e6}
+.chrome span{margin-left:10px;flex:1;font-size:12px;color:#6b678a;background:#fff;border:1px solid #e3e1f0;border-radius:6px;padding:3px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app{padding:16px 18px;display:flex;flex-direction:column;gap:12px;flex:1;font-size:clamp(10.5px,1vw,13.5px)}
+.app-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.app-top strong{font-family:var(--display);font-weight:700;font-size:1.4em}
+.app-top span{color:#6b678a;font-size:.9em}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters span{border:1px solid #e3e1f0;border-radius:999px;padding:3px 10px;color:#6b678a}
+.filters span.on{background:#14112b;border-color:#14112b;color:#fff}
+.app table{width:100%;border-collapse:collapse}
+.app th{text-align:left;font-weight:500;color:#6b678a;font-size:.88em;padding:6px;border-bottom:1px solid #e3e1f0}
+.app td{padding:7px 6px;border-bottom:1px solid #f0eff7;white-space:nowrap}
+.app td.n{font-family:var(--mono);text-align:right}
+.pill{font-size:.82em;padding:2px 8px;border-radius:999px;font-weight:600}
+.pill.ok{background:#e3f6ea;color:#11743a}.pill.wait{background:#fff3d6;color:#8a5a00}
+.app-foot{margin-top:auto;display:flex;gap:6px;flex-wrap:wrap}
+.app-foot span{font-family:var(--mono);font-size:.8em;color:#5a3fe0;background:#ece7fd;padding:2px 8px;border-radius:6px}
+
+/* reel */
+.reel{height:var(--reel-h,400vh);position:relative}
+.reel-pin{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,4vh,44px)}
+.reel-head{width:100%;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.reel-count{font-family:var(--mono);font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cards{display:flex;gap:24px;width:max-content;will-change:transform;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:40vw}
+@media(min-width:760px){.cards{padding-left:max(40px,calc((100vw - var(--max)) / 2 + 40px))}}
+.card{position:relative;width:clamp(290px,30vw,420px);height:clamp(380px,58vh,540px);border-radius:26px;overflow:hidden;border:1px solid var(--line);background:var(--night);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;transform-style:preserve-3d;transition:transform .2s ease-out,border-color .3s;flex:none}
+.card:hover{border-color:rgba(236,233,255,.35)}
+.card-art{position:absolute;inset:0;z-index:0;background:var(--art)}
+.card-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(16,14,34,.94) 68%)}
+.card-glyph{position:absolute;top:18px;left:22px;right:22px;font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 150;font-size:clamp(46px,5vw,72px);line-height:.9;letter-spacing:-.04em;color:rgba(255,255,255,.14);z-index:1}
+.card>*:not(.card-art):not(.card-glyph){position:relative;z-index:2}
+.card small{font-family:var(--mono);font-size:12px;color:var(--aqua);margin-bottom:8px}
+.card h3{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 105;font-size:clamp(23px,2.2vw,30px);line-height:1.08;letter-spacing:-.015em;margin-bottom:10px}
+.card p{color:#c4c0e3;font-size:15px;margin-bottom:14px}
+.techs{display:flex;flex-wrap:wrap;gap:6px}
+.techs span{font-family:var(--mono);font-size:11.5px;border:1px solid rgba(236,233,255,.22);border-radius:6px;padding:2px 8px;color:var(--text)}
+
+/* more list */
+.more{padding-block:clamp(70px,9vw,120px) 0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 20px}
+.tab{border:1px solid var(--line);padding:8px 15px;border-radius:999px;font-size:14.5px;color:var(--muted);transition:.25s}
+.tab:hover{color:var(--text);border-color:var(--muted)}
+.tab[aria-pressed="true"]{background:var(--text);color:var(--void);border-color:var(--text)}
+.list{list-style:none;border-top:1px solid var(--line)}
+.row{border-bottom:1px solid var(--line)}
+.row>button{width:100%;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 40px;gap:18px;align-items:center;text-align:left;padding:22px 2px;transition:padding .35s}
+.row>button:hover{padding-left:14px}
+.row-name{font-family:var(--display);font-weight:600;font-variation-settings:'wdth' 100;font-size:clamp(19px,2vw,26px);letter-spacing:-.01em;transition:font-variation-settings .4s,color .3s}
+.row>button:hover .row-name{font-variation-settings:'wdth' 130;color:var(--aqua)}
+.row-what{color:var(--muted);font-size:15px}
+.row-what em{font-style:normal;color:var(--amber);font-family:var(--mono);font-size:12px;margin-left:8px}
+.plus{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .35s,background .3s;justify-self:end}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--text);transform:translate(-50%,-50%)}
 .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
-.row.open .plus{transform:rotate(45deg);background:var(--dotnet-soft)}
-.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.row.open .plus{transform:rotate(135deg);background:var(--violet);border-color:var(--violet)}
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
 .row.open .detail{grid-template-rows:1fr}
 .detail>div{overflow:hidden}
-.detail-in{padding:0 4px 24px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px}
-.detail p{color:var(--ink);font-size:16px;max-width:60ch}
-.tech{display:flex;flex-wrap:wrap;gap:6px;align-content:start}
-.tech span{font-family:var(--mono);font-size:12.5px;background:var(--dotnet-soft);color:var(--dotnet);padding:3px 8px;border-radius:6px}
+.detail-in{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;padding:0 2px 24px}
+.detail-in p{color:#c4c0e3;max-width:60ch}
 
-/* ---------- career ---------- */
-.career{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.tl{list-style:none;display:grid;gap:0}
-.tl>li{display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;padding:34px 0;border-top:1px solid var(--rule)}
-.tl>li:first-child{border-top:2px solid var(--ink)}
-.tl time{font-family:var(--mono);font-size:14px;color:var(--slate);padding-top:6px}
-.tl h3{font-family:var(--display);font-size:clamp(22px,2.2vw,28px);font-weight:600;letter-spacing:-.015em;line-height:1.2}
-.tl .org{color:var(--slate);margin:4px 0 14px}
-.tl ul{list-style:none;display:grid;gap:9px;max-width:72ch}
-.tl ul li{position:relative;padding-left:20px;font-size:16px}
-.tl ul li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:2px;background:var(--dotnet)}
-.ai-way{margin-top:72px;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-.ai-way h3{grid-column:1/-1;font-family:var(--display);font-size:clamp(24px,2.6vw,32px);font-weight:600;letter-spacing:-.015em;margin-bottom:-8px}
-.ai-way strong{display:block;font-size:18px;margin-bottom:6px}
-.ai-way p{color:var(--slate);font-size:15.5px}
-.edu{margin-top:72px;padding-top:26px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.edu strong{font-weight:600}
-.edu span{color:var(--slate)}
+/* career */
+.career .h2{max-width:none}
+.tl{position:relative;list-style:none;margin-top:clamp(50px,7vw,90px);padding-left:44px}
+.tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-fill{position:absolute;left:11px;top:6px;width:2px;height:calc(100% - 12px);background:var(--aurora);transform-origin:top;transform:scaleY(0)}
+.tl>li{position:relative;padding-bottom:clamp(44px,6vw,70px)}
+.tl>li::before{content:"";position:absolute;left:-41px;top:8px;width:18px;height:18px;border-radius:50%;background:var(--void);border:2px solid var(--violet)}
+.tl time{font-family:var(--mono);font-size:13px;color:var(--aqua)}
+.tl h3{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 105;font-size:clamp(24px,2.8vw,36px);letter-spacing:-.02em;line-height:1.1;margin:6px 0 4px}
+.tl .org{color:var(--muted);margin-bottom:16px}
+.tl ul{list-style:none;display:grid;gap:8px;max-width:72ch}
+.tl ul li{position:relative;padding-left:22px;color:#cfcbea}
+.tl ul li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:2px;background:var(--violet)}
+.ai{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(30px,4vw,50px)}
+.ai div{border:1px solid var(--line);border-radius:22px;padding:26px;background:var(--night);transition:transform .35s,border-color .35s}
+.ai div:hover{transform:translateY(-6px);border-color:var(--violet)}
+.ai strong{display:block;font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 115;font-size:24px;margin-bottom:8px}
+.ai p{color:var(--muted);font-size:15.5px}
+.edu{margin-top:40px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line)}
+.edu span{color:var(--muted)}
 
-/* ---------- contact ---------- */
-.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:start}
-.contact h3{font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px;line-height:1.1}
-.contact p{color:var(--slate);margin-bottom:24px}
-.links{list-style:none;border-top:1px solid var(--rule)}
-.links li{border-bottom:1px solid var(--rule)}
-.links a,.links .copy{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 2px;text-decoration:none;width:100%;font-size:16px}
-.links a:hover span:last-child,.links .copy:hover span:last-child{color:var(--dotnet)}
-.links span:first-child{color:var(--slate);font-size:14px;min-width:90px;text-align:left}
-.links span:last-child{font-weight:500;text-align:right;overflow-wrap:anywhere}
-.form{background:var(--paper);border:1px solid var(--rule);border-radius:18px;overflow:hidden}
-.form iframe{width:100%;height:560px;border:0}
+/* log */
+.log{background:var(--night);border-block:1px solid var(--line)}
+.entries{list-style:none;margin-top:44px}
+.entries li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid var(--line);transition:background .3s}
+.entries time{font-family:var(--mono);font-size:13px;color:var(--aqua);padding-top:3px}
+.entries strong{display:block;font-size:18px;margin-bottom:2px}
+.entries p{color:var(--muted)}
+.log-foot{margin-top:24px;color:var(--muted)}
+.log-foot a{color:var(--aqua)}
 
-/* ---------- build log ---------- */
-.log{background:var(--ink);color:#e7ebf5}
-.log h2{color:#fff}
-.log .intro{color:#9aa6c2}
-.entries{list-style:none;display:grid;gap:0}
-.entries li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:20px 0;border-top:1px solid #26335a}
-.entries time{font-family:var(--mono);font-size:14px;color:var(--phosphor)}
-.entries strong{display:block;color:#fff;font-size:17px;margin-bottom:3px}
-.entries p{color:#9aa6c2;font-size:15.5px}
-.log-foot{margin-top:28px;font-size:15px;color:#9aa6c2}
-.log-foot a{color:var(--phosphor)}
+/* contact */
+.contact{text-align:left;overflow:hidden}
+.big{font-family:var(--display);font-weight:900;font-variation-settings:'wdth' var(--w,100);font-size:clamp(52px,11vw,170px);line-height:.88;letter-spacing:-.045em;transition:font-variation-settings .2s}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,80px);margin-top:clamp(40px,6vw,70px);align-items:start}
+.contact-grid p{color:var(--muted);font-size:18px;max-width:42ch;margin-bottom:26px}
+.links{list-style:none;border-top:1px solid var(--line)}
+.links li{border-bottom:1px solid var(--line)}
+.links a,.links button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 2px;text-decoration:none;font-size:17px;transition:padding .3s,color .3s}
+.links a:hover,.links button:hover{padding-left:12px;color:var(--aqua)}
+.links span:first-child{color:var(--muted);font-size:14px}
+.links span:last-child{text-align:right;overflow-wrap:anywhere}
+footer{padding-block:34px calc(34px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
-footer{padding:36px 0 44px;font-size:14px;color:var(--slate)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-
-/* ---------- command palette ---------- */
-dialog.palette{border:0;border-radius:16px;padding:0;width:min(560px,calc(100vw - 32px));margin:12vh auto auto;box-shadow:0 40px 100px -20px rgba(16,26,51,.6);background:var(--paper);color:var(--ink)}
-dialog.palette::backdrop{background:rgba(16,26,51,.45);backdrop-filter:blur(3px)}
-.palette input{width:100%;border:0;border-bottom:1px solid var(--rule);padding:18px 20px;font:inherit;font-size:17px;outline:none;background:transparent}
-.palette ul{list-style:none;max-height:340px;overflow-y:auto;padding:8px}
-.palette li button{width:100%;text-align:left;padding:11px 12px;border-radius:9px;display:flex;justify-content:space-between;gap:12px;font-size:15.5px}
-.palette li button span{color:var(--slate);font-size:13px}
-.palette li button.active{background:var(--dotnet-soft);color:var(--dotnet)}
-.palette .hint{padding:10px 20px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--slate)}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;z-index:200}
+/* palette + toast */
+dialog.pal{border:1px solid var(--line);border-radius:18px;padding:0;width:min(560px,calc(100vw - 32px));margin:12vh auto auto;background:var(--night);color:var(--text);box-shadow:0 40px 120px -20px rgba(124,92,255,.45)}
+dialog.pal::backdrop{background:rgba(7,6,15,.6);backdrop-filter:blur(4px)}
+.pal input{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--text);padding:18px 20px;font:inherit;font-size:17px;outline:none}
+.pal ul{list-style:none;max-height:340px;overflow-y:auto;padding:8px}
+.pal li button{width:100%;text-align:left;padding:11px 12px;border-radius:10px;display:flex;justify-content:space-between;gap:12px}
+.pal li button span{color:var(--muted);font-size:13px}
+.pal li button.active{background:rgba(124,92,255,.22)}
+.pal .hint{padding:10px 20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--text);color:var(--void);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;transition:.3s;pointer-events:none;z-index:95}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
-/* hero trace */
-.trace{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:20px 20px 18px;box-shadow:0 40px 80px -40px rgba(16,26,51,.35)}
-.trace-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:14px}
-.trace-head b{color:var(--dotnet)}
-.trace-ok{color:#11743a}
-.trace-sub{font-size:14px;color:var(--slate);margin:4px 0 14px}
-.spans{list-style:none;display:grid;gap:4px}
-.span{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:12px;align-items:center;width:100%;text-align:left;padding:6px 8px;border-radius:8px;transition:background .2s}
-.span:hover,.span[aria-pressed="true"]{background:var(--porcelain)}
-.span-name{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3}
-.span-name small{display:block;font-size:12px;color:var(--slate)}
-.span-track{position:relative;height:14px}
-.span-bar{position:absolute;top:0;height:100%;border-radius:4px;transform-origin:left;transform:scaleX(0);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.trace.run .span-bar{transform:scaleX(1)}
-.span-ms{position:absolute;top:-1px;font-family:var(--mono);font-size:11px;color:var(--slate);white-space:nowrap}
-.span-detail{margin-top:14px;border-top:1px solid var(--rule);padding-top:14px;min-height:118px;font-size:15px}
-.span-detail strong{display:block;font-size:16px;margin-bottom:4px}
-.span-detail p{color:var(--slate);margin-bottom:10px}
-.span-detail .tech{display:flex;flex-wrap:wrap;gap:6px}
-.span-detail .tech span{font-family:var(--mono);font-size:12.5px;background:var(--dotnet-soft);color:var(--dotnet);padding:3px 8px;border-radius:6px}
-.projects-intro{padding:110px 0 0}
-.projects-intro h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.2vw,52px);line-height:1.04;letter-spacing:-.025em;margin-bottom:14px}
-.projects-intro .intro{color:var(--slate);max-width:62ch;font-size:18px;margin-bottom:40px}
-.feature{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center;padding:36px;background:var(--paper);border:1px solid var(--rule);border-radius:22px;margin-bottom:80px}
-.feature h3,.index-h{line-height:1.15;font-family:var(--display);font-size:clamp(24px,2.6vw,32px);font-weight:600;letter-spacing:-.015em;margin-bottom:12px}
-.feature p{color:var(--slate)}
-.index-note{color:var(--slate);margin:-4px 0 22px}
-.contact h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.2vw,52px);line-height:1.04;letter-spacing:-.025em;margin-bottom:14px}
-@media (max-width:1020px){.feature{grid-template-columns:1fr;padding:24px}}
-@media (max-width:760px){.span{grid-template-columns:minmax(0,108px) minmax(0,1fr)}.projects-intro{padding-top:76px}.feature{padding:18px;margin-bottom:56px}}
-
-/* ---------- responsive ---------- */
-@media (max-width:1020px){
-  .hero-grid{grid-template-columns:1fr;gap:44px}
+/* responsive */
+@media(max-width:1020px){
+  .hero-copy{grid-template-columns:1fr;gap:24px}
+  .story{grid-template-columns:1fr}
+  .orb-wrap{position:relative;top:0;height:300px}
+  .step{min-height:0;padding-block:28px;opacity:1}
   .meet{grid-template-columns:1fr}
-  .side{min-height:380px}
-  .steps{grid-template-columns:repeat(3,1fr);row-gap:34px}
-  .steps::before{display:none}
-  .stack dl{grid-template-columns:repeat(2,1fr)}
-  .contact{grid-template-columns:1fr}
-  .proof ul{grid-template-columns:repeat(3,1fr)}
-  .proof li:nth-child(4){border-left:0;padding-left:0}
-  .proof li:nth-child(n+4){border-top:1px solid var(--rule)}
+  .side{min-height:320px}
+  .stack{grid-template-columns:repeat(2,1fr)}
+  .helps{grid-template-columns:repeat(2,1fr)}
+  .migrate-grid{grid-template-columns:1fr;gap:24px}
+  .contact-grid{grid-template-columns:1fr}
 }
-@media (max-width:760px){
+@media(max-width:760px){
   body{font-size:16px}
-  .bar nav{display:none;position:fixed;inset:64px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px var(--gutter) 16px}
+  .bar nav{position:fixed;top:calc(68px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--void);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 18px max(16px,env(safe-area-inset-left,0px));display:none}
   .bar nav.open{display:flex}
-  .bar nav a{padding:12px 0;border-bottom:1px solid var(--rule);font-size:16px}
-  .bar nav .kbd-btn{display:none}
+  .bar nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;color:var(--text)}
+  .kbd{display:none}
   .menu-btn{display:block}
-  .hero{padding:100px 0 56px}
-  .app th:nth-child(4),.app td:nth-child(4){display:none}
-  .block{padding:76px 0}
-  .proof ul{grid-template-columns:1fr 1fr}
-  .proof li{padding:18px 14px}
-  .proof li:nth-child(odd){border-left:0;padding-left:0}
-  .proof li:nth-child(4){border-left:1px solid var(--rule);padding-left:14px}
-  .proof li:nth-child(n+3){border-top:1px solid var(--rule)}
-  .proof li:last-child{grid-column:1/-1}
-  .shui-top{grid-template-columns:1fr}
-  .stage{min-height:0}
-  .tiles{grid-template-columns:1fr 1fr}
-  .tile{min-height:104px}
-  .face{width:48px;height:48px;font-size:18px}
-  .orb{width:70px;height:70px}
-  .steps{grid-template-columns:1fr 1fr}
+  .scroll-cue{display:none}
+  .hero{min-height:0}
+  #particles{height:150px;margin-top:16px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){padding-left:0;border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line);margin-top:24px}
+  .stack{grid-template-columns:1fr}
   .helps{grid-template-columns:1fr}
-  .stack dl{grid-template-columns:1fr}
-  .row>button{grid-template-columns:minmax(0,1fr) 28px;gap:6px 12px}
-  .r-what{grid-column:1;grid-row:2}
-  .r-tag{display:none}
-  .plus{grid-column:2;grid-row:1}
+  .migrate{height:auto}
+  .migrate-pin{position:relative;height:auto;padding-block:90px}
+  .reel{height:auto!important}
+  .reel-pin{position:relative;height:auto;padding-block:90px 20px}
+  .cards{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;padding-right:16px;padding-bottom:12px;transform:none!important;-webkit-overflow-scrolling:touch}
+  .card{scroll-snap-align:start;width:82vw;height:440px}
+  .row>button{grid-template-columns:minmax(0,1fr) 34px;gap:6px 12px}
+  .row-what{grid-row:2;grid-column:1}
+  .plus{grid-row:1;grid-column:2}
   .detail-in{grid-template-columns:1fr}
-  .tl>li{grid-template-columns:1fr;gap:6px}
-  .ai-way{grid-template-columns:1fr;gap:20px}
+  .ai{grid-template-columns:1fr}
   .entries li{grid-template-columns:1fr;gap:4px}
-  .form iframe{height:620px}
+  .tl{padding-left:34px}
+  .tl>li::before{left:-31px}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.001ms!important}
+  .grain{display:none}
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="loader" id="loader" aria-hidden="true"><div class="loader-num" id="loaderNum">0</div><div class="loader-tag">dotnet build prajwal.dev</div></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="ring" aria-hidden="true"></div>
 
 <header class="bar" id="bar">
   <div class="wrap">
-    <a class="mark" href="#top" aria-label="Prajwal Yathiraj, home"><i>PY</i>prajwal.dev</a>
+    <a class="mark" href="#top">prajwal<span class="grad">.dev</span></a>
     <nav id="nav" aria-label="Main">
-      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#shui">Shui.AI</a>
+      <a href="#work">Work</a>
       <a href="#career">Career</a>
       <a href="#contact">Contact</a>
-      <a href="#log">Build log</a>
-      <button class="kbd-btn" type="button" data-open-palette aria-label="Open quick menu">Jump to <kbd id="kbdHint">Ctrl K</kbd></button>
+      <button class="kbd" type="button" data-pal>Jump to <kbd id="kbdHint">Ctrl K</kbd></button>
     </nav>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </div>
 </header>
 
-<main id="main">
-<!-- ================= HERO ================= -->
+<main>
+<!-- HERO -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="wrap hero-copy">
     <div>
-      <p class="status"><b aria-hidden="true"></b>Lead Software Engineer in Bengaluru, open to lead and principal roles</p>
-      <h1><span class="name">Prajwal Yathiraj</span>Full-stack .NET engineer who builds with AI.</h1>
-      <p class="lede">Seven years of shipping enterprise apps end to end: the UI, the API, the database, the cloud and the pipeline that deploys it. I use AI to deliver faster, and I build AI into products.</p>
-      <div class="cta-row">
-        <a class="btn btn-net" href="#projects">See my projects</a>
-        <a class="btn btn-ink" href="Prajwal_Yathiraj_Resume.pdf" download>Download resume</a>
-        <a class="btn btn-line" href="mailto:yathirajprajwal@gmail.com?subject=Hello%20Prajwal">Email me</a>
-      </div>
+      <p class="kicker"><b aria-hidden="true"></b>Prajwal Yathiraj, Lead Software Engineer, Bengaluru</p>
+      <h1 id="heroTitle">Full-stack .NET engineer who builds with AI.</h1>
     </div>
-
-    <div class="trace" id="trace">
-      <div class="trace-head">
-        <span><b>GET</b> /stores/0412/transactions</span><span class="trace-ok">200 OK, 412 ms</span>
+    <div>
+      <p class="rot-line">I build <span class="rot" id="rot" aria-live="off"><span>Razor UIs</span></span> in .NET.</p>
+      <div class="ctas">
+        <a class="btn btn-main magnetic" href="#work">See my work</a>
+        <a class="btn btn-ghost magnetic" href="Prajwal_Yathiraj_Resume.pdf" download>Resume</a>
       </div>
-      <p class="trace-sub">One request through every layer I build. Pick a span.</p>
-      <ol class="spans" id="spans"></ol>
-      <div class="span-detail" id="spanDetail" aria-live="polite"></div>
     </div>
   </div>
+  <span class="scroll-cue">Scroll</span>
 </section>
 
-<div class="proof">
-  <div class="wrap">
-    <ul>
-      <li><strong>7+ yrs</strong><span>full-stack .NET and C#</span></li>
-      <li><strong>35+</strong><span>apps and modules built</span></li>
-      <li><strong>40+</strong><span>stores running an app I architected</span></li>
-      <li><strong>~50%</strong><span>faster delivery with AI-assisted work</span></li>
-      <li><strong>20+</strong><span>API integrations</span></li>
-    </ul>
-  </div>
+<div class="marquee" aria-label="Tech I use">
+  <div class="track" data-speed="1"><span>C#</span><span>.NET 10</span><span>ASP.NET Core</span><span>Razor</span><span>Blazor</span><span>Web API</span><span>SQL Server</span><span>PostgreSQL</span><span>pgvector</span><span>Snowflake</span></div>
+  <div class="track alt" data-speed="-1"><span>AWS</span><span>Azure Entra ID</span><span>Kubernetes</span><span>Docker</span><span>GitHub Actions</span><span>ArgoCD</span><span>Claude API</span><span>Microsoft.Extensions.AI</span><span>RAG</span><span>Playwright</span></div>
 </div>
 
-<!-- ================= PROJECTS ================= -->
-<section class="projects-intro" id="projects" aria-labelledby="projects-h">
+<!-- ABOUT -->
+<section class="chapter statement" id="about">
   <div class="wrap">
-    <h2 id="projects-h">Projects</h2>
-    <p class="intro">One I built on my own to push what .NET and AI can do together, then the apps I've shipped at work.</p>
+    <span class="label">About</span>
+    <p id="statement">Seven years shipping enterprise apps end to end. The UI, the API, the database, the cloud and the pipeline that deploys it. I use AI to deliver faster, and I build AI into the products themselves.</p>
+    <div class="stats">
+      <div class="stat"><strong data-count="7" data-suffix="+">7+</strong><span>years of full-stack .NET</span></div>
+      <div class="stat"><strong data-count="35" data-suffix="+">35+</strong><span>apps and modules built</span></div>
+      <div class="stat"><strong data-count="40" data-suffix="+">40+</strong><span>stores run an app I architected</span></div>
+      <div class="stat"><strong data-count="50" data-prefix="~" data-suffix="%">~50%</strong><span>faster delivery with AI</span></div>
+    </div>
   </div>
 </section>
 
-<section class="shui block" id="shui" aria-labelledby="shui-h">
+<!-- SHUI -->
+<section class="shui chapter" id="shui">
   <div class="wrap">
-    <div class="shui-top">
+    <div class="shui-head">
       <div>
-        <div class="brand"><span class="mini-orb" aria-hidden="true"></span>Shui.AI <span class="say">said "shoo-ee"</span></div>
-        <h2 id="shui-h">An AI teammate that joins Google Meet calls.</h2>
-        <p class="intro">I built Shui solo, end to end in .NET 10. Invite it to a call, say "Hey Shui", and it answers out loud from the team's own code, pull requests, issues and docs, with a source for every claim. When it doesn't know, it says so. When the call ends, it writes the notes.</p>
+        <span class="label">Personal project</span>
+        <h2 class="h2 reveal">Shui.AI, an AI teammate that joins your meetings.</h2>
+        <p class="lead reveal">I built it solo, end to end in .NET 10. Say "Hey Shui" in a Google Meet call and it answers out loud from the team's own code, pull requests, issues and docs, with a source for every claim.</p>
       </div>
-      <span class="badge-dev">Personal project</span>
+      <span class="tag">said "shoo-ee"</span>
     </div>
 
-    <div class="meet" id="meet">
+    <div class="story">
+      <div class="orb-wrap"><canvas id="orb" aria-hidden="true"></canvas><span class="orb-caption" id="orbCaption">invite</span></div>
+      <ol class="steps">
+        <li class="step on" data-mode="0"><small>Step 1</small><h3>It joins by itself</h3><p>Add Shui to a Calendar event, or use Meet's "Add people" mid-call. It joins on its own browser profile, several calls at once.</p></li>
+        <li class="step" data-mode="1"><small>Step 2</small><h3>It listens and waits its turn</h3><p>Shui reads Meet's live captions, waits for people to finish, and stops if someone starts talking.</p></li>
+        <li class="step" data-mode="2"><small>Step 3</small><h3>It answers with sources</h3><p>Hybrid search over your repos, filtered by who may see what. It speaks the answer and posts the sources in the chat. No source, no answer.</p></li>
+        <li class="step" data-mode="3"><small>Step 4</small><h3>It writes the notes</h3><p>Summary, decisions and action items when the call ends, indexed so later questions can cite them.</p></li>
+      </ol>
+    </div>
+
+    <div class="demo-head">
+      <h3>Try it</h3>
+      <p>Pick a question or type your own. Turn the voice on to hear Shui speak.</p>
+    </div>
+    <div class="meet">
       <div class="stage">
-        <div class="stage-head"><span class="rec"><b aria-hidden="true"></b>Platform sync · Google Meet</span><span id="clock">10:02</span></div>
+        <div class="stage-head"><span class="rec"><b aria-hidden="true"></b>Platform sync, Google Meet</span><span id="clock">10:02</span></div>
         <div class="tiles">
           <div class="tile" data-who="Nik"><span class="face" style="background:#ffd6a5">N</span><span class="nm">Nik</span></div>
           <div class="tile" data-who="Priya"><span class="face" style="background:#cdb4ff">P</span><span class="nm">Priya</span></div>
           <div class="tile" data-who="Dev"><span class="face" style="background:#9be7c4">D</span><span class="nm">Dev</span></div>
-          <div class="tile shui-tile" data-who="Shui"><span class="orb" aria-hidden="true"></span><span class="nm">Shui</span></div>
+          <div class="tile shui-tile" data-who="Shui"><span class="mini-orb" aria-hidden="true"></span><span class="nm">Shui</span></div>
         </div>
-        <div class="captions" id="captions" aria-live="polite"><span class="who-c">Priya</span>Okay, let's start. Pick a question below and ask Shui.</div>
-        <div class="ask-row" id="chips">
+        <div class="captions" id="captions" aria-live="polite"><span class="who">Priya</span>Okay, let's start. Ask Shui something.</div>
+        <div class="chips" id="chips">
           <button class="chip" type="button" data-q="sync">Hey Shui, why did the sync skip some files?</button>
           <button class="chip" type="button" data-q="catchup">Hey Shui, catch me up</button>
           <button class="chip" type="button" data-q="secret">Hey Shui, what's this quarter's revenue?</button>
           <button class="chip" type="button" data-q="unknown">Hey Shui, who wrote the original COBOL?</button>
         </div>
-        <form class="ask-form" id="askForm">
-          <label for="askInput" class="skip">Ask Shui your own question</label>
-          <input id="askInput" autocomplete="off" placeholder="Or type your own: Hey Shui, …" maxlength="140">
+        <form class="ask" id="askForm">
+          <label for="askInput" class="sr">Ask Shui your own question</label>
+          <input id="askInput" autocomplete="off" placeholder="Or type: Hey Shui, …" maxlength="140">
           <button type="submit">Ask</button>
         </form>
       </div>
       <aside class="side" aria-label="Meeting chat">
-        <div class="side-head"><span>In-call messages</span><button class="sound" id="sound" type="button" aria-pressed="false">Voice off</button></div>
-        <div class="chat" id="chat"><p class="empty-chat">Shui's answers and their sources show up here.</p></div>
+        <div class="side-head"><span>In-call messages</span><button class="voice" id="voice" type="button" aria-pressed="false">Voice off</button></div>
+        <div class="chat" id="chat"><p class="empty">Shui's answers and their sources show up here.</p></div>
       </aside>
     </div>
-    <p class="demo-note">This demo is scripted in your browser so it's instant, but every behaviour in it comes from the real product: cited answers, catch-up, the room rule and "no source, no answer". Turn the voice on to hear it.</p>
+    <p class="note">The demo runs in your browser so it's instant. Each behaviour mirrors the real app: cited answers, catch-up, the room rule, and "no source, no answer".</p>
 
-    <div class="flow">
-      <h3>What happens in a call</h3>
-      <ol class="steps">
-        <li><strong>Invite</strong><p>Add Shui to a Calendar event, or use Meet's "Add people" mid-call.</p></li>
-        <li><strong>Join</strong><p>It joins a minute before start, on its own browser profile, several calls at once.</p></li>
-        <li><strong>Listen</strong><p>Reads Meet's live captions and waits for people to finish talking.</p></li>
-        <li><strong>Search</strong><p>Vector and keyword search over your sources, filtered by who may see what.</p></li>
-        <li><strong>Answer</strong><p>Speaks in a natural voice and posts the sources in the chat.</p></li>
-        <li><strong>Notes</strong><p>Summary, decisions and action items, indexed so later questions can cite them.</p></li>
-      </ol>
-    </div>
-
+    <h3 class="stack-h">What I built it with</h3>
+    <dl class="stack">
+      <div><dt>.NET 10, ASP.NET Core MVC</dt><dd>Razor views, a JSON API and background workers in one classic .sln.</dd></div>
+      <div><dt>Microsoft.Extensions.AI</dt><dd>One interface for every model, so switching providers is configuration.</dd></div>
+      <div><dt>PostgreSQL + pgvector</dt><dd>Vector and full-text search merged with reciprocal rank fusion.</dd></div>
+      <div><dt>Free model chain</dt><dd>Gemini, Groq, Cerebras, OpenRouter and Mistral free tiers, then local Ollama.</dd></div>
+      <div><dt>Playwright</dt><dd>Drives a real Edge or Chrome window into Google Meet.</dd></div>
+      <div><dt>Kokoro TTS, SearXNG</dt><dd>A self-hosted voice and private web search with no API key.</dd></div>
+      <div><dt>MailKit, Ical.Net</dt><dd>Reads calendar and Meet invitations so Shui joins on its own.</dd></div>
+      <div><dt>OpenID Connect</dt><dd>Google or Entra sign-in, per-user rate limits, an audit log of every answer.</dd></div>
+      <div><dt>Docker, Caddy, GitHub Actions</dt><dd>One-command deploy with HTTPS, and CI running 80+ xUnit tests.</dd></div>
+    </dl>
     <div class="helps">
-      <h3>Who it helps</h3>
-      <div class="help"><strong>Teams losing context</strong><p>When the person who knew why something was built leaves, the answer is still in the PRs and issues. Shui finds it and points to it.</p></div>
-      <div class="help"><strong>People who joined late</strong><p>"Hey Shui, catch me up" gives a short recap of what was said, without stopping the meeting.</p></div>
-      <div class="help"><strong>Managers and leads</strong><p>Notes with decisions and owners arrive after every call. Nobody has to take minutes.</p></div>
-      <div class="help"><strong>Security and compliance</strong><p>Permissions are enforced inside the database query, every answer is audited, and in a room Shui only uses what everyone there may hear.</p></div>
+      <div><strong>Teams losing context</strong><p>When someone leaves, the reasons behind the code are still in PRs and issues. Shui finds them.</p></div>
+      <div><strong>People who join late</strong><p>"Hey Shui, catch me up" recaps the call without stopping it.</p></div>
+      <div><strong>Leads and managers</strong><p>Decisions and owners arrive after every call. Nobody takes minutes.</p></div>
+      <div><strong>Security teams</strong><p>Permissions are enforced in the database query, so the model never sees what the asker can't.</p></div>
     </div>
-
-    <div class="stack">
-      <h3>What I built it with, and why</h3>
-      <dl>
-        <div><dt>.NET 10 · ASP.NET Core MVC</dt><dd>Razor views, a JSON API and background workers in one classic .sln.</dd></div>
-        <div><dt>Microsoft.Extensions.AI</dt><dd>One interface for every model, so swapping providers is configuration.</dd></div>
-        <div><dt>PostgreSQL + pgvector</dt><dd>Hybrid search: vectors plus full-text, merged with reciprocal rank fusion.</dd></div>
-        <div><dt>Free model chain</dt><dd>Gemini, Groq, Cerebras, OpenRouter and Mistral free tiers, then local Ollama, tried in turn.</dd></div>
-        <div><dt>Playwright</dt><dd>Drives a real Edge or Chrome window into Google Meet, captions in, voice out.</dd></div>
-        <div><dt>Kokoro TTS · SearXNG</dt><dd>A self-hosted voice, and private web search with no API key.</dd></div>
-        <div><dt>MailKit · Ical.Net</dt><dd>Picks up calendar invites and Meet invitations so Shui joins by itself.</dd></div>
-        <div><dt>OpenID Connect</dt><dd>Google or Entra sign-in, per-user rate limits, fail-closed startup.</dd></div>
-        <div><dt>Docker · Caddy · GitHub Actions</dt><dd>One-command deploy on a free VM with HTTPS, and CI with 80+ xUnit tests.</dd></div>
-      </dl>
-    </div>
-
-    <div class="shui-cta">
-      <a class="btn btn-aqua" href="https://github.com/yathirajprajwal/shui-ai-assistant" target="_blank" rel="noopener">Read the code on GitHub</a>
-      <span class="shui-facts">About 7,500 lines of C# and 80+ tests. First commit to speaking in Meet took two days.</span>
+    <div class="shui-foot">
+      <a class="btn btn-main magnetic" href="https://github.com/yathirajprajwal/shui-ai-assistant" target="_blank" rel="noopener">Read the code on GitHub</a>
+      <span>About 7,500 lines of C#. First commit to speaking in Meet took two days.</span>
     </div>
   </div>
 </section>
 
-<!-- ================= WORK ================= -->
-<section class="block" id="work" aria-labelledby="work-h">
-  <div class="wrap">
-    <h2 id="work-h">At work: apps for stores and the people in them.</h2>
-    <p class="intro">Internal apps at Saks Global, Hudson's Bay and Neiman Marcus, from point-of-sale monitoring to gift cards to sign-in.</p>
-
-    <div class="feature">
-      <div class="feature-copy">
-        <h3>Mainframe screens to .NET&nbsp;10</h3>
-        <p>Part of my job is retiring the mainframe. I've moved 25+ UC4/DB2 batch jobs and 6 applications to .NET 10 so far. Flip the switch to see one of those screens before and after.</p>
-        <div class="toggle">
-          <button class="switch" id="migrate" type="button" role="switch" aria-checked="false" aria-label="Show the modern version"></button>
-          <span id="toggleLabel"><b>Before:</b> the 3270 screen store teams used</span>
-        </div>
+<!-- MIGRATION -->
+<section class="migrate" id="migrate">
+  <div class="migrate-pin">
+    <div class="wrap migrate-grid">
+      <div>
+        <span class="label">At work</span>
+        <h2 class="h2">Green screens to .NET 10.</h2>
+        <p class="lead">Part of my job is retiring the mainframe. So far I've moved 25+ UC4/DB2 batch jobs and 6 applications onto .NET 10. Scroll to migrate this one.</p>
+        <div class="meter"><span id="meterText">Migrated 0%</span><div class="meter-bar"><i id="meterBar"></i></div></div>
       </div>
-      <div class="device" id="device" aria-label="The same returns lookup as a legacy mainframe screen and as the modern .NET app that replaced it" role="img">
-        <div class="screen legacy" id="legacy" aria-hidden="true"></div>
-        <div class="screen modern" aria-hidden="true">
-          <div class="chrome"><i></i><i></i><i></i><span class="url">returns.store-apps.internal/transactions</span></div>
+      <div class="screens" aria-label="A mainframe transaction screen being replaced by the modern .NET returns app" role="img">
+        <div class="scr legacy" id="legacy" aria-hidden="true"></div>
+        <div class="scr modern" id="modern" aria-hidden="true">
+          <div class="chrome"><i></i><i></i><i></i><span>returns.store-apps.internal/transactions</span></div>
           <div class="app">
-            <div class="app-head"><strong>Returns lookup</strong><span class="who"><i>AS</i>Store 0412 · Entra ID</span></div>
+            <div class="app-top"><strong>Returns lookup</strong><span>Store 0412, Entra ID</span></div>
             <div class="filters"><span class="on">Last 7 days</span><span>Register 07</span><span>Gift card</span><span>Pending</span></div>
             <table>
-              <thead><tr><th>Date</th><th>Type</th><th style="text-align:right">Amount</th><th>Tender</th><th>Status</th></tr></thead>
+              <thead><tr><th>Date</th><th>Type</th><th style="text-align:right">Amount</th><th>Status</th></tr></thead>
               <tbody>
-                <tr><td>Oct 23, 2:02 pm</td><td>Sale</td><td class="num">$129.00</td><td>Visa</td><td><span class="pill ok">Posted</span></td></tr>
-                <tr><td>Oct 23, 3:47 pm</td><td>Return</td><td class="num">−$42.50</td><td>Gift card</td><td><span class="pill wait">Pending</span></td></tr>
-                <tr><td>Oct 23, 5:12 pm</td><td>Sale</td><td class="num">$310.75</td><td>Amex</td><td><span class="pill ok">Posted</span></td></tr>
-                <tr><td>Oct 24, 10:31 am</td><td>Exchange</td><td class="num">$0.00</td><td>Store credit</td><td><span class="pill ok">Posted</span></td></tr>
+                <tr><td>Oct 23, 2:02 pm</td><td>Sale</td><td class="n">$129.00</td><td><span class="pill ok">Posted</span></td></tr>
+                <tr><td>Oct 23, 3:47 pm</td><td>Return</td><td class="n">−$42.50</td><td><span class="pill wait">Pending</span></td></tr>
+                <tr><td>Oct 23, 5:12 pm</td><td>Sale</td><td class="n">$310.75</td><td><span class="pill ok">Posted</span></td></tr>
+                <tr><td>Oct 24, 10:31 am</td><td>Exchange</td><td class="n">$0.00</td><td><span class="pill ok">Posted</span></td></tr>
               </tbody>
             </table>
             <div class="app-foot"><span>.NET 10</span><span>ASP.NET Core MVC</span><span>SQL Server</span><span>Kubernetes</span></div>
           </div>
         </div>
+        <div class="wipe" id="wipe" aria-hidden="true"></div>
       </div>
     </div>
-
-    <h3 class="index-h">Everything else I've shipped</h3>
-    <p class="index-note">Open any row for what it does and what it runs on. All in production unless marked otherwise.</p>
-    <div class="tabs" id="tabs" role="group" aria-label="Filter projects"></div>
-    <ul class="index" id="index"></ul>
   </div>
 </section>
 
-<!-- ================= CAREER ================= -->
-<section class="career block" id="career" aria-labelledby="career-h">
+<!-- REEL -->
+<section class="reel" id="work">
+  <div class="reel-pin">
+    <div class="wrap reel-head">
+      <div>
+        <span class="label">Work</span>
+        <h2 class="h2">Apps I've shipped for stores.</h2>
+      </div>
+      <span class="reel-count" id="reelCount">01 / 08</span>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="more">
   <div class="wrap">
-    <h2 id="career-h">Seven years, one stack, end to end.</h2>
-    <p class="intro">Same company since 2020 through two acquisitions, promoted twice. I've owned features from the Razor view to the Kubernetes deployment.</p>
-    <ol class="tl">
+    <h2 class="h2 reveal" style="font-size:clamp(30px,4vw,54px)">And the rest.</h2>
+    <div class="tabs" id="tabs" role="group" aria-label="Filter projects"></div>
+    <ul class="list" id="list"></ul>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="chapter career" id="career">
+  <div class="wrap">
+    <span class="label">Career</span>
+    <h2 class="h2 reveal">Seven years, one stack, end to end.</h2>
+    <ol class="tl" id="tl">
+      <span class="tl-fill" id="tlFill" aria-hidden="true"></span>
       <li>
         <time>Sep 2025 – now</time>
-        <div>
-          <h3>Lead Software Engineer, Store Applications</h3>
-          <p class="org">Neiman Marcus Global Technology Services, formerly Hudson's Bay / Saks Global</p>
-          <ul>
-            <li>Key contributor to an $8M mainframe decommissioning program (1,500+ jobs, 50+ applications). I personally moved 25+ UC4/DB2 batch jobs and 6 applications to .NET 10.</li>
-            <li>Architected the promotional card activation and returns platform: ASP.NET Core MVC, Azure AD sign-in with Graph API roles, barcode scanning, live in 40+ stores.</li>
-            <li>Replaced manual mainframe extracts with .NET pipelines to S3, cutting delivery from hours to under 5 minutes.</li>
-            <li>Centralised secrets in AWS Secrets Manager across 3 Kubernetes environments, cutting config-related deployment failures by 90%.</li>
-            <li>Built AI-powered internal tools on the Claude API. AI-assisted development cut our feature delivery time by about half.</li>
-            <li>Mentor 3+ developers; my .NET scaffolding is reused across 4 console apps, and CI/CD took deployments from hours to under 15 minutes. Since Oct 2026 I also act as architect for the team's .NET applications.</li>
-          </ul>
-        </div>
+        <h3>Lead Software Engineer, Store Applications</h3>
+        <p class="org">Neiman Marcus Global Technology Services, formerly Hudson's Bay / Saks Global</p>
+        <ul>
+          <li>Architected the promotional card activation and returns platform: ASP.NET Core MVC, Azure AD sign-in with Graph API roles, barcode scanning, live in 40+ stores.</li>
+          <li>Built AI-powered internal tools on the Claude API; AI-assisted development cut our delivery time by about half.</li>
+          <li>Key contributor to an $8M mainframe decommissioning program; I moved 25+ batch jobs and 6 applications to .NET 10.</li>
+          <li>Centralised secrets in AWS Secrets Manager across 3 Kubernetes environments, cutting config-related deployment failures by 90%.</li>
+          <li>Mentor 3+ developers; CI/CD took deployments from hours to under 15 minutes. Since Oct 2026 I also act as architect for the team's .NET applications.</li>
+        </ul>
       </li>
       <li>
         <time>Apr 2024 – Sep 2025</time>
-        <div>
-          <h3>Senior Software Engineer, Store Applications</h3>
-          <p class="org">Hudson's Bay Services / Saks Global</p>
-          <ul>
-            <li>Web apps and REST APIs in ASP.NET Core MVC, JavaScript and Swagger for store operations.</li>
-            <li>Integrated AWS S3 for file storage; tuned queries and refactored for speed, with response times up to 60% faster.</li>
-            <li>Drove test-driven development with unit, integration and regression suites.</li>
-            <li>Across 2020 to 2025: built 10+ enterprise apps, including the Sales Trickle Dashboard, EJ Viewer, Incident Management and NOC Dashboard, and led the Okta to Azure AD migration with OAuth 2.0 and OpenID Connect.</li>
-          </ul>
-        </div>
+        <h3>Senior Software Engineer, Store Applications</h3>
+        <p class="org">Hudson's Bay Services / Saks Global</p>
+        <ul>
+          <li>Web apps and REST APIs in ASP.NET Core MVC, JavaScript and Swagger for store operations.</li>
+          <li>Integrated AWS S3 for file storage; query tuning and refactoring made responses up to 60% faster.</li>
+          <li>Drove test-driven development with unit, integration and regression suites.</li>
+          <li>Across 2020 to 2025: 10+ enterprise apps including the Sales Trickle Dashboard, EJ Viewer and NOC Dashboard, and the Okta to Azure AD migration.</li>
+        </ul>
       </li>
       <li>
         <time>Jul 2020 – Mar 2024</time>
-        <div>
-          <h3>Software Engineer, Store Applications</h3>
-          <p class="org">Hudson's Bay Services</p>
-          <ul>
-            <li>Built middleware for secure TLS handshakes with Okta verification, Microsoft MFA, Akamai tokens and cache keys.</li>
-            <li>Built .NET web applications for store operations, with validation in ASP.NET MVC.</li>
-            <li>Shipped iOS apps for in-store iPads where customers apply for the store credit card.</li>
-          </ul>
-        </div>
+        <h3>Software Engineer, Store Applications</h3>
+        <p class="org">Hudson's Bay Services</p>
+        <ul>
+          <li>Middleware for secure TLS handshakes with Okta verification, Microsoft MFA, Akamai tokens and cache keys.</li>
+          <li>.NET web applications for store operations, with validation in ASP.NET MVC.</li>
+          <li>iOS apps for in-store iPads where customers apply for the store credit card.</li>
+        </ul>
       </li>
       <li>
         <time>Jun 2019 – Feb 2020</time>
-        <div>
-          <h3>Software Engineer</h3>
-          <p class="org">Infolink Technologies</p>
-          <ul><li>Built a SaaS business platform for lead tracking, quotations, orders and reporting.</li></ul>
-        </div>
+        <h3>Software Engineer</h3>
+        <p class="org">Infolink Technologies</p>
+        <ul><li>A SaaS business platform for lead tracking, quotations, orders and reporting.</li></ul>
       </li>
     </ol>
-
-    <div class="ai-way">
-      <h3>How I use AI day to day</h3>
-      <div><strong>Claude</strong><p>My main partner for architecture, full-stack code, hard debugging and documentation, and the API behind the AI tools I build.</p></div>
+    <div class="ai">
+      <div><strong>Claude</strong><p>My main partner for architecture, full-stack code, hard debugging and docs, and the API behind the AI tools I build.</p></div>
       <div><strong>GitHub Copilot</strong><p>Inline completion in Visual Studio and VS Code for models, LINQ, scaffolding and tests.</p></div>
       <div><strong>Gemini</strong><p>Quick research, unfamiliar APIs, and a second opinion before I commit to a design.</p></div>
     </div>
-
     <div class="edu"><strong>B.E. Computer Science and Engineering</strong><span>The Oxford College of Engineering, Bengaluru, 2015 – 2019</span></div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section class="block" id="contact" aria-labelledby="contact-h">
-  <div class="wrap contact">
-    <div>
-      <h2 id="contact-h">Say hello.</h2>
-      <p>Hiring for a lead or principal .NET role, or want to talk about something I've built? I reply within a day.</p>
-      <ul class="links">
-        <li><button class="copy" type="button" data-copy="yathirajprajwal@gmail.com"><span>Email</span><span>yathirajprajwal@gmail.com</span></button></li>
-        <li><a href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank" rel="noopener"><span>LinkedIn</span><span>in/prajwal-yathiraj</span></a></li>
-        <li><a href="https://github.com/yathirajprajwal" target="_blank" rel="noopener"><span>GitHub</span><span>yathirajprajwal</span></a></li>
-        <li><a href="tel:+919481719233"><span>Phone</span><span>+91 94817 19233</span></a></li>
-        <li><a href="Prajwal_Yathiraj_Resume.pdf" download><span>Resume</span><span>One-page PDF</span></a></li>
-      </ul>
-    </div>
-    <div class="form">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4DTJCeKA-QEYEuN-tyzmqgXBZdqG8qH8fslgN92jwn1e8gg/viewform?embedded=true" loading="lazy" title="Contact form">Loading…</iframe>
-    </div>
+<!-- LOG -->
+<section class="chapter log" id="log">
+  <div class="wrap">
+    <span class="label">Build log</span>
+    <h2 class="h2 reveal">What I shipped lately.</h2>
+    <ol class="entries">
+      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Shui takes turns like a person</strong><p>Waits for people to finish, yields when someone talks, and answers questions typed in the Meet chat.</p></div></li>
+      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Never stuck on a busy model</strong><p>Every free model from five providers is tried in turn; a model that just failed rests before it's tried again.</p></div></li>
+      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Joins by itself</strong><p>Invite Shui in Google Calendar, or add it mid-call with Meet's "Add people".</p></div></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><div><strong>"Hey Shui" in Google Meet</strong><p>Spoken answers, catch-up for latecomers, and notes when the call ends.</p></div></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><div><strong>Shui's first commit</strong><p>GitHub ingestion, permission-aware hybrid search and cited answers.</p></div></li>
+      <li><time datetime="2026-10">Oct 2026</time><div><strong>Returns Management at work</strong><p>A new .NET 10 MVC app replacing the mainframe screens stores used to look up transactions.</p></div></li>
+    </ol>
+    <p class="log-foot">Every Shui change is public in its <a href="https://github.com/yathirajprajwal/shui-ai-assistant/commits/main" target="_blank" rel="noopener">commit history</a>.</p>
   </div>
 </section>
 
-<!-- ================= BUILD LOG ================= -->
-<section class="log block" id="log" aria-labelledby="log-h">
+<!-- CONTACT -->
+<section class="chapter contact" id="contact">
   <div class="wrap">
-    <h2 id="log-h">Build log</h2>
-    <p class="intro">What I've shipped lately, at work and on my own. Updated as I go.</p>
-    <ol class="entries">
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Shui takes turns like a person</strong><p>It waits for people to finish, yields when someone talks, and answers questions typed in the Meet chat too.</p></div></li>
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Never stuck on a busy model</strong><p>Every free model from five providers is tried in turn, and a model that just failed rests before it's tried again.</p></div></li>
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Joins by itself</strong><p>Invite Shui in Google Calendar, or add it mid-call with Meet's "Add people", and it shows up.</p></div></li>
-      <li><time datetime="2026-10-23">Oct 23, 2026</time><div><strong>Beyond your sources, labelled</strong><p>Team questions stay on team sources. General questions can use private web search, then clearly labelled general knowledge.</p></div></li>
-      <li><time datetime="2026-10-22">Oct 22, 2026</time><div><strong>"Hey Shui" in Google Meet</strong><p>The meeting bot: spoken answers, catch-up for latecomers, and notes when the call ends.</p></div></li>
-      <li><time datetime="2026-10-22">Oct 22, 2026</time><div><strong>First commit</strong><p>GitHub ingestion, permission-aware hybrid search and cited answers.</p></div></li>
-      <li><time datetime="2026-10">Oct 2026</time><div><strong>Returns Management at work</strong><p>A new .NET 10 MVC app replacing the mainframe green screens stores used to look up transactions.</p></div></li>
-    </ol>
-    <p class="log-foot">Every change is public in the <a href="https://github.com/yathirajprajwal/shui-ai-assistant/commits/main" target="_blank" rel="noopener">Shui commit history</a>.</p>
+    <span class="label">Contact</span>
+    <p class="big" id="big" aria-label="Let's build something.">Let's build<br><span class="grad">something.</span></p>
+    <div class="contact-grid">
+      <p>Hiring for a lead or principal .NET role, or want to talk about something I've built? I reply within a day.</p>
+      <ul class="links">
+        <li><button type="button" data-copy="yathirajprajwal@gmail.com"><span>Email</span><span>yathirajprajwal@gmail.com</span></button></li>
+        <li><a href="https://www.linkedin.com/in/prajwal-yathiraj/" target="_blank" rel="noopener"><span>LinkedIn</span><span>in/prajwal-yathiraj</span></a></li>
+        <li><a href="https://github.com/yathirajprajwal" target="_blank" rel="noopener"><span>GitHub</span><span>yathirajprajwal</span></a></li>
+        <li><a href="tel:+919481719233"><span>Phone</span><span>+91 94817 19233</span></a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4DTJCeKA-QEYEuN-tyzmqgXBZdqG8qH8fslgN92jwn1e8gg/viewform" target="_blank" rel="noopener"><span>Form</span><span>Send me a message</span></a></li>
+        <li><a href="Prajwal_Yathiraj_Resume.pdf" download><span>Resume</span><span>One-page PDF</span></a></li>
+      </ul>
+    </div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="wrap"><span>Prajwal Yathiraj, Bengaluru. Hand-built, no framework.</span><span>Updated October 2026</span></div>
-</footer>
+<footer><div class="wrap"><span>Prajwal Yathiraj, Bengaluru. Hand-built, no framework.</span><span>Updated October 2026</span></div></footer>
 
-<dialog class="palette" id="palette" aria-label="Quick menu">
-  <input id="palInput" placeholder="Where to?" autocomplete="off" aria-label="Search actions">
-  <ul id="palList" role="listbox"></ul>
+<dialog class="pal" id="pal" aria-label="Quick menu">
+  <input id="palInput" placeholder="Where to?" autocomplete="off" aria-label="Search">
+  <ul id="palList"></ul>
   <div class="hint">Arrow keys to move, Enter to go, Esc to close</div>
 </dialog>
 <div class="toast" id="toast" role="status"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const toast = msg => { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1800); };
+  const fine = matchMedia('(pointer: fine)').matches;
+  const mobile = () => innerWidth <= 760;
+  const G = window.gsap, ST = window.ScrollTrigger;
+  if (G && ST) G.registerPlugin(ST);
+  const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1800); };
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-  /* top bar */
-  const bar = $('#bar');
-  const onScroll = () => bar.classList.toggle('scrolled', scrollY > 10);
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  const nav = $('#nav'), menuBtn = $('#menuBtn');
+  /* ---------- smooth scroll ---------- */
+  let lenis = null, velocity = 0;
+  if (window.Lenis && !reduce) {
+    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    lenis.on('scroll', e => { velocity = e.velocity || 0; ST && ST.update(); });
+    if (G) { G.ticker.add(t => lenis.raf(t * 1000)); G.ticker.lagSmoothing(0); }
+    else { const raf = t => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
+  }
+  const scrollTo = id => { const el = document.getElementById(id); if (!el) return; lenis ? lenis.scrollTo(el, { offset: -60 }) : el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); };
+
+  /* ---------- nav ---------- */
+  const bar = $('#bar'), nav = $('#nav'), menuBtn = $('#menuBtn'), progress = $('#progress');
   menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
-  $$('#nav a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+  $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href').slice(1); if (!id) return; e.preventDefault(); scrollTo(id); nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
 
-  /* ---------- hero: request trace ---------- */
-  const spans = [
-    ['Request', 'ASP.NET Core', 0, 412, '#101a33', 'The whole request', 'An MVC controller with dependency injection, thin services and a repository layer, the way I structure every app.', ['C#', '.NET 10', 'ASP.NET Core MVC', 'Web API', 'SOLID']],
-    ['Sign-in check', 'Entra ID', 4, 30, '#512bd4', 'Who is asking', 'OpenID Connect with Microsoft Entra ID and Graph API roles. I led our Okta to Azure AD move and wire role-based access into each app.', ['Entra ID', 'OIDC', 'OAuth 2.0', 'Graph API']],
-    ['Query', 'SQL Server', 40, 120, '#0e7c66', 'The data', 'Stored procedures and LINQ on SQL Server at work, PostgreSQL with pgvector on my own projects. Query tuning made some pages up to 60% faster.', ['SQL Server', 'PostgreSQL', 'pgvector', 'Snowflake', 'LINQ']],
-    ['Receipt file', 'AWS S3', 165, 70, '#c26b00', 'The cloud', 'Files in S3, secrets in AWS Secrets Manager, containers on Kubernetes, shipped by GitHub Actions and ArgoCD.', ['AWS', 'Azure', 'Docker', 'Kubernetes', 'GitHub Actions', 'ArgoCD']],
-    ['Summary', 'AI model', 240, 130, '#9d4edd', 'The AI', 'Models behind Microsoft.Extensions.AI, so switching providers is configuration. Answers grounded in your data with citations, as I built for Shui.', ['Claude API', 'Microsoft.Extensions.AI', 'RAG', 'Ollama']],
-    ['Page', 'Razor + JS', 372, 38, '#2563eb', 'The UI', 'Server-rendered Razor with JavaScript where it earns its place, plus Blazor and native iOS in Swift when the job needs it.', ['Razor', 'JavaScript', 'HTML/CSS', 'Blazor', 'Swift']]
-  ];
-  const total = 412, spansEl = $('#spans'), spanDetail = $('#spanDetail');
-  spansEl.innerHTML = spans.map((s, i) => {
-    const end = (s[2] + s[3]) / total * 100;
-    const label = end > 82 ? `right:${100 - s[2] / total * 100 + 1}%` : `left:calc(${end}% + 6px)`;
-    return `<li><button class="span" type="button" data-i="${i}" aria-pressed="false">
-      <span class="span-name">${s[0]}<small>${s[1]}</small></span>
-      <span class="span-track"><span class="span-bar" style="left:${s[2] / total * 100}%;width:${s[3] / total * 100}%;background:${s[4]};transition-delay:${i * 120}ms"></span>${i ? `<span class="span-ms" style="${label}">${s[3]} ms</span>` : ''}</span></button></li>`;
-  }).join('');
-  function showSpan(i) {
-    const s = spans[i];
-    $$('.span').forEach(b => b.setAttribute('aria-pressed', +b.dataset.i === i));
-    spanDetail.innerHTML = `<strong>${s[5]}</strong><p>${s[6]}</p><div class="tech">${s[7].map(t => `<span>${t}</span>`).join('')}</div>`;
-  }
-  spansEl.addEventListener('click', e => { const b = e.target.closest('.span'); if (b) showSpan(+b.dataset.i); });
-  showSpan(0);
-  requestAnimationFrame(() => setTimeout(() => $('#trace').classList.add('run'), 150));
-
-  /* ---------- mainframe before/after ---------- */
-  const screenText = [
-    '<span class="hi">PICICPS1</span>          TRANSACTION INQUIRY          10/24/26 10:02',
-    '<span class="dim">STORE:</span> 0412   <span class="dim">REG:</span> 07   <span class="dim">OPER:</span> 4518',
-    '<span class="dim">-------------------------------------------------------</span>',
-    ' DATE      TIME   TYPE   AMOUNT     TENDER   STATUS',
-    ' 10/23/26  14:02  SALE    129.00    VISA     POSTED',
-    ' 10/23/26  15:47  RTN     -42.50    GC       PENDNG',
-    ' 10/23/26  17:12  SALE    310.75    AMEX     POSTED',
-    ' 10/24/26  10:31  EXCH      0.00    SCRD     POSTED',
-    '',
-    '',
-    '<span class="dim">-------------------------------------------------------</span>',
-    ' PF1=HELP  PF3=EXIT  PF7=BKWD  PF8=FWD  ENTER=SEARCH',
-    '<span class="hi">===&gt;</span> <span class="cur">█</span>'
-  ];
-  const legacy = $('#legacy'), device = $('#device'), sw = $('#migrate'), lbl = $('#toggleLabel');
-  const strip = s => s.replace(/<[^>]+>/g, '').replace(/&gt;/g, '>');
-  function typeScreen(done) {
-    if (reduce) { legacy.innerHTML = screenText.join('\n'); return done && done(); }
-    let line = 0, ch = 0;
-    const plain = screenText.map(strip);
-    (function tick() {
-      if (line >= plain.length) { legacy.innerHTML = screenText.join('\n'); return done && done(); }
-      ch += 4;
-      if (ch >= plain[line].length) { line++; ch = 0; }
-      const shown = screenText.slice(0, line).join('\n') + (line < plain.length ? (line ? '\n' : '') + plain[line].slice(0, ch) : '');
-      legacy.innerHTML = shown + '<span class="cur">█</span>';
-      setTimeout(tick, 14);
-    })();
-  }
-  function setModern(on) {
-    device.classList.toggle('is-modern', on);
-    sw.setAttribute('aria-checked', on);
-    sw.setAttribute('aria-label', on ? 'Show the legacy version' : 'Show the modern version');
-    lbl.innerHTML = on ? '<b>After:</b> the .NET 10 app that replaced it' : '<b>Before:</b> the 3270 screen store teams used';
-  }
-  sw.addEventListener('click', () => setModern(sw.getAttribute('aria-checked') !== 'true'));
-  let typed = false;
-  new IntersectionObserver((es, o) => { if (es[0].isIntersecting && !typed) { typed = true; o.disconnect(); typeScreen(() => { if (!reduce) setTimeout(() => setModern(true), 1400); }); } }, { threshold: .4 }).observe(device);
-
-  /* ---------- Shui meeting demo ---------- */
-  const SRC = 'https://github.com/yathirajprajwal/shui-ai-assistant';
-  const script = {
-    sync: {
-      q: 'Hey Shui, why did the last sync skip some files?', asker: 'Dev',
-      say: "It skipped files whose content hasn't changed since the last sync, and removed files that were deleted in the repository. Vendored, generated, binary and oversized files are filtered out on purpose.",
-      html: 'It skipped files whose content hash hasn\'t changed since the last sync, and removed files deleted upstream <span class="cite">1</span>. Vendored, generated, binary and oversized files are filtered out on purpose <span class="cite">2</span>.',
-      sources: [['1', 'docs/architecture.md · Ingesting a source', SRC + '/blob/main/docs/architecture.md'], ['2', 'src/…/GitHub/GitHubFileFilter.cs', SRC + '/blob/main/src/Shui.Infrastructure/GitHub/GitHubFileFilter.cs']]
-    },
-    catchup: {
-      q: 'Hey Shui, catch me up.', asker: 'Nik',
-      say: "You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work without a screen. Action item: Dev spikes it by Friday.",
-      html: 'You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work headless.<br><b>Action:</b> Dev spikes it by Friday.',
-      sources: [['', 'From this call\'s live captions', null]]
-    },
-    secret: {
-      q: "Hey Shui, what's this quarter's revenue?", asker: 'Priya',
-      say: "I can't answer that here. Everyone in the call hears my answers, so I only use material the whole team is allowed to see.",
-      html: "I can't answer that here. Everyone in the call hears my answers, so I only use material the whole team is allowed to see.",
-      sources: [['', 'Room rule: answers limited to what everyone present may see', null]]
-    },
-    unknown: {
-      q: 'Hey Shui, who wrote the original COBOL for this?', asker: 'Nik',
-      say: "I don't have a source for that, so I won't guess.",
-      html: "I don't have a source for that, so I won't guess.",
-      sources: [['', 'No source, no answer: the model wasn\'t even called', null]]
-    }
-  };
-  const route = text => {
-    const t = text.toLowerCase();
-    if (/catch|missed|recap|summar/.test(t)) return 'catchup';
-    if (/sync|skip|file|index|github|repo|ingest/.test(t)) return 'sync';
-    if (/revenue|salary|profit|margin|sales number|confidential/.test(t)) return 'secret';
-    return null;
-  };
-  const tiles = $$('.tile'), shuiTile = $('.shui-tile'), captions = $('#captions'), chat = $('#chat'), chips = $$('#chips .chip');
-  const soundBtn = $('#sound'); let voiceOn = false, busy = false, minute = 2;
-  const hasSpeech = 'speechSynthesis' in window;
-  if (!hasSpeech) soundBtn.hidden = true;
-  soundBtn.addEventListener('click', () => { voiceOn = !voiceOn; soundBtn.setAttribute('aria-pressed', voiceOn); soundBtn.textContent = voiceOn ? 'Voice on' : 'Voice off'; if (!voiceOn) speechSynthesis.cancel(); });
-  function pickVoice() {
-    const v = speechSynthesis.getVoices().filter(x => /^en/i.test(x.lang));
-    return v.find(x => /female|samantha|zira|jenny|aria|libby|sonia|google uk english female|victoria|karen|moira|tessa/i.test(x.name)) || v.find(x => /google/i.test(x.name)) || v[0];
-  }
-  if (hasSpeech) speechSynthesis.onvoiceschanged = () => {};
-  const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
-  const talking = who => tiles.forEach(t => t.classList.toggle('talking', t.dataset.who === who));
-  function caption(who, text) { captions.innerHTML = `<span class="who-c">${who}</span>${text}`; }
-  function addMsg(who, html, sources, isShui) {
-    const e = chat.querySelector('.empty-chat'); if (e) e.remove();
-    const m = document.createElement('div'); m.className = 'msg' + (isShui ? ' shui-msg' : '');
-    let s = '';
-    if (sources && sources.length) s = '<div class="sources">' + sources.map(([n, label, url]) => url ? `<a href="${url}" target="_blank" rel="noopener">${n ? '[' + n + '] ' : ''}${label}</a>` : `<a aria-disabled="true">${label}</a>`).join('') + '</div>';
-    m.innerHTML = `<div class="from">${who}</div><div class="bubble">${html}${s}</div>`;
-    chat.appendChild(m); chat.scrollTop = chat.scrollHeight;
-  }
-  function speak(text) {
-    return new Promise(res => {
-      if (!voiceOn || !hasSpeech) return wait(Math.min(5200, 900 + text.length * 32)).then(res);
-      speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text); const v = pickVoice(); if (v) u.voice = v; u.rate = 1.03; u.pitch = 1.08;
-      u.onend = u.onerror = () => res(); speechSynthesis.speak(u);
+  /* ---------- cursor + magnetic ---------- */
+  if (fine && !reduce) {
+    const c = $('#cursor'), r = $('#ring'); let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+    addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; c.style.transform = `translate(${mx}px,${my}px)`; });
+    (function loop() { rx += (mx - rx) * .16; ry += (my - ry) * .16; r.style.transform = `translate(${rx}px,${ry}px)`; requestAnimationFrame(loop); })();
+    document.addEventListener('mouseover', e => r.classList.toggle('hover', !!e.target.closest('a,button,input,.card')));
+    $$('.magnetic').forEach(b => {
+      b.addEventListener('mousemove', e => { const k = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - k.left - k.width / 2) * .3}px,${(e.clientY - k.top - k.height / 2) * .4}px)`; });
+      b.addEventListener('mouseleave', () => { b.style.transform = ''; });
     });
   }
+
+  /* ---------- particle name ---------- */
+  const pc = $('#particles'), px = pc.getContext('2d');
+  let parts = [], pw = 0, ph = 0, dpr = 1, mouse = { x: -9999, y: -9999 }, scatter = 0, heroVisible = true;
+  const palette = ['#7c5cff', '#9d8cff', '#5cf2da', '#ff6b8b', '#ffb547'];
+  function buildParticles() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    pw = pc.clientWidth; ph = pc.clientHeight;
+    pc.width = pw * dpr; pc.height = ph * dpr; px.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const off = document.createElement('canvas'); off.width = pw; off.height = ph;
+    const o = off.getContext('2d');
+    const text = 'PRAJWAL';
+    let size = Math.min(ph * .82, pw / 4.4);
+    const setFont = () => { o.font = `900 ${size}px Anybody, 'Arial Black', sans-serif`; };
+    setFont();
+    let w = o.measureText(text).width;
+    if (w > pw * .94) { size *= pw * .94 / w; setFont(); }
+    o.fillStyle = '#fff'; o.textBaseline = 'middle'; o.textAlign = 'center';
+    o.fillText(text, pw / 2, ph / 2);
+    const data = o.getImageData(0, 0, pw, ph).data;
+    const gap = pw < 560 ? 4 : pw < 1000 ? 5 : 6;
+    const old = parts; parts = [];
+    for (let y = 0; y < ph; y += gap) for (let x = 0; x < pw; x += gap) {
+      if (data[(y * pw + x) * 4 + 3] > 128) {
+        const prev = old[parts.length];
+        const hue = palette[Math.floor((x / pw) * (palette.length - 1) + Math.random() * 1.2) % palette.length];
+        parts.push({ tx: x, ty: y, x: prev ? prev.x : Math.random() * pw, y: prev ? prev.y : Math.random() * ph * 2 - ph / 2, vx: 0, vy: 0, c: hue, s: gap * .42 + Math.random() * gap * .25, seed: Math.random() * 6.28 });
+      }
+    }
+    if (reduce) parts.forEach(p => { p.x = p.tx; p.y = p.ty; });
+  }
+  function drawParticles(t) {
+    px.clearRect(0, 0, pw, ph);
+    const R = 90, R2 = R * R;
+    for (const p of parts) {
+      const sx = Math.cos(p.seed + t * .0004) * 160 * scatter, sy = (Math.sin(p.seed * 2 + t * .0003) * 120 - 140) * scatter;
+      let ax = (p.tx + sx - p.x) * .06, ay = (p.ty + sy - p.y) * .06;
+      const dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+      if (d2 < R2) { const f = (1 - d2 / R2) * 6; const d = Math.sqrt(d2) || 1; ax += dx / d * f; ay += dy / d * f; }
+      p.vx = (p.vx + ax) * .82; p.vy = (p.vy + ay) * .82;
+      p.x += p.vx; p.y += p.vy;
+      px.fillStyle = p.c; px.globalAlpha = 1 - scatter * .7;
+      px.fillRect(p.x, p.y, p.s, p.s);
+    }
+    px.globalAlpha = 1;
+  }
+  function particleLoop(t) { if (heroVisible) drawParticles(t); requestAnimationFrame(particleLoop); }
+  const startParticles = () => { buildParticles(); if (reduce) drawParticles(0); else requestAnimationFrame(particleLoop); };
+  pc.addEventListener('pointermove', e => { const k = pc.getBoundingClientRect(); mouse.x = e.clientX - k.left; mouse.y = e.clientY - k.top; });
+  pc.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+  new IntersectionObserver(es => { heroVisible = es[0].isIntersecting; }).observe(pc);
+
+  /* ---------- hero title split ---------- */
+  const h1 = $('#heroTitle');
+  h1.setAttribute('aria-label', h1.textContent);
+  h1.innerHTML = h1.textContent.split(' ').map(w => `<span class="w" aria-hidden="true">${[...w].map(ch => `<span class="ch">${ch}</span>`).join('')}</span>`).join(' ');
+
+  /* rotating word */
+  const rotWords = ['Razor UIs', 'ASP.NET Core APIs', 'SQL Server schemas', 'Kubernetes deploys', 'Entra ID sign-in', 'AI agents'];
+  let rotI = 0; const rot = $('#rot');
+  if (!reduce) setInterval(() => {
+    const cur = rot.querySelector('span:not(.out)'); rotI = (rotI + 1) % rotWords.length;
+    const nx = document.createElement('span'); nx.textContent = rotWords[rotI]; nx.className = 'in'; rot.appendChild(nx);
+    requestAnimationFrame(() => requestAnimationFrame(() => { nx.className = ''; cur.className = 'out'; }));
+    setTimeout(() => cur.remove(), 700);
+  }, 2200);
+
+  /* ---------- preloader then intro ---------- */
+  const loader = $('#loader'), lnum = $('#loaderNum');
+  function intro() {
+    if (G && !reduce) {
+      G.from('.hero h1 .ch', { yPercent: 110, opacity: 0, rotate: 8, duration: .9, ease: 'expo.out', stagger: .018 });
+      G.from('.kicker, .rot-line, .ctas', { y: 24, opacity: 0, duration: .8, ease: 'power3.out', stagger: .1, delay: .35 });
+      G.from('.bar', { y: -30, opacity: 0, duration: .8, ease: 'power3.out', delay: .2 });
+    }
+  }
+  const fontsReady = (document.fonts && document.fonts.ready) ? Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1500))]) : Promise.resolve();
+  if (reduce || !G) { loader.remove(); fontsReady.then(startParticles); }
+  else {
+    const o = { v: 0 };
+    G.to(o, { v: 100, duration: 1.3, ease: 'power2.inOut', onUpdate: () => { lnum.textContent = Math.round(o.v); } });
+    fontsReady.then(() => {
+      startParticles();
+      G.to(loader, { yPercent: -100, duration: .9, ease: 'expo.inOut', delay: 1.1, onStart: () => loader.classList.add('done'), onComplete: () => loader.remove() });
+      G.delayedCall(1.4, intro);
+    });
+  }
+
+  /* ---------- marquee ---------- */
+  const tracks = $$('.track').map(el => { el.innerHTML += el.innerHTML; return { el, x: 0, dir: +el.dataset.speed }; });
+  (function mq() {
+    const boost = 1 + Math.min(Math.abs(velocity) * .35, 8);
+    tracks.forEach(t => {
+      const half = t.el.scrollWidth / 2; t.x -= .6 * t.dir * boost * (reduce ? 0 : 1);
+      if (t.x <= -half) t.x += half; if (t.x > 0) t.x -= half;
+      t.el.style.transform = `translate3d(${t.x}px,0,0)`;
+    });
+    requestAnimationFrame(mq);
+  })();
+
+  /* ---------- statement words ---------- */
+  const st = $('#statement');
+  st.innerHTML = st.textContent.split(' ').map(w => `<span class="word">${w}</span>`).join(' ');
+  const words = $$('.word', st);
+
+  /* ---------- counters ---------- */
+  const counted = new WeakSet();
+  const counterObs = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting || counted.has(e.target)) return; counted.add(e.target);
+    const el = e.target, end = +el.dataset.count, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    if (reduce) return; const t0 = performance.now();
+    (function step(t) { const k = Math.min((t - t0) / 1400, 1), v = Math.round(end * (1 - Math.pow(1 - k, 4))); el.textContent = pre + v + suf; if (k < 1) requestAnimationFrame(step); })(t0);
+  }), { threshold: .6 });
+  $$('[data-count]').forEach(el => counterObs.observe(el));
+
+  /* ---------- Shui orb ---------- */
+  const oc = $('#orb'), ox = oc.getContext('2d'); let ow = 0, oh = 0, orbMode = 0, orbVisible = false;
+  const modes = ['invite', 'listening', 'answering', 'notes'];
+  function sizeOrb() { const d = Math.min(devicePixelRatio || 1, 2); ow = oc.clientWidth; oh = oc.clientHeight; oc.width = ow * d; oc.height = oh * d; ox.setTransform(d, 0, 0, d, 0, 0); }
+  function drawOrb(t) {
+    ox.clearRect(0, 0, ow, oh);
+    const cx = ow / 2, cy = oh / 2, base = Math.min(ow, oh) * .26;
+    const amp = [6, 10, 26, 8][orbMode], spd = [.0008, .0016, .004, .001][orbMode];
+    for (let k = 0; k < 3; k++) {
+      const rr = base * (1.35 + k * .32) + Math.sin(t * .001 + k) * 6;
+      ox.beginPath(); ox.arc(cx, cy, rr, 0, Math.PI * 2);
+      ox.strokeStyle = `rgba(92,242,218,${orbMode === 1 ? .22 - k * .06 : .1 - k * .03})`; ox.lineWidth = 1.5; ox.stroke();
+    }
+    const layers = [['rgba(124,92,255,.55)', 1.12, 0], ['rgba(92,242,218,.6)', 1, 2], ['rgba(255,107,139,.35)', .92, 4]];
+    ox.globalCompositeOperation = 'lighter';
+    layers.forEach(([col, sc, ph]) => {
+      ox.beginPath();
+      for (let a = 0; a <= Math.PI * 2 + .01; a += .06) {
+        const n = Math.sin(a * 3 + t * spd * 1.3 + ph) * amp + Math.sin(a * 5 - t * spd + ph) * amp * .6;
+        const r = base * sc + n; const x = cx + Math.cos(a) * r, y = cy + Math.sin(a) * r;
+        a ? ox.lineTo(x, y) : ox.moveTo(x, y);
+      }
+      const g = ox.createRadialGradient(cx - base * .3, cy - base * .3, base * .1, cx, cy, base * 1.3);
+      g.addColorStop(0, 'rgba(255,255,255,.32)'); g.addColorStop(.35, col); g.addColorStop(1, 'rgba(6,12,31,0)');
+      ox.fillStyle = g; ox.fill();
+    });
+    ox.globalCompositeOperation = 'source-over';
+    if (orbMode === 3) for (let i = 0; i < 4; i++) { const w = base * (1.1 - i * .18); ox.fillStyle = 'rgba(236,233,255,.55)'; ox.fillRect(cx - w / 2, cy - base * .3 + i * base * .2, w * (.6 + .4 * Math.abs(Math.sin(t * .001 + i))), 3); }
+  }
+  function orbLoop(t) { if (orbVisible) drawOrb(reduce ? 0 : t); requestAnimationFrame(orbLoop); }
+  sizeOrb(); requestAnimationFrame(orbLoop);
+  new IntersectionObserver(es => { orbVisible = es[0].isIntersecting; }).observe(oc);
+  const stepObs = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    $$('.step').forEach(s => s.classList.toggle('on', s === e.target));
+    orbMode = +e.target.dataset.mode; $('#orbCaption').textContent = modes[orbMode];
+  }), { rootMargin: '-45% 0px -45% 0px' });
+  $$('.step').forEach(s => stepObs.observe(s));
+
+  /* ---------- Shui demo ---------- */
+  const SRC = 'https://github.com/yathirajprajwal/shui-ai-assistant';
+  const script = {
+    sync: { q: 'Hey Shui, why did the last sync skip some files?', asker: 'Dev',
+      say: "It skipped files whose content hasn't changed since the last sync, and removed files that were deleted in the repository. Vendored, generated, binary and oversized files are filtered out on purpose.",
+      html: 'It skipped files whose content hash hasn\'t changed since the last sync, and removed files deleted upstream <span class="cite">1</span>. Vendored, generated, binary and oversized files are filtered out on purpose <span class="cite">2</span>.',
+      sources: [['1', 'docs/architecture.md, Ingesting a source', SRC + '/blob/main/docs/architecture.md'], ['2', 'src/…/GitHub/GitHubFileFilter.cs', SRC + '/blob/main/src/Shui.Infrastructure/GitHub/GitHubFileFilter.cs']] },
+    catchup: { q: 'Hey Shui, catch me up.', asker: 'Nik',
+      say: "You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work without a screen. Action item: Dev spikes it by Friday.",
+      html: 'You missed about ten minutes. Priya proposed running the meeting bot in a container on the VM. Dev agreed, as long as captions still work headless.<br><b>Action:</b> Dev spikes it by Friday.',
+      sources: [['', "From this call's live captions", null]] },
+    secret: { q: "Hey Shui, what's this quarter's revenue?", asker: 'Priya',
+      say: "I can't answer that here. Everyone in the call hears my answers, so I only use material the whole team is allowed to see.",
+      html: "I can't answer that here. Everyone in the call hears my answers, so I only use material the whole team is allowed to see.",
+      sources: [['', 'Room rule: only what everyone present may see', null]] },
+    unknown: { q: 'Hey Shui, who wrote the original COBOL for this?', asker: 'Nik',
+      say: "I don't have a source for that, so I won't guess.", html: "I don't have a source for that, so I won't guess.",
+      sources: [['', "No source, no answer: the model wasn't called", null]] }
+  };
+  const route = t => { t = t.toLowerCase(); if (/catch|missed|recap|summar/.test(t)) return 'catchup'; if (/sync|skip|file|index|github|repo|ingest/.test(t)) return 'sync'; if (/revenue|salary|profit|margin|confidential/.test(t)) return 'secret'; return null; };
+  const tiles = $$('.tile'), shuiTile = $('.shui-tile'), caps = $('#captions'), chat = $('#chat'), chips = $$('#chips .chip'), voiceBtn = $('#voice');
+  let voiceOn = false, busy = false, minute = 2; const hasSpeech = 'speechSynthesis' in window;
+  if (!hasSpeech) voiceBtn.hidden = true;
+  voiceBtn.addEventListener('click', () => { voiceOn = !voiceOn; voiceBtn.setAttribute('aria-pressed', voiceOn); voiceBtn.textContent = voiceOn ? 'Voice on' : 'Voice off'; if (!voiceOn) speechSynthesis.cancel(); });
+  const pickVoice = () => { const v = speechSynthesis.getVoices().filter(x => /^en/i.test(x.lang)); return v.find(x => /female|samantha|zira|jenny|aria|libby|sonia|victoria|karen|moira|tessa/i.test(x.name)) || v.find(x => /google/i.test(x.name)) || v[0]; };
+  const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+  const talking = who => tiles.forEach(t => t.classList.toggle('talking', t.dataset.who === who));
+  const caption = (who, text) => { caps.innerHTML = `<span class="who">${who}</span>${text}`; };
+  const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  function addMsg(item) {
+    const e = chat.querySelector('.empty'); if (e) e.remove();
+    const m = document.createElement('div'); m.className = 'msg';
+    const s = '<div class="sources">' + item.sources.map(([n, l, u]) => u ? `<a href="${u}" target="_blank" rel="noopener">${n ? '[' + n + '] ' : ''}${l}</a>` : `<a>${l}</a>`).join('') + '</div>';
+    m.innerHTML = `<div class="from">Shui</div><div class="bubble">${item.html}${s}</div>`;
+    chat.appendChild(m); chat.scrollTop = chat.scrollHeight;
+  }
+  const speak = text => new Promise(res => {
+    if (!voiceOn || !hasSpeech) return wait(Math.min(5200, 900 + text.length * 32)).then(res);
+    speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); const v = pickVoice(); if (v) u.voice = v; u.rate = 1.03; u.pitch = 1.08; u.onend = u.onerror = () => res(); speechSynthesis.speak(u);
+  });
   async function run(key, customQ) {
     if (busy) return; busy = true; chips.forEach(c => c.disabled = true);
-    const item = key ? script[key] : null;
-    const q = customQ || item.q, asker = item ? item.asker : 'You';
-    talking(asker); caption(asker, q);
-    $('#clock').textContent = '10:' + String(++minute + 2).padStart(2, '0');
+    const item = key ? script[key] : null, ans = item || script.unknown;
+    const q = customQ ? esc(customQ) : item.q, asker = customQ ? 'You' : item.asker;
+    talking(asker); caption(asker, q); $('#clock').textContent = '10:' + String(++minute + 2).padStart(2, '0');
     await wait(1300);
-    talking(null); shuiTile.classList.add('thinking'); caption('Shui', '<em style="color:var(--mist)">waits for a pause, then searches…</em>');
+    talking(null); shuiTile.classList.add('thinking'); caption('Shui', '<em style="color:#8fa6cc">waits for a pause, then searches…</em>');
     await wait(1100);
     shuiTile.classList.remove('thinking'); shuiTile.classList.add('speaking'); talking('Shui');
-    const ans = item || script.unknown;
-    caption('Shui', ans.say);
-    addMsg('Shui', ans.html, ans.sources, true);
-    await speak(ans.say);
-    shuiTile.classList.remove('speaking'); talking(null);
-    busy = false; chips.forEach(c => c.disabled = false);
+    caption('Shui', ans.say); addMsg(ans); await speak(ans.say);
+    shuiTile.classList.remove('speaking'); talking(null); busy = false; chips.forEach(c => c.disabled = false);
   }
   chips.forEach(c => c.addEventListener('click', () => run(c.dataset.q)));
-  $('#askForm').addEventListener('submit', e => {
-    e.preventDefault(); const v = $('#askInput').value.trim(); if (!v) return;
-    let q = /^(hey|hi)\s+sh/i.test(v) ? v : 'Hey Shui, ' + v;
-    $('#askInput').value = ''; run(route(q), q);
-  });
+  $('#askForm').addEventListener('submit', e => { e.preventDefault(); const v = $('#askInput').value.trim(); if (!v) return; const q = /^(hey|hi)\s+sh/i.test(v) ? v : 'Hey Shui, ' + v; $('#askInput').value = ''; run(route(q), q); });
 
-  /* ---------- work index ---------- */
-  const work = [
-    ['Returns Management', 'Transaction search and lookup for store teams', 'mod', 'live', 'Replaces the mainframe PICICPS1 green screens with a .NET 10 MVC app, so associates find a transaction in seconds instead of paging through 3270 screens.', ['.NET 10', 'ASP.NET Core MVC', 'SQL Server', 'Entra ID']],
-    ['Store Gift Card Platform (PCAP/PCAR)', 'Promotional card activation and returns', 'mod', 'live', 'Activates promotional gift cards during store events and handles their returns. Azure AD sign-in, Graph API roles, barcode scanning and a gift card SOAP integration. Running in 40+ stores.', ['.NET 10', 'MVC', 'Azure AD', 'Graph API', 'SQL Server', 'Kubernetes']],
-    ['POS Extract', 'Mainframe job rebuilt as a .NET console app', 'mod', 'live', 'Generates JSON extracts from SQL Server and uploads them to AWS S3, replacing a UC4/DB2 mainframe job. Delivery went from hours to under 5 minutes.', ['.NET 10', 'Console', 'SQL Server', 'AWS S3']],
-    ['MuleTranslator API', 'Customer and shipping data for POS', 'mod', 'live', 'A .NET REST API replacing an AWS Spring Boot/Java service for customer lookups and shipping updates from point of sale.', ['.NET 10', 'REST API', 'SQL Server']],
-    ['PCAP Returns eGift Connector', 'Promotional eGift card returns', 'mod', 'live', 'Console app that processes promotional eGift card returns as a single transaction, updating and clearing pending records together so nothing is left half-done.', ['.NET 10', 'Console', 'SQL Server']],
-    ['Sales Trickle Dashboard', 'Live view of POS transactions', 'mon', 'live', 'Real-time monitoring of POS transactions, store health, sales data and transaction flow across every store.', ['ASP.NET Core', 'JavaScript', 'SQL Server', 'REST']],
-    ['Electronic Journal Viewer', 'Receipts and TLOGs on demand', 'mon', 'live', 'Transaction search with a receipt viewer, TLOG download, bulk ZIP export, filtering and pagination, tuned for large result sets.', ['ASP.NET MVC', 'jQuery', 'SQL Server', 'AWS S3']],
-    ['Store Health Dashboard', 'Connectivity and status for the store network', 'mon', 'live', 'Shows store connectivity, transaction status and operational health across the retail network.', ['.NET Core', 'Snowflake', 'REST']],
-    ['NOC Dashboard', 'Network operations center wall view', 'mon', 'live', 'Real-time application health and transaction flow for the operations center.', ['ASP.NET Core', 'JavaScript', 'SQL Server']],
-    ['Error Monitoring Portal', 'Failed POS transactions in one place', 'mon', 'live', 'Central tracking, search, analytics and reporting for failed point-of-sale transactions.', ['ASP.NET Core', 'Serilog', 'SQL Server']],
-    ['Incident Management Portal', 'Transaction incidents, start to finish', 'mon', 'live', 'Create, track, investigate and resolve transaction incidents, with full history and status workflows.', ['.NET Core', 'REST API', 'SQL Server']],
-    ['Authentication Platform', 'Okta to Azure AD migration', 'id', 'live', 'Led the move from Okta to Azure AD across apps, with OAuth 2.0, OpenID Connect, Microsoft Graph and role-based access.', ['Azure AD', 'OAuth 2.0', 'OIDC', 'Graph API']],
-    ['Credit System Management', 'Moving from AD/LDAP to Entra ID', 'id', 'wip', 'Migrating the credit token UI from AD/LDAP authentication to Microsoft Entra ID.', ['.NET', 'Entra ID', 'OIDC']],
-    ['Secure Middleware', 'TLS handshakes with external systems', 'id', 'live', 'Middleware handling TLS handshakes with Okta user verification, Microsoft MFA, Akamai tokens and cache keys.', ['.NET', 'Okta', 'MFA', 'Akamai']],
-    ['Snowflake Integration', 'Reporting pipelines over Snowflake', 'int', 'live', 'Secure integration with Snowflake APIs using JWT and private-key authentication for enterprise reporting.', ['Snowflake', 'JWT', '.NET']],
-    ['Payment Integration', 'Cybersource payment gateway', 'int', 'live', 'Cybersource integration for secure payment processing through enterprise payment APIs.', ['Cybersource', 'REST', '.NET']],
-    ['Sales Price Adjustment', 'Price adjustments with approvals', 'int', 'live', 'Pricing adjustment workflows with business-rule validation and approval flows.', ['ASP.NET MVC', 'SQL Server', 'jQuery']],
-    ['MyAssociate', 'Associate management app', 'int', 'live', 'New features, faster APIs and performance work on the internal associate management app.', ['.NET Core', 'REST', 'SQL Server']],
-    ['Store iPad Apps', 'Credit card applications in store', 'mob', 'live', 'iOS apps on in-store iPads where customers apply for the store credit card and associates manage operations.', ['Swift', 'Xcode', 'REST']],
-    ['SaaS Business Platform', 'Infolink Technologies', 'early', 'live', 'Lead tracking, quotations, orders and operational reporting for small businesses.', ['.NET MVC', 'SQL Server']]
+  /* ---------- migration ---------- */
+  const legacyLines = [
+    '<span class="hi">PICICPS1</span>        TRANSACTION INQUIRY        10/24/26 10:02',
+    '<span class="dim">STORE:</span> 0412   <span class="dim">REG:</span> 07   <span class="dim">OPER:</span> 4518',
+    '<span class="dim">----------------------------------------------------</span>',
+    ' DATE      TIME   TYPE   AMOUNT    TENDER  STATUS',
+    ' 10/23/26  14:02  SALE    129.00   VISA    POSTED',
+    ' 10/23/26  15:47  RTN     -42.50   GC      PENDNG',
+    ' 10/23/26  17:12  SALE    310.75   AMEX    POSTED',
+    ' 10/24/26  10:31  EXCH      0.00   SCRD    POSTED', '', '',
+    '<span class="dim">----------------------------------------------------</span>',
+    ' PF1=HELP  PF3=EXIT  PF7=BKWD  PF8=FWD  ENTER=SEARCH',
+    '<span class="hi">===&gt;</span> █'
   ];
-  const cats = [['all', 'All'], ['mod', 'Mainframe to .NET'], ['mon', 'Monitoring'], ['id', 'Identity & security'], ['int', 'Integrations'], ['mob', 'Mobile'], ['early', 'Earlier']];
-  const tabsEl = $('#tabs'), indexEl = $('#index');
-  tabsEl.innerHTML = cats.map(([k, l]) => `<button class="tab" type="button" data-cat="${k}" aria-pressed="${k === 'all'}">${l}<small>${k === 'all' ? work.length : work.filter(w => w[2] === k).length}</small></button>`).join('');
-  const tagLabel = { live: 'In production', wip: 'In progress' };
-  const catLabel = Object.fromEntries(cats);
-  indexEl.innerHTML = work.map((w, i) => `
-    <li class="row" data-cat="${w[2]}">
-      <button type="button" aria-expanded="false" aria-controls="d${i}">
-        <span class="r-name">${w[0]}</span><span class="r-what">${w[1]}</span>
-        <span class="r-tag ${w[3]}"${w[3]==='live'?' hidden':''}>${tagLabel[w[3]]}</span><span class="plus" aria-hidden="true"></span>
-      </button>
-      <div class="detail" id="d${i}"><div><div class="detail-in"><p>${w[4]}</p><div class="tech">${w[5].map(t => `<span>${t}</span>`).join('')}</div></div></div></div>
-    </li>`).join('');
-  $$('.row > button').forEach(b => b.addEventListener('click', () => {
-    const row = b.parentElement, open = row.classList.toggle('open'); b.setAttribute('aria-expanded', open);
-  }));
-  tabsEl.addEventListener('click', e => {
-    const t = e.target.closest('.tab'); if (!t) return;
-    $$('.tab').forEach(x => x.setAttribute('aria-pressed', x === t));
-    $$('.row').forEach(r => r.hidden = !(t.dataset.cat === 'all' || r.dataset.cat === t.dataset.cat));
-  });
-  $('.row').classList.add('open'); $('.row > button').setAttribute('aria-expanded', true);
+  $('#legacy').innerHTML = legacyLines.join('\n');
+  const mig = $('#migrate'), modern = $('#modern'), wipe = $('#wipe'), meterBar = $('#meterBar'), meterText = $('#meterText');
+  function updateMigrate() {
+    const k = mig.getBoundingClientRect();
+    const p = mobile() ? clamp((innerHeight * .75 - k.top) / (k.height * .7), 0, 1) : clamp(-k.top / (k.height - innerHeight), 0, 1);
+    const q = clamp((p - .12) / .7, 0, 1);
+    modern.style.clipPath = `inset(0 0 0 ${100 - q * 100}%)`;
+    wipe.style.left = `${100 - q * 100}%`; wipe.style.opacity = q > 0 && q < 1 ? 1 : 0;
+    meterBar.style.width = q * 100 + '%'; meterText.textContent = q >= 1 ? 'Migrated to .NET 10' : `Migrated ${Math.round(q * 100)}%`;
+  }
 
-  /* copy email */
+  /* ---------- reel ---------- */
+  const featured = [
+    ['Store Gift Card Platform', 'PCAP / PCAR', 'Activates promotional gift cards during store events and handles their returns. Azure AD sign-in, Graph roles, barcode scanning. Live in 40+ stores.', ['.NET 10', 'MVC', 'Azure AD', 'Kubernetes'], 'GIFT', ['#7c5cff', '#ff6b8b']],
+    ['Returns Management', 'Mainframe replacement', 'Transaction search and lookup that replaces the PICICPS1 green screens, so associates find a sale in seconds.', ['.NET 10', 'ASP.NET Core MVC', 'SQL Server'], 'RTN', ['#5cf2da', '#7c5cff']],
+    ['Sales Trickle Dashboard', 'Real-time monitoring', 'Live POS transactions, store health and sales flow across every store, on one screen.', ['ASP.NET Core', 'JavaScript', 'SQL Server'], 'LIVE', ['#ffb547', '#ff6b8b']],
+    ['Electronic Journal Viewer', 'Receipts and TLOGs', 'Transaction search with a receipt viewer, TLOG download and bulk ZIP export, tuned for big result sets.', ['ASP.NET MVC', 'jQuery', 'AWS S3'], 'EJ', ['#7c5cff', '#5cf2da']],
+    ['Authentication Platform', 'Okta to Azure AD', 'Led the move from Okta to Azure AD with OAuth 2.0, OpenID Connect, Graph and role-based access.', ['Azure AD', 'OIDC', 'Graph API'], 'AUTH', ['#ff6b8b', '#7c5cff']],
+    ['MuleTranslator API', 'Java to .NET', 'A .NET REST API that replaced an AWS Spring Boot service for customer lookups and shipping updates from POS.', ['.NET 10', 'REST', 'SQL Server'], 'API', ['#5cf2da', '#ffb547']],
+    ['POS Extract', 'Batch job to console app', 'JSON extracts from SQL Server to S3, replacing a mainframe job. Hours down to under 5 minutes.', ['.NET 10', 'Console', 'AWS S3'], 'S3', ['#ffb547', '#7c5cff']],
+    ['Store iPad Apps', 'Native iOS', 'In-store iPad apps where customers apply for the store credit card and associates run operations.', ['Swift', 'Xcode', 'REST'], 'iOS', ['#9d8cff', '#5cf2da']]
+  ];
+  const cardsEl = $('#cards');
+  cardsEl.innerHTML = featured.map(f => `<article class="card" style="--art:radial-gradient(120% 80% at 10% 0%,${f[5][0]}cc,transparent 60%),radial-gradient(90% 70% at 100% 30%,${f[5][1]}aa,transparent 60%),linear-gradient(160deg,#1a1640,#100e22)">
+      <div class="card-art"></div><div class="card-glyph" aria-hidden="true">${f[4]}</div>
+      <small>${f[1]}</small><h3>${f[0]}</h3><p>${f[2]}</p><div class="techs">${f[3].map(t => `<span>${t}</span>`).join('')}</div></article>`).join('');
+  const reel = $('#work'), reelCount = $('#reelCount');
+  let reelMax = 0;
+  function layoutReel() {
+    if (mobile()) { reel.style.removeProperty('--reel-h'); cardsEl.style.transform = ''; return; }
+    reelMax = Math.max(0, cardsEl.scrollWidth - innerWidth * .6);
+    reel.style.setProperty('--reel-h', (reelMax + innerHeight) + 'px');
+  }
+  function updateReel() {
+    if (mobile()) { const i = Math.round(cardsEl.scrollLeft / (cardsEl.firstElementChild.offsetWidth + 24)); reelCount.textContent = String(Math.min(8, i + 1)).padStart(2, '0') + ' / 08'; return; }
+    const k = reel.getBoundingClientRect(); const p = clamp(-k.top / (k.height - innerHeight || 1), 0, 1);
+    cardsEl.style.transform = `translate3d(${-p * reelMax}px,0,0)`;
+    reelCount.textContent = String(Math.min(8, Math.floor(p * 7.99) + 1)).padStart(2, '0') + ' / 08';
+  }
+  cardsEl.addEventListener('scroll', updateReel, { passive: true });
+  if (fine && !reduce) $$('.card').forEach(c => {
+    c.addEventListener('mousemove', e => { const k = c.getBoundingClientRect(); const x = (e.clientX - k.left) / k.width - .5, y = (e.clientY - k.top) / k.height - .5; c.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`; });
+    c.addEventListener('mouseleave', () => { c.style.transform = ''; });
+  });
+
+  /* ---------- rest of work ---------- */
+  const work = [
+    ['PCAP Returns eGift Connector', 'Promotional eGift card returns', 'mod', 0, 'Console app that processes promotional eGift card returns in one transaction, updating and clearing pending records together.', ['.NET 10', 'Console', 'SQL Server']],
+    ['Store Health Dashboard', 'Connectivity across the store network', 'mon', 0, 'Store connectivity, transaction status and operational health across the retail network.', ['.NET Core', 'Snowflake', 'REST']],
+    ['NOC Dashboard', 'Operations center wall view', 'mon', 0, 'Real-time application health and transaction flow for the network operations center.', ['ASP.NET Core', 'JavaScript', 'SQL Server']],
+    ['Error Monitoring Portal', 'Failed POS transactions in one place', 'mon', 0, 'Central tracking, search, analytics and reporting for failed point-of-sale transactions.', ['ASP.NET Core', 'Serilog', 'SQL Server']],
+    ['Incident Management Portal', 'Transaction incidents, start to finish', 'mon', 0, 'Create, track, investigate and resolve transaction incidents with full history and status workflows.', ['.NET Core', 'REST API', 'SQL Server']],
+    ['Credit System Management', 'AD/LDAP to Entra ID', 'id', 1, 'Moving the credit token UI from AD/LDAP authentication to Microsoft Entra ID.', ['.NET', 'Entra ID', 'OIDC']],
+    ['Secure Middleware', 'TLS handshakes with external systems', 'id', 0, 'TLS handshakes with Okta user verification, Microsoft MFA, Akamai tokens and cache keys.', ['.NET', 'Okta', 'MFA', 'Akamai']],
+    ['Snowflake Integration', 'Reporting pipelines', 'int', 0, 'Secure Snowflake API integration with JWT and private-key auth for enterprise reporting.', ['Snowflake', 'JWT', '.NET']],
+    ['Payment Integration', 'Cybersource gateway', 'int', 0, 'Cybersource integration for secure payment processing.', ['Cybersource', 'REST', '.NET']],
+    ['Sales Price Adjustment', 'Price changes with approvals', 'int', 0, 'Pricing adjustment workflows with business-rule validation and approval flows.', ['ASP.NET MVC', 'SQL Server', 'jQuery']],
+    ['MyAssociate', 'Associate management app', 'int', 0, 'New features, faster APIs and performance work on the internal associate app.', ['.NET Core', 'REST', 'SQL Server']],
+    ['SaaS Business Platform', 'Infolink Technologies', 'early', 0, 'Lead tracking, quotations, orders and reporting for small businesses.', ['.NET MVC', 'SQL Server']]
+  ];
+  const cats = [['all', 'All'], ['mon', 'Monitoring'], ['id', 'Identity & security'], ['int', 'Integrations'], ['mod', 'Modernization'], ['early', 'Earlier']];
+  $('#tabs').innerHTML = cats.map(([k, l]) => `<button class="tab" type="button" data-cat="${k}" aria-pressed="${k === 'all'}">${l}</button>`).join('');
+  $('#list').innerHTML = work.map((w, i) => `<li class="row" data-cat="${w[2]}"><button type="button" aria-expanded="false" aria-controls="r${i}">
+    <span class="row-name">${w[0]}</span><span class="row-what">${w[1]}${w[3] ? '<em>in progress</em>' : ''}</span><span class="plus" aria-hidden="true"></span></button>
+    <div class="detail" id="r${i}"><div><div class="detail-in"><p>${w[4]}</p><div class="techs">${w[5].map(t => `<span>${t}</span>`).join('')}</div></div></div></div></li>`).join('');
+  const refresh = () => { layoutReel(); onScroll(); ST && ST.refresh(); };
+  $$('.row > button').forEach(b => b.addEventListener('click', () => { const o = b.parentElement.classList.toggle('open'); b.setAttribute('aria-expanded', o); setTimeout(refresh, 450); }));
+  $('#tabs').addEventListener('click', e => { const t = e.target.closest('.tab'); if (!t) return; $$('.tab').forEach(x => x.setAttribute('aria-pressed', x === t)); $$('.row').forEach(r => r.hidden = !(t.dataset.cat === 'all' || r.dataset.cat === t.dataset.cat)); refresh(); });
+
+  /* ---------- timeline fill ---------- */
+  const tl = $('#tl'), tlFill = $('#tlFill');
+  function updateTimeline() { const k = tl.getBoundingClientRect(); const p = clamp((innerHeight * .6 - k.top) / k.height, 0, 1); tlFill.style.transform = `scaleY(${p})`; }
+
+  /* ---------- big contact text ---------- */
+  const big = $('#big');
+  if (fine && !reduce) big.addEventListener('mousemove', e => { const k = big.getBoundingClientRect(); big.style.setProperty('--w', 60 + ((e.clientX - k.left) / k.width) * 90); });
+  big.addEventListener('mouseleave', () => big.style.setProperty('--w', 100));
+
+  /* ---------- one scroll handler ---------- */
+  const hero = $('#top');
+  function onScroll() {
+    const y = scrollY, doc = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${doc > 0 ? y / doc : 0})`;
+    bar.classList.toggle('scrolled', y > 20);
+    scatter = reduce ? 0 : clamp(y / (hero.offsetHeight * .8), 0, 1);
+    const sk = st.getBoundingClientRect(); const sp = clamp((innerHeight * .85 - sk.top) / (sk.height + innerHeight * .35), 0, 1);
+    const lit = Math.floor(sp * words.length * 1.05); words.forEach((w, i) => w.classList.toggle('lit', reduce || i < lit));
+    updateMigrate(); updateReel(); updateTimeline();
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(() => { buildParticles(); if (reduce) drawParticles(0); sizeOrb(); refresh(); }, 200); });
+  layoutReel(); onScroll();
+  addEventListener('load', refresh);
+
+  /* ---------- section reveals ---------- */
+  if (G && ST && !reduce) {
+    $$('.reveal').forEach(el => G.from(el, { y: 50, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
+    G.from('.stack div', { y: 30, opacity: 0, duration: .6, ease: 'power2.out', stagger: .06, scrollTrigger: { trigger: '.stack', start: 'top 85%' } });
+    G.from('.helps > div', { y: 30, opacity: 0, duration: .7, ease: 'power2.out', stagger: .08, scrollTrigger: { trigger: '.helps', start: 'top 88%' } });
+    G.from('.ai > div', { y: 30, opacity: 0, duration: .7, ease: 'power2.out', stagger: .08, scrollTrigger: { trigger: '.ai', start: 'top 88%' } });
+    G.from('.tl > li', { x: -30, opacity: 0, duration: .8, ease: 'power3.out', stagger: .15, scrollTrigger: { trigger: '.tl', start: 'top 80%' } });
+    G.from('.entries li', { y: 24, opacity: 0, duration: .6, ease: 'power2.out', stagger: .07, scrollTrigger: { trigger: '.entries', start: 'top 85%' } });
+    G.from('.big', { yPercent: 30, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: '.big', start: 'top 90%' } });
+    G.from('.meet', { y: 60, opacity: 0, scale: .97, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.meet', start: 'top 85%' } });
+  }
+
+  /* ---------- copy ---------- */
   $$('[data-copy]').forEach(b => b.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(b.dataset.copy); toast('Email copied'); }
-    catch { location.href = 'mailto:' + b.dataset.copy; }
+    catch { const r = document.createRange(); r.selectNodeContents(b.lastElementChild); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast('Press Ctrl+C to copy'); }
   }));
 
   /* ---------- quick menu ---------- */
-  const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
-  $('#kbdHint').textContent = isMac ? '⌘ K' : 'Ctrl K';
-  const pal = $('#palette'), palInput = $('#palInput'), palList = $('#palList');
-  const go = id => () => document.getElementById(id).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  $('#kbdHint').textContent = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘ K' : 'Ctrl K';
+  const pal = $('#pal'), palInput = $('#palInput'), palList = $('#palList');
   const actions = [
-    ['Projects', 'Section', go('projects')],
-    ['Try the Shui demo', 'Section', () => { go('shui')(); setTimeout(() => chips[0].focus(), 600); }],
-    ['Work projects', 'Section', go('work')],
-    ['Career', 'Section', go('career')],
-    ['Contact', 'Section', go('contact')],
-    ['Build log', 'Section', go('log')],
-    ['Download resume', 'PDF', () => { const a = document.createElement('a'); a.href = 'Prajwal_Yathiraj_Resume.pdf'; a.download = ''; a.click(); }],
-    ['Copy my email', 'Contact', () => navigator.clipboard.writeText('yathirajprajwal@gmail.com').then(() => toast('Email copied'))],
-    ['Open LinkedIn', 'Link', () => open('https://www.linkedin.com/in/prajwal-yathiraj/', '_blank', 'noopener')],
-    ['Shui on GitHub', 'Link', () => open('https://github.com/yathirajprajwal/shui-ai-assistant', '_blank', 'noopener')],
-    ['Flip the green screen', 'Fun', () => { go('work')(); sw.click(); }]
+    ['About', 'Section', () => scrollTo('about')],
+    ['Shui.AI', 'Project', () => scrollTo('shui')],
+    ['Try the Shui demo', 'Project', () => { scrollTo('chips'); setTimeout(() => chips[0].focus(), 900); }],
+    ['Green screen migration', 'Work', () => scrollTo('migrate')],
+    ["Apps I've shipped", 'Work', () => scrollTo('work')],
+    ['Career', 'Section', () => scrollTo('career')],
+    ['Build log', 'Section', () => scrollTo('log')],
+    ['Contact', 'Section', () => scrollTo('contact')],
+    ['Copy my email', 'Contact', () => navigator.clipboard.writeText('yathirajprajwal@gmail.com').then(() => toast('Email copied'), () => toast('yathirajprajwal@gmail.com'))]
   ];
   let shown = actions, active = 0;
-  function renderPal() {
-    const q = palInput.value.toLowerCase();
-    shown = actions.filter(a => a[0].toLowerCase().includes(q));
-    active = Math.min(active, Math.max(shown.length - 1, 0));
-    palList.innerHTML = shown.map((a, i) => `<li><button type="button" class="${i === active ? 'active' : ''}" data-i="${i}">${a[0]}<span>${a[1]}</span></button></li>`).join('') || '<li style="padding:12px;color:var(--slate)">Nothing matches.</li>';
-  }
-  function openPal() { palInput.value = ''; active = 0; renderPal(); pal.showModal(); palInput.focus(); }
-  function runPal(i) { const a = shown[i]; if (!a) return; pal.close(); a[2](); }
-  $$('[data-open-palette]').forEach(b => b.addEventListener('click', openPal));
+  const renderPal = () => { const q = palInput.value.toLowerCase(); shown = actions.filter(a => a[0].toLowerCase().includes(q)); active = Math.min(active, Math.max(0, shown.length - 1)); palList.innerHTML = shown.map((a, i) => `<li><button type="button" class="${i === active ? 'active' : ''}" data-i="${i}">${a[0]}<span>${a[1]}</span></button></li>`).join('') || '<li style="padding:12px;color:var(--muted)">Nothing matches.</li>'; };
+  const openPal = () => { palInput.value = ''; active = 0; renderPal(); pal.showModal(); palInput.focus(); };
+  const runPal = i => { const a = shown[i]; if (!a) return; pal.close(); a[2](); };
+  $$('[data-pal]').forEach(b => b.addEventListener('click', openPal));
   palInput.addEventListener('input', () => { active = 0; renderPal(); });
   palList.addEventListener('click', e => { const b = e.target.closest('button'); if (b) runPal(+b.dataset.i); });
   palInput.addEventListener('keydown', e => {
@@ -954,9 +1099,7 @@ dialog.palette::backdrop{background:rgba(16,26,51,.45);backdrop-filter:blur(3px)
     if (e.key === 'ArrowUp') { active = (active - 1 + shown.length) % shown.length; renderPal(); e.preventDefault(); }
     if (e.key === 'Enter') { runPal(active); e.preventDefault(); }
   });
-  addEventListener('keydown', e => {
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal.open ? pal.close() : openPal(); }
-  });
+  addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal.open ? pal.close() : openPal(); } });
 })();
 </script>
 </body>
